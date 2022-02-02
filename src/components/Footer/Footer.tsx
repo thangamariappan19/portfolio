@@ -9,10 +9,10 @@ import {
   Tooltip,
   Flex,
   SimpleGrid,
-  useColorMode,
+  // useColorMode,
 } from '@chakra-ui/react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import { useQuery } from 'react-query'
+// import { useQuery } from 'react-query'
 // import { BsPauseFill } from 'react-icons/bs'
 import SocialIcons from './SocialIcons'
 

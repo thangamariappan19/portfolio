@@ -9,7 +9,7 @@ import {
   // Link as ChakraLink,
   useBreakpoint,
 } from '@chakra-ui/react';
-import Link from 'next/link';
+// import Link from 'next/link';
 import React, { useState } from 'react';
 import { NextSeo } from 'next-seo';
 import AboutTerminal from '@/components/AboutTerminal';
@@ -110,8 +110,7 @@ export default function Home(): React.ReactElement {
                   <ChakraLink>blogs</ChakraLink>
                 </Link> */}
                 I’m passionate about working on open source products & building thriving communities around them and I have at least learnt something, I think… 🤷‍♂️
-                
-My field of Interest's are building new Web Technologies and Products
+My field of Interests are building new Web Technologies and Products
 
 A passionate  Software Developer 🚀
 I have an experience of building Web applications with
