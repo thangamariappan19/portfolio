@@ -6,7 +6,7 @@ import {
   chakra,
   useColorModeValue,
   Skeleton,
-  Link as ChakraLink,
+  // Link as ChakraLink,
   useBreakpoint,
 } from '@chakra-ui/react';
 import Link from 'next/link';

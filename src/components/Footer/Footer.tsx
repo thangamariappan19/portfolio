@@ -3,7 +3,7 @@ import {
   Text,
   useColorModeValue,
   Box,
-  chakra,
+  // chakra,
   Link as ChakraLink,
   Icon,
   Tooltip,
@@ -13,16 +13,16 @@ import {
 } from '@chakra-ui/react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { useQuery } from 'react-query'
-import { BsPauseFill } from 'react-icons/bs'
+// import { BsPauseFill } from 'react-icons/bs'
 import SocialIcons from './SocialIcons'
 
 const Footer = (): JSX.Element => {
-  const { colorMode } = useColorMode()
-  const { error, data: currentlyPlaying } = useQuery(
-    `currentlyPlaying`,
-    () => fetch(`/api/get-now-playing`).then(res => res.json()),
-    { refetchOnMount: true }
-  )
+  // const { colorMode } = useColorMode()
+  // const { error, data: currentlyPlaying } = useQuery(
+  //   `currentlyPlaying`,
+  //   () => fetch(`/api/get-now-playing`).then(res => res.json()),
+  //   { refetchOnMount: true }
+  // )
 
   return (
     <Box
