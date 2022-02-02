@@ -14,8 +14,8 @@ import DesktopNav from './DesktopNav';
 import { useRouter } from 'next/router';
 import { transparentize } from '@chakra-ui/theme-tools';
 import styled from '@emotion/styled';
-import useScrollPosition from '@/hooks/useScrollPosition.hook';
-import { useEffect } from 'react';
+// import useScrollPosition from '@/hooks/useScrollPosition.hook';
+// import { useEffect } from 'react';
 
 const links = [
   {
@@ -49,20 +49,20 @@ const links = [
 function Nav(): JSX.Element {
   const router = useRouter();
   const { colorMode } = useColorMode();
-  const [width, setWidth] = useState(0);
-  const { y, max } = useScrollPosition();
-  const { pathname } = useRouter();
+  const [width] = useState(0);
+  // const { max } = useScrollPosition();
+  // const { pathname } = useRouter();
 
-  const blogPage = pathname === '/blog/[slug]';
+  // const blogPage = pathname === '/blog/[slug]';
 
-  useEffect(() => {
-    if (blogPage) {
-      const newWidth = y / max;
-      if (newWidth !== width) {
-        setWidth(newWidth * 100);
-      }
-    }
-  }, [y, max, width, blogPage]);
+  // useEffect(() => {
+  //   if (blogPage) {
+  //     const newWidth = y / max;
+  //     if (newWidth !== width) {
+  //       setWidth(newWidth * 100);
+  //     }
+  //   }
+  // }, [y, max, width, blogPage]);
 
   return (
     <chakra.header
