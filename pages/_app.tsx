@@ -36,15 +36,15 @@ export default function MyApp({ Component, pageProps }: AppProps): React.ReactEl
   return (
     <>
       <DefaultSeo
-        defaultTitle='Thanga Mariappan'
-        titleTemplate='%s | Thanga Mariappan'
+        defaultTitle='Michael Hall'
+        titleTemplate='%s | Michael Hall'
         openGraph={{
-          title: `Thanga Mariappan`,
+          title: `Michael Hall`,
           type: `website`,
-          site_name: `Thanga Mariappan`,
+          site_name: `Michael Hall`,
           images: [
             {
-              url: `https://github.com/thangamariappan19/static/images/profile.jpeg`,
+              url: `https://www.michael-hall.me/static/images/profile.jpeg`,
               alt: `Profile Picture`,
             },
           ],

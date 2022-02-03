@@ -14,23 +14,26 @@ import DesktopNav from './DesktopNav';
 import { useRouter } from 'next/router';
 import { transparentize } from '@chakra-ui/theme-tools';
 import styled from '@emotion/styled';
-// import useScrollPosition from '@/hooks/useScrollPosition.hook';
-// import { useEffect } from 'react';
+import useScrollPosition from '@/hooks/useScrollPosition.hook';
+import { useEffect } from 'react';
 
 const links = [
+  {
+    name: 'Blog',
+    link: '/blog',
+  },
   {
     name: `Projects`,
     link: `/projects`,
   },
-  // {
-  //   name: `Research`,
-  //   link: `/research`,
-  // },
-  // {
-  //   name: 'Blog',
-  //   link: '/blog',
-  // },
-
+  {
+    name: `Research`,
+    link: `/research`,
+  },
+  {
+    type: `dropdown`,
+    name: `Other`,
+    links: [
       {
         name: `Tools`,
         link: `/tools`,
@@ -39,30 +42,31 @@ const links = [
         name: `Links`,
         link: `/links`,
       },
-      // {
-      //   name: `Music`,
-      //   link: `/spotify`,
-      // },
-  
+      {
+        name: `Music`,
+        link: `/spotify`,
+      },
+    ],
+  },
 ];
 
 function Nav(): JSX.Element {
   const router = useRouter();
   const { colorMode } = useColorMode();
-  const [width] = useState(0);
-  // const { max } = useScrollPosition();
-  // const { pathname } = useRouter();
+  const [width, setWidth] = useState(0);
+  const { y, max } = useScrollPosition();
+  const { pathname } = useRouter();
 
-  // const blogPage = pathname === '/blog/[slug]';
+  const blogPage = pathname === '/blog/[slug]';
 
-  // useEffect(() => {
-  //   if (blogPage) {
-  //     const newWidth = y / max;
-  //     if (newWidth !== width) {
-  //       setWidth(newWidth * 100);
-  //     }
-  //   }
-  // }, [y, max, width, blogPage]);
+  useEffect(() => {
+    if (blogPage) {
+      const newWidth = y / max;
+      if (newWidth !== width) {
+        setWidth(newWidth * 100);
+      }
+    }
+  }, [y, max, width, blogPage]);
 
   return (
     <chakra.header
@@ -130,7 +134,7 @@ function Nav(): JSX.Element {
                   }}
                   color={colorMode === 'light' ? 'gray.900' : 'white'}
                 >
-                  Thanga Mariappan
+                  Michael Hall
                 </ChakraLink>
               )}
             </Link>
@@ -153,7 +157,7 @@ const AnimatedTitle = () => (
     fontWeight='semibold'
     textAlign='center'
   >
-    Thanga Mariappan
+    Michael Hall
     {/* eslint-disable-next-line @next/next/no-img-element */}
     <chakra.svg
       className='path-under'

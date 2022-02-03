@@ -3,26 +3,26 @@ import {
   Text,
   useColorModeValue,
   Box,
-  // chakra,
+  chakra,
   Link as ChakraLink,
   Icon,
   Tooltip,
   Flex,
   SimpleGrid,
-  // useColorMode,
+  useColorMode,
 } from '@chakra-ui/react'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
-// import { useQuery } from 'react-query'
-// import { BsPauseFill } from 'react-icons/bs'
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { useQuery } from 'react-query'
+import { BsPauseFill } from 'react-icons/bs'
 import SocialIcons from './SocialIcons'
 
 const Footer = (): JSX.Element => {
-  // const { colorMode } = useColorMode()
-  // const { error, data: currentlyPlaying } = useQuery(
-  //   `currentlyPlaying`,
-  //   () => fetch(`/api/get-now-playing`).then(res => res.json()),
-  //   { refetchOnMount: true }
-  // )
+  const { colorMode } = useColorMode()
+  const { error, data: currentlyPlaying } = useQuery(
+    `currentlyPlaying`,
+    () => fetch(`/api/get-now-playing`).then(res => res.json()),
+    { refetchOnMount: true }
+  )
 
   return (
     <Box
@@ -40,7 +40,7 @@ const Footer = (): JSX.Element => {
         align='center'
       >
         <Flex direction='row' maxW='full' mx={{ base: `auto`, md: 5 }} alignItems='center'>
-          {/* {currentlyPlaying?.isPlaying ? (
+          {currentlyPlaying?.isPlaying ? (
             <Icon h={4} w={4} viewBox='0 0 168 168' color='brand.500'>
               <path
                 fill='currentColor'
@@ -49,9 +49,9 @@ const Footer = (): JSX.Element => {
             </Icon>
           ) : (
             <Icon color='brand.500' boxSize='1.4em' as={BsPauseFill} />
-          )} */}
+          )}
 
-          {/* <Flex ml={2} isTruncated>
+          <Flex ml={2} isTruncated>
             {currentlyPlaying?.songUrl ? (
               <chakra.a
                 color={colorMode === 'light' ? `gray.900` : `gray.200`}
@@ -86,7 +86,7 @@ const Footer = (): JSX.Element => {
             <chakra.p color='gray.600' isTruncated maxW='full'>
               {currentlyPlaying?.artist ?? `Spotify`}
             </chakra.p>
-          </Flex> */}
+          </Flex>
         </Flex>
         <Text display='flex' alignSelf='center' mx='auto'>
           Built with:
@@ -145,11 +145,15 @@ const Footer = (): JSX.Element => {
           </Tooltip>
         </Text>
         <Stack direction='row' spacing={6} ml='auto' mr={{ base: `auto`, md: 5 }}>
-          <SocialIcons label='GitHub' href='https://github.com/thangamariappan19'>
+          <SocialIcons label='GitHub' href='https://github.com/mah51/'>
             <FaGithub />
           </SocialIcons>
-          <SocialIcons label='LinkedIn' href='https://www.linkedin.com/in/thanga-mariappan-p/'>
+          <SocialIcons label='LinkedIn' href='https://www.linkedin.com/in/michael-hall-86616b17b/'>
             <FaLinkedin />
+          </SocialIcons>
+
+          <SocialIcons label='Instagram' href='https://www.instagram.com/michael.__.hall/'>
+            <FaInstagram />
           </SocialIcons>
         </Stack>
       </SimpleGrid>

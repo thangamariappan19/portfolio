@@ -5,7 +5,7 @@ import { BsFillLightningFill } from 'react-icons/bs';
 import { FaDiscord, FaReact } from 'react-icons/fa';
 import { IoLogoNodejs } from 'react-icons/io';
 import { SiMarkdown } from 'react-icons/si';
-import { NextJSIcon, SemanticIcon, TypeScriptIcon,TailwindCssIcon} from '../Icons';
+import { NextJSIcon, SemanticIcon, TypeScriptIcon } from '../Icons';
 
 const tagDict = {
   React: FaReact,
@@ -16,7 +16,6 @@ const tagDict = {
   MDX: SiMarkdown,
   'Discord.JS': FaDiscord,
   'Semantic-UI': SemanticIcon,
-  'Tailwind css' : TailwindCssIcon,
 };
 
 interface TagsProps {

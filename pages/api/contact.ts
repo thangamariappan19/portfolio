@@ -11,7 +11,7 @@ const handler = (req: NextApiRequest, res: NextApiResponse): void => {
     'https://michael-hall.me/static/images/profile.jpeg',
     'JPEG'
   );
-  vCard.socialUrls['github'] = 'https://github.com/thangamariappan19';
+  vCard.socialUrls['github'] = 'https://github.com/mah51';
 
   res.setHeader('Content-Type', 'text/vcard; name=vcard.vcf');
   res.setHeader('Content-Disposition', 'inline; filename=vcard.vcf');

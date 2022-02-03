@@ -58,6 +58,11 @@ module.exports = withMDX({
     if (dev) return config;
     if (!isServer) return config;
     const missingVars = [
+      'SPOTIFY_CLIENT_ID',
+      'SPOTIFY_CLIENT_SECRET',
+      'SPOTIFY_REFRESH_TOKEN',
+      'FIREBASE_PRIVATE_KEY',
+      'FIREBASE_CLIENT_EMAIL',
     ].filter((envVar) => !process.env[envVar]);
     if (missingVars.length) {
       throw new Error(

@@ -6,10 +6,10 @@ import {
   chakra,
   useColorModeValue,
   Skeleton,
-  // Link as ChakraLink,
+  Link as ChakraLink,
   useBreakpoint,
 } from '@chakra-ui/react';
-// import Link from 'next/link';
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { NextSeo } from 'next-seo';
 import AboutTerminal from '@/components/AboutTerminal';
@@ -54,9 +54,9 @@ export default function Home(): React.ReactElement {
                 flexGrow={3}
                 borderRadius="2xl"
                 boxSize="250px"
-                src="./static/images/profile.png"
+                src="./static/images/profile.jpeg"
                 objectFit="cover"
-                alt="Thanga Mariappan"
+                alt="Michael Hall"
                 onLoad={() => setImageLoad(true)}
               />
             </Skeleton>
@@ -80,7 +80,7 @@ export default function Home(): React.ReactElement {
                 fontSize={{ base: `5xl`, lg: `7xl` }}
                 textAlign={{ base: `center`, lg: `left` }}
               >
-                Hi, I&apos;m Thanga!
+                Hi, I&apos;m Michael!
               </Heading>
               <chakra.p
                 maxW="650px"
@@ -88,7 +88,7 @@ export default function Home(): React.ReactElement {
                 fontSize="xl"
                 mt={2}
               >
-                {/* Welcome to my website! I use this to show some of my{' '}
+                Welcome to my website! I use this to show some of my{' '}
                 <Link href="/projects" passHref>
                   <ChakraLink>projects</ChakraLink>
                 </Link>{' '}
@@ -108,13 +108,10 @@ export default function Home(): React.ReactElement {
                 that I like. Sometimes I even write{' '}
                 <Link href="/blog" passHref>
                   <ChakraLink>blogs</ChakraLink>
-                </Link> */}
-                I’m passionate about working on open source products & building thriving communities around them and I have at least learnt something, I think… 🤷‍♂️
-My field of Interests are building new Web Technologies and Products
-
-A passionate  Software Developer 🚀
-I have an experience of building Web applications with
-JavaScript, Angular,NextJs,Reactjs and some other cool libraries
+                </Link>
+                . I am currently undertaking a research masters degree in
+                Computational Biology at the University of Kent; attempting to
+                predict protein function from sequence using deep learning.
               </chakra.p>
             </Flex>
           </Flex>
