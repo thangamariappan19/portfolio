@@ -29,20 +29,12 @@ const projects = [
     livePreview: 'https://techsheet.vercel.app/',
   },
   {
-    name: 'Project 2',
+    name: 'Portfolio',
     description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
-  },
-  {
-    name: 'Project 3',
-    description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+      'The Complete Customizable Front End Developer Portfolio Template which lets you showcase your skills,work and provides each and every detail about you as Front End Developer.',
+    stack: ['REACT', 'HTML', 'VERCEL'],
+    sourceCode: 'https://github.com/thangamariappan19/portfolio.git',
+    livePreview: 'https://thangamariappan.vercel.app/',
   },
 ]
 
