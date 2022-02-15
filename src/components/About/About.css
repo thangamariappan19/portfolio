@@ -17,7 +17,7 @@
 }
 
 .about__desc,
-.about__contact {
+.about__contact,.about__role,.about__name {
   margin-top: 2.4em;
   padding:1em;
     text-align: center;
