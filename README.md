@@ -1,5 +1,8 @@
 ## Portfolio
 
+<div align="center">
+  <img alt="screenshot" src="./public/index.png" />
+</div>
 <center>
 
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com) &nbsp;
