@@ -32,9 +32,23 @@ const projects = [
     name: 'Portfolio',
     description:
       'The Complete Customizable Front End Developer Portfolio Template which lets you showcase your skills,work and provides each and every detail about you as Front End Developer.',
-    stack: ['REACT', 'HTML', 'VERCEL'],
+    stack: ['React', 'HTML', 'Vercel'],
     sourceCode: 'https://github.com/thangamariappan19/portfolio.git',
     livePreview: 'https://thangamariappan.vercel.app/',
+  },
+  {
+    name: 'E.C.I.N',
+    description:
+      'E.C.I. Networks delivers the Open Networking solutions with the network optics you need for tomorrow’s Data and monitoring, backed by trusted expertise, outstanding service and end-to-end support.',
+    stack: ['Big-Commerce', 'HTML', 'Core-js'],
+    livePreview: 'https://ecin.ca/',
+  },
+  {
+    name: 'Testoper',
+    description:
+      'Testoper Programs aim to develop future skills and innovation at the heart of growth in the age of intelligent technology',
+    stack: ['Wordddpress', 'HTML', 'PHP'],
+    livePreview: 'https://www.testoper.com/',
   },
 ]
 
