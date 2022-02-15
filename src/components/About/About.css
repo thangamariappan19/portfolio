@@ -19,6 +19,17 @@
 .about__desc,
 .about__contact {
   margin-top: 2.4em;
+  padding:1em;
+    text-align: center;
+    display:inline-block;
+    text-decoration: none !important;
+    margin:0 auto;
+
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .about .link--icon {
