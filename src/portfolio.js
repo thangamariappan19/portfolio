@@ -9,7 +9,7 @@ const about = {
   name: 'Thanga Mariappan',
   role: 'Front End Developer',
   description:
-    'I am a Front-end Developer.I like to code things from scratch, I like dabbling in various parts of frontend development and like to learn about new technologies, read technical articles or simply play games in my free time.',
+    'I like to code things from scratch, I like dabbling in various parts of frontend development and like to learn about new technologies, read technical articles or simply play games in my free time.',
   resume: '',
   social: {
     linkedin: 'https://www.linkedin.com/in/thanga-mariappan-p/',
