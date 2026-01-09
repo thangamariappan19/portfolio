@@ -5,8 +5,8 @@
   "homepage": "https://thangamariappan.vercel.app/",
 
   "engines": {
-    "node": "18.x"
-  },
+  "node": "24.x"
+},
 
   "dependencies": {
     "@material-ui/core": "^4.12.4",
