@@ -1,16 +1,14 @@
 const header = {
-  // all the properties are optional - can be left empty or deleted
   homepage: 'https://thangamariappan.vercel.app/',
   title: 'TM.',
 }
 
 const about = {
-  // all the properties are optional - can be left empty or deleted
   name: 'Thanga Mariappan',
-  role: 'Front End Developer',
+  role: 'Senior Full Stack (Angular) Engineer | Technology Lead',
   description:
-    'I like to code things from scratch, I like dabbling in various parts of frontend development and like to learn about new technologies, read technical articles or simply play games in my free time.',
-  resume: '',
+    'Senior engineer with 9+ years of experience building and scaling enterprise e-commerce and web platforms for global clients including Siemens Gamesa, BASF and AGCO. Specialized in Angular (8–19), Spartacus, GraphQL and production-grade frontend architecture with strong ownership of performance, stability and CI/CD driven releases.',
+  resume: '', // add PDF link when ready
   social: {
     linkedin: 'https://www.linkedin.com/in/thanga-mariappan-p/',
     github: 'https://github.com/thangamariappan19',
@@ -18,59 +16,57 @@ const about = {
 }
 
 const projects = [
-  // projects can be added an removed
-  // if there are no projects, Projects section won't show up
+  {
+    name: 'Siemens Gamesa – E-commerce Storefront',
+    description:
+      'Enterprise Spartacus-based Angular storefront serving 100K+ users. Worked on checkout flows, performance optimization and production releases reducing cart drop-offs by 20%.',
+    stack: ['Angular', 'Spartacus', 'TypeScript', 'REST APIs', 'SCSS'],
+  },
+  {
+    name: 'BASF Winecellar – Global Commerce Platform',
+    description:
+      'Built and maintained Angular-GraphQL based commerce platform integrated with Magnolia CMS, handling 50K+ transactions with 99% uptime.',
+    stack: ['Angular', 'GraphQL', 'Magnolia CMS', 'TypeScript'],
+  },
+  {
+    name: 'AGCO – Dealer & Equipment Platform',
+    description:
+      'Led Angular 8 → 13 migration improving runtime performance by 30% and build time by 40% across enterprise modules.',
+    stack: ['Angular', 'TypeScript', 'NgRx', 'Karma', 'Jasmine'],
+  },
   {
     name: 'Tech Sheet',
     description:
-      'Techsheets for popular programming languages, frameworks and development tools. They include everything you should know in one single page.',
-    stack: ['Next.js', 'Tailwind Css', 'React'],
+      'Tech sheets for popular programming languages, frameworks and development tools built using Next.js and Tailwind.',
+    stack: ['Next.js', 'Tailwind CSS', 'React'],
     sourceCode: 'https://github.com/thangamariappan19/techsheet.git',
     livePreview: 'https://techsheet.vercel.app/',
-  },
-  {
-    name: 'Portfolio',
-    description:
-      'The Complete Customizable Front End Developer Portfolio Template which lets you showcase your skills,work and provides each and every detail about you as Front End Developer.',
-    stack: ['React', 'HTML', 'Vercel'],
-    sourceCode: 'https://github.com/thangamariappan19/portfolio.git',
-    livePreview: 'https://thangamariappan.vercel.app/',
-  },
-  {
-    name: 'E.C.I.N',
-    description:
-      'E.C.I. Networks delivers the Open Networking solutions with the network optics you need for tomorrow’s Data and monitoring, backed by trusted expertise, outstanding service and end-to-end support.',
-    stack: ['Big-Commerce', 'HTML', 'Core-js'],
-    livePreview: 'https://ecin.ca/',
-  },
-  {
-    name: 'Testoper',
-    description:
-      'Testoper Programs aim to develop future skills and innovation at the heart of growth in the age of intelligent technology',
-    stack: ['Wordddpress', 'HTML', 'PHP'],
-    livePreview: 'https://www.testoper.com/',
   },
 ]
 
 const skills = [
-  // skills can be added or removed
-  // if there are no skills, Skills section won't show up
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'TypeScript',
-  'React',
   'Angular',
-  'SASS',
-  'Material UI',
+  'Spartacus',
+  'TypeScript',
+  'JavaScript',
+  'HTML5',
+  'CSS3',
+  'SCSS',
+  'RxJS',
+  'NgRx',
+  'Node.js',
+  'GraphQL',
+  'REST APIs',
+  'Magnolia CMS',
+  'Contentful',
   'Git',
+  'Docker',
   'CI/CD',
-  'Wordpress',
-  'BigCommerce'
+  'Azure DevOps',
+  'AWS'
 ]
 
 const contact = {
-  // email is optional - if left empty Contact section won't show up
   email: 'thangamariappancse@gmail.com',
 }
 
