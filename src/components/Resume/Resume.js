@@ -102,7 +102,7 @@ const Resume = () => {
             <span className='resume__stat-label'>Technologies</span>
           </div>
           <div className='resume__stat'>
-            <span className='resume__stat-value'>3</span>
+            <span className='resume__stat-value'>10+</span>
             <span className='resume__stat-label'>Global Clients</span>
           </div>
         </div>
