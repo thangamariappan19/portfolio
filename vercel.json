@@ -1,5 +1,4 @@
 {
   "buildCommand": "npm install --legacy-peer-deps && npm run build",
-  "installCommand": "npm install --legacy-peer-deps",
-  "nodeVersion": "24.x"
+  "installCommand": "npm install --legacy-peer-deps"
 }
