@@ -4,11 +4,11 @@ const header = {
 }
 
 const about = {
-  name: 'Thanga Mariappan',
+  name: 'Thanga Mariappan Pandian',
   role: 'Senior Full Stack (Angular) Engineer | Technology Lead',
   description:
     'Senior engineer with 9+ years of experience building and scaling enterprise e-commerce and web platforms for global clients including Siemens Gamesa, BASF and AGCO. Specialized in Angular (8–19), Spartacus, GraphQL and production-grade frontend architecture with strong ownership of performance, stability and CI/CD driven releases.',
-  resume: '', // add PDF link when ready
+  resume: '', 
   social: {
     linkedin: 'https://www.linkedin.com/in/thanga-mariappan-p/',
     github: 'https://github.com/thangamariappan19',
