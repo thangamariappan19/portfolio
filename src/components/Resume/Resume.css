@@ -66,14 +66,16 @@
 .resume__btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.8em;
-  padding: 1em 2em;
+  justify-content: center;
+  gap: 0.75em;
+  padding: 0.95em 2em;
   background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-light));
   color: var(--clr-bg);
   border: none;
   border-radius: 10px;
   font-weight: 600;
   font-size: 1rem;
+  line-height: 1.2;
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
