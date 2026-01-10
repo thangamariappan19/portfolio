@@ -55,15 +55,23 @@ const skills = {
   },
   backend: {
     title: 'Backend & APIs',
-    items: ['Node.js', 'GraphQL', 'REST APIs', 'Express.js']
+    items: ['Node.js', 'Express.js', 'GraphQL', 'REST APIs']
   },
   cms: {
-    title: 'CMS & Platforms',
-    items: ['Spartacus', 'Magnolia CMS', 'Contentful']
+    title: 'CMS & E-Commerce',
+    items: ['Spartacus', 'Magnolia CMS', 'Contentful', 'WordPress', 'Shopify']
   },
-  tools: {
-    title: 'Tools & DevOps',
-    items: ['Git', 'Docker', 'CI/CD', 'Azure DevOps', 'AWS', 'Webpack', 'Karma', 'Jasmine']
+  devops: {
+    title: 'DevOps & Tools',
+    items: ['Git', 'Docker', 'AWS', 'Azure DevOps', 'CI/CD', 'Webpack']
+  },
+  testing: {
+    title: 'Testing',
+    items: ['Karma', 'Jasmine']
+  },
+  methodologies: {
+    title: 'Methodologies',
+    items: ['Agile', 'Scrum']
   }
 }
 
