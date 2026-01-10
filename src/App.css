@@ -1,58 +1,108 @@
 .app {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.5;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
   color: var(--clr-fg);
   background-color: var(--clr-bg);
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .light {
   --clr-bg: #fcfcfc;
-  --clr-bg-alt: #fff;
-  --clr-fg: #555;
-  --clr-fg-alt: #444;
+  --clr-bg-alt: #f8f9fa;
+  --clr-fg: #1a1a1a;
+  --clr-fg-alt: #0d0d0d;
   --clr-primary: #2978b5;
-  --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --clr-primary-light: #5ba3d0;
+  --clr-primary-dark: #1a4d7f;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.07), 0 10px 20px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
 .dark {
-  --clr-bg: #23283e;
-  --clr-bg-alt: #2a2f4c;
-  --clr-fg: #bdbddd;
-  --clr-fg-alt: #cdcdff;
-  --clr-primary: #90a0d9;
-  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  --clr-bg: #0f1419;
+  --clr-bg-alt: #1a202c;
+  --clr-fg: #e2e8f0;
+  --clr-fg-alt: #f1f5f9;
+  --clr-primary: #60a5fa;
+  --clr-primary-light: #93c5fd;
+  --clr-primary-dark: #3b82f6;
+  --shadow: 0 10px 15px rgba(0, 0, 0, 0.3), 0 4px 6px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 20px 25px rgba(0, 0, 0, 0.4), 0 0 1px rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 main {
-  max-width: 1100px;
-  width: 95%;
+  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
+  padding: 2rem 1.5rem;
 }
 
 .section {
-  margin-top: 5em;
+  margin-top: 6em;
+  scroll-margin-top: 80px;
 }
 
 .section__title {
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 3em;
   text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1.5rem 1rem;
+  }
+
+  .section {
+    margin-top: 4em;
+  }
+
+  .section__title {
+    font-size: 1.8rem;
+    margin-bottom: 2.5em;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1rem;
+  }
+
+  .section {
+    margin-top: 3em;
+  }
+
+  .section__title {
+    font-size: 1.5rem;
+    margin-bottom: 2em;
+  }
 }
 
 .center {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .link {
   color: var(--clr-primary);
   padding: 0 0 0.3em 0;
   position: relative;
+  font-weight: 500;
 }
 
 .link:hover {
-  color: var(--clr-primary);
+  color: var(--clr-primary-light);
 }
 
 .link::before {
@@ -62,8 +112,8 @@ main {
   height: 0.2em;
   position: absolute;
   bottom: 0;
-  background-color: var(--clr-primary);
-  transition: width 0.2s ease-in;
+  background: linear-gradient(90deg, var(--clr-primary), var(--clr-primary-light));
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover::before,
@@ -73,22 +123,55 @@ main {
 
 .link--nav {
   color: var(--clr-fg);
-  /* text-transform: lowercase; */
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 0.95rem;
+  position: relative;
+  padding: 0.5em 0;
+}
+
+.link--nav::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--clr-primary), transparent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.link--nav:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .link--icon {
   color: var(--clr-fg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.link--icon:hover {
+  color: var(--clr-primary);
+  transform: translateY(-2px) scale(1.1);
 }
 
 .btn {
-  display: block;
+  display: inline-block;
   cursor: pointer;
-  padding: 0.8em 1.4em;
-  font-weight: 500;
-  font-size: 0.9rem;
+  padding: 0.8em 1.6em;
+  font-weight: 600;
+  font-size: 0.95rem;
   text-transform: lowercase;
-  transition: transform 0.2s ease-in-out;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  letter-spacing: 0.5px;
 }
 
 .btn--outline {
@@ -97,56 +180,104 @@ main {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  background: transparent;
 }
 
-.btn--outline:hover,
-.btn--outline:focus {
-  color: var(--clr-bg);
-}
-
-.btn--outline:before {
+.btn--outline::before {
   content: '';
   position: absolute;
-  background-color: var(--clr-primary);
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-light));
   right: 100%;
   bottom: 0;
   left: 0;
   top: 0;
   z-index: -1;
-  transition: right 0.2s ease-in-out;
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn--outline:hover:before,
-.btn--outline:focus:before {
+.btn--outline:hover,
+.btn--outline:focus {
+  color: var(--clr-bg);
+  border-color: var(--clr-primary-light);
+  box-shadow: 0 8px 16px rgba(41, 120, 181, 0.2);
+}
+
+.btn--outline:hover::before,
+.btn--outline:focus::before {
   right: 0;
 }
 
 .btn--plain {
   text-transform: initial;
   background-color: var(--clr-bg-alt);
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
-  border: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
+  color: var(--clr-fg);
+}
+
+.dark .btn--plain {
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .btn--plain:hover {
   transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  background-color: var(--clr-primary);
+  color: var(--clr-bg);
+  border-color: var(--clr-primary);
 }
 
 .btn--icon {
-  padding: 0;
+  padding: 0.5em;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
 }
 
 .btn--icon:hover,
 .btn--icon:focus {
   color: var(--clr-primary);
+  transform: scale(1.15);
 }
 
 .btn--icon:active {
-  transform: translateY(-5px);
+  transform: scale(0.95);
+}
+
+/* Smooth transitions and animations */
+@media (prefers-reduced-motion: no-preference) {
+  .app {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    width: 97%;
+    padding: 1.5rem 0;
+  }
+
+  .section {
+    margin-top: 4em;
+  }
+
+  .section__title {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 600px) {
   .section {
-    margin-top: 4em;
+    margin-top: 3em;
+  }
+
+  .section__title {
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .btn {
+    padding: 0.7em 1.4em;
+    font-size: 0.9rem;
   }
 }

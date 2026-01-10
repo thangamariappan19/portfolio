@@ -6,17 +6,16 @@ const Header = () => {
   const { homepage, title } = header
 
   return (
-    <header className='header center'>
-      <h3>
+    <header className='header'>
+      <div className='header__logo'>
         {homepage ? (
-          <a href={homepage} className='link'>
+          <a href={homepage} className='header__logo-link'>
             {title}
           </a>
         ) : (
-          title
+          <span className='header__logo-text'>{title}</span>
         )}
-      </h3>
-      <Navbar />
+      </div>      <Navbar />
     </header>
   )
 }

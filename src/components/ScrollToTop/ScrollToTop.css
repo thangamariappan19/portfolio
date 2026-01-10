@@ -1,12 +1,54 @@
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .scroll-top {
   position: fixed;
-  bottom: 2em;
-  right: 4em;
-  background-color: transparent;
+  bottom: 2.5em;
+  right: 2.5em;
+  z-index: 98;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-light));
+  color: var(--clr-bg);
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: var(--shadow-lg);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.scroll-top:hover {
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 0 12px 28px rgba(41, 120, 181, 0.35);
+}
+
+.scroll-top:active {
+  transform: scale(0.95);
 }
 
 @media (max-width: 900px) {
   .scroll-top {
-    display: none;
+    bottom: 2em;
+    right: 2em;
+    width: 52px;
+    height: 52px;
+  }
+}
+
+@media (max-width: 600px) {
+  .scroll-top {
+    bottom: 1.5em;
+    right: 1.5em;
+    width: 48px;
+    height: 48px;
   }
 }

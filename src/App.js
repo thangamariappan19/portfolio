@@ -4,6 +4,7 @@ import Header from './components/Header/Header'
 import About from './components/About/About'
 import Projects from './components/Projects/Projects'
 import Skills from './components/Skills/Skills'
+import Resume from './components/Resume/Resume'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
@@ -20,6 +21,7 @@ const App = () => {
         <About />
         <Projects />
         <Skills />
+        <Resume />
         <Contact />
       </main>
 

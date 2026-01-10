@@ -1,39 +1,129 @@
-.nav__list {
-  margin-right: 1.5em;
+.nav {
   display: flex;
-}
-.nav__list-item {
-  margin-left: 1.5em;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5em;
+  margin-left: auto;
 }
 
-.app .nav__hamburger {
+.nav__list {
   display: none;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+
+@media (min-width: 769px) {
+  .nav__list {
+    display: flex;
+    gap: 2.5em;
+  }
+}
+
+.nav__list-item {
+  position: relative;
+}
+
+.nav__list-item .link--nav {
+  padding: 0.5em 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 .nav__theme {
-  margin-top: 0.4em;
+  padding: 0.6em;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
-@media (max-width: 600px) {
+.nav__theme:hover {
+  background: var(--clr-bg-alt);
+  transform: rotate(20deg);
+}
+
+.nav__hamburger {
+  display: inline-flex;
+  padding: 0.5em;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  z-index: 101;
+}
+
+.nav__controls {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+@media (min-width: 769px) {
+  .nav__hamburger {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
   .nav__list {
     display: none;
+  }
+
+  .nav__list--active {
+    display: flex;
+    position: fixed;
+    inset: 0;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    inset: 0;
     width: 100%;
-    height: 100%;
-    z-index: 2;
+    height: 100vh;
+    z-index: 50;
+    gap: 2em;
+    background: var(--clr-bg);
+    backdrop-filter: blur(10px);
+    padding-top: 5em;
   }
 
   .nav__list-item {
-    margin: 0.5em 0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInDown 0.4s ease-out forwards;
   }
 
-  .app .nav__hamburger {
-    display: flex;
-    z-index: 2;
-    margin-left: 0.8em;
+  .nav__list-item:nth-child(1) {
+    animation-delay: 0.05s;
+  }
+
+  .nav__list-item:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+
+  .nav__list-item:nth-child(3) {
+    animation-delay: 0.15s;
+  }
+
+  .nav__list-item .link--nav {
+    font-size: 1.5rem;
+  }
+
+  .nav__controls {
+    gap: 0.5em;
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

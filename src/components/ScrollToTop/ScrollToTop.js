@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward'
+import { ArrowUp } from 'lucide-react'
 import './ScrollToTop.css'
 
 const ScrollToTop = () => {
@@ -13,12 +13,21 @@ const ScrollToTop = () => {
     return () => window.removeEventListener('scroll', toggleVisibility)
   }, [])
 
+  const handleClick = (e) => {
+    e.preventDefault()
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return isVisible ? (
-    <div className='scroll-top'>
-      <a href='#top'>
-        <ArrowUpwardIcon fontSize='large' />
-      </a>
-    </div>
+    <a 
+      href='#top'
+      className='scroll-top'
+      onClick={handleClick}
+      aria-label='Scroll to top'
+      title='Scroll to top'
+    >
+      <ArrowUp size={24} strokeWidth={2.5} />
+    </a>
   ) : null
 }
 

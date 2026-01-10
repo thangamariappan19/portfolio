@@ -1,8 +1,5 @@
 import { useContext, useState } from 'react'
-import Brightness2Icon from '@material-ui/icons/Brightness2'
-import WbSunnyRoundedIcon from '@material-ui/icons/WbSunnyRounded'
-import MenuIcon from '@material-ui/icons/Menu'
-import CloseIcon from '@material-ui/icons/Close'
+import { Moon, Sun, Menu, X } from 'lucide-react'
 import { ThemeContext } from '../../contexts/theme'
 import { projects, skills, contact } from '../../portfolio'
 import './Navbar.css'
@@ -13,66 +10,87 @@ const Navbar = () => {
 
   const toggleNavList = () => setShowNavList(!showNavList)
 
+  const hasProjects = projects && projects.length > 0
+  const hasSkills = skills && Object.keys(skills).length > 0
+  const hasContact = contact && contact.email
+
   return (
-    <nav className='center nav'>
+    <nav className='nav'>
       <ul
-        style={{ display: showNavList ? 'flex' : null }}
-        className='nav__list'
+        className={`nav__list ${showNavList ? 'nav__list--active' : ''}`}
       >
-        {projects.length ? (
+        {hasProjects && (
           <li className='nav__list-item'>
             <a
               href='#projects'
-              onClick={toggleNavList}
+              onClick={(e) => {
+                setShowNavList(false)
+              }}
               className='link link--nav'
             >
               Projects
             </a>
           </li>
-        ) : null}
+        )}
 
-        {skills.length ? (
+        {hasSkills && (
           <li className='nav__list-item'>
             <a
               href='#skills'
-              onClick={toggleNavList}
+              onClick={(e) => {
+                setShowNavList(false)
+              }}
               className='link link--nav'
             >
               Skills
             </a>
           </li>
-        ) : null}
+        )}
 
-        {contact.email ? (
+        {hasContact && (
           <li className='nav__list-item'>
             <a
               href='#contact'
-              onClick={toggleNavList}
+              onClick={(e) => {
+                setShowNavList(false)
+              }}
               className='link link--nav'
             >
               Contact
             </a>
           </li>
-        ) : null}
+        )}
       </ul>
 
-      <button
-        type='button'
-        onClick={toggleTheme}
-        className='btn btn--icon nav__theme'
-        aria-label='toggle theme'
-      >
-        {themeName === 'dark' ? <WbSunnyRoundedIcon /> : <Brightness2Icon />}
-      </button>
+      <div className='nav__controls'>
+        <button
+          type='button'
+          onClick={toggleTheme}
+          className='btn btn--icon nav__theme'
+          aria-label={`Switch to ${themeName === 'dark' ? 'light' : 'dark'} mode`}
+          title={`${themeName === 'dark' ? 'Light' : 'Dark'} mode`}
+        >
+          {themeName === 'dark' ? (
+            <Sun size={20} strokeWidth={2} />
+          ) : (
+            <Moon size={20} strokeWidth={2} />
+          )}
+        </button>
 
-      <button
-        type='button'
-        onClick={toggleNavList}
-        className='btn btn--icon nav__hamburger'
-        aria-label='toggle navigation'
-      >
-        {showNavList ? <CloseIcon /> : <MenuIcon />}
-      </button>
+        <button
+          type='button'
+          onClick={toggleNavList}
+          className='btn btn--icon nav__hamburger'
+          aria-label='toggle navigation menu'
+          aria-expanded={showNavList}
+        >
+          {showNavList ? (
+            <X size={24} strokeWidth={2} />
+          ) : (
+            <Menu size={24} strokeWidth={2} />
+          )}
+        </button>
+      </div>
     </nav>
   )
 }
