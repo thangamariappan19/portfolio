@@ -1,0 +1,126 @@
+.header {
+  min-height: 90vh;
+  /* Increased slighty */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-top: 120px;
+    /* Force push down from fixed navbar */
+    justify-content: flex-start;
+    /* Start from top + padding instead of centering which might push up */
+    min-height: auto;
+    /* Allow natural height */
+    padding-bottom: 4rem;
+  }
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.header h3 {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--clr-primary);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+.header__name {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--clr-fg);
+  margin: 0;
+}
+
+.header__role {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--clr-fg-alt);
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .header__name {
+    font-size: 2.5rem;
+    /* Slightly smaller to fit "Hi, I am..." */
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .header__role {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .header__headline {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+.header__headline {
+  margin-top: 1rem;
+  max-width: 600px;
+  font-size: 1.1rem;
+  color: var(--clr-fg-alt);
+}
+
+.text-primary {
+  color: var(--clr-primary);
+}
+
+.header__actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Animations */
+.header__name {
+  opacity: 0;
+  animation: fadeUp 0.6s ease-out forwards 0.2s;
+}
+
+.header__role {
+  opacity: 0;
+  animation: fadeUp 0.6s ease-out forwards 0.4s;
+}
+
+.header__headline {
+  opacity: 0;
+  animation: fadeUp 0.6s ease-out forwards 0.6s;
+}
+
+.header__actions {
+  opacity: 0;
+  animation: fadeUp 0.6s ease-out forwards 0.8s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

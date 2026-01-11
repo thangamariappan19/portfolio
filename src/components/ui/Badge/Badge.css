@@ -1,0 +1,25 @@
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.badge--default {
+    background-color: var(--clr-bg-alt);
+    color: var(--clr-fg);
+}
+
+.badge--outline {
+    background-color: transparent;
+    border: 1px solid var(--clr-primary);
+    color: var(--clr-primary);
+}
+
+.badge--solid {
+    background-color: var(--clr-primary);
+    color: #fff;
+}

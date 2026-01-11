@@ -1,0 +1,62 @@
+.contact {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Ensure vertical centering too if needed */
+  padding: 4rem 2rem;
+  background: var(--clr-bg-alt);
+  border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+  margin-top: 4rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dark .contact {
+  background: rgba(17, 34, 64, 0.4);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact__content {
+  margin-top: 2.5rem;
+}
+
+.contact .btn--primary {
+  background: var(--clr-primary);
+  color: #fff;
+  padding: 1.2rem 3rem;
+  /* Larger touch target */
+  font-size: 1.2rem;
+  border-radius: 50px;
+  /* Pill shape */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+  /* Updated color to match variable roughly */
+  transition: all 0.2s ease;
+  min-width: 200px;
+}
+
+.contact .btn--primary:hover {
+  background: var(--clr-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 118, 255, 0.23);
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 3rem 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .contact .btn--primary {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+}

@@ -1,0 +1,67 @@
+.section {
+    padding: 4rem 1.5rem;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .section {
+        padding: 6rem 2rem;
+    }
+}
+
+.section__content {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section__content--md {
+    max-width: 768px;
+}
+
+.section__content--lg {
+    max-width: 1024px;
+}
+
+.section__content--xl {
+    max-width: 1280px;
+}
+
+.section__content--full {
+    max-width: 100%;
+}
+
+.section__header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.section__title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--clr-fg);
+    /* Changed from primary to fg for cleaner look, primary used for accents */
+    position: relative;
+    display: inline-block;
+}
+
+/* Add a subtle underline decoration */
+.section__title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--clr-primary);
+    margin: 0.5rem auto 0;
+    /* Center aligned */
+    border-radius: 2px;
+}
+
+.section__subtitle {
+    font-size: 1.125rem;
+    color: var(--clr-fg-alt);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
