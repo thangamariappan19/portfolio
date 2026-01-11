@@ -10,6 +10,13 @@
   border-color: rgba(255, 255, 255, 0.05);
 }
 
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
 .footer__link {
   font-family: var(--font-body);
   font-size: 0.9rem;
@@ -21,6 +28,14 @@
 
 .footer__link:hover {
   color: var(--clr-primary);
+}
+
+.footer__legal {
+  font-size: 0.75rem;
+  color: var(--clr-fg-alt);
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 @media (max-width: 768px) {
