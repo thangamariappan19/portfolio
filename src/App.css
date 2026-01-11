@@ -22,6 +22,7 @@
   --clr-primary: #2563eb;
   --clr-primary-light: #60a5fa;
   --clr-primary-dark: #1d4ed8;
+  --clr-primary-text: #ffffff;
   --clr-accent: #0f172a;
   --border-sm: 1px solid rgba(0, 0, 0, 0.08);
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -36,6 +37,7 @@
   --clr-primary: #64ffda;
   --clr-primary-light: #99ffee;
   --clr-primary-dark: #4cd6b3;
+  --clr-primary-text: #0a192f;
   --clr-accent: #ffffff;
   --border-sm: 1px solid rgba(255, 255, 255, 0.08);
   --shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
@@ -189,7 +191,7 @@ main {
 
 .btn--primary {
   background: var(--clr-primary);
-  color: #ffffff;
+  color: var(--clr-primary-text);
   box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
 }
 
@@ -197,7 +199,7 @@ main {
   background: var(--clr-primary-dark);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(37, 99, 235, 0.23);
-  color: #ffffff;
+  color: var(--clr-primary-text);
 }
 
 .btn--outline {

@@ -28,7 +28,7 @@
 
 .contact .btn--primary {
   background: var(--clr-primary);
-  color: #fff;
+  color: var(--clr-primary-text);
   padding: 1.2rem 3rem;
   /* Larger touch target */
   font-size: 1.2rem;
@@ -46,6 +46,7 @@
   background: var(--clr-primary-dark);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 118, 255, 0.23);
+  color: var(--clr-primary-text);
 }
 
 @media (max-width: 768px) {
