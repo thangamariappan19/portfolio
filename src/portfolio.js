@@ -5,10 +5,10 @@ const header = {
 
 const about = {
   name: 'Thanga Mariappan Pandian',
-  role: 'Senior Full Stack (Angular) Engineer | Technology Lead',
+  role: 'Technology Lead | Frontend Architect',
   description:
-    'Senior engineer with 9+ years of experience building and scaling enterprise e-commerce and web platforms for global clients including Siemens Gamesa, BASF and AGCO. Specialized in Angular (8–19), Spartacus, GraphQL and production-grade frontend architecture with strong ownership of performance, stability and CI/CD driven releases.',
-  resume: '/Thanga_Mariappan.pdf',
+    'Senior engineer with 9+ years of experience building and scaling enterprise e-commerce and web platforms for global leaders. Lead Architect of the Hybrid RTO Predictive Analytics system, specializing in Angular, research-grade forecasting, and privacy-preserving data architectures.',
+  resume: null,
   social: {
     linkedin: 'https://www.linkedin.com/in/thanga-mariappan-p/',
     github: 'https://github.com/thangamariappan19',
@@ -16,6 +16,15 @@ const about = {
 }
 
 const projects = [
+  {
+    name: 'Hybrid RTO Predictive Analytics',
+    description:
+      'Enterprise-grade forecasting system to predict office occupancy patterns using multi-modal behavioral signals and privacy protocols.',
+    stack: ['Angular', 'FastAPI', 'Python', 'Chart.js', 'SCSS'],
+    category: 'Machine Learning',
+    sourceCode: 'https://github.com/thangamariappan19/rto',
+    livePreview: 'https://returntooffice.vercel.app/',
+  },
   {
     name: 'Siemens Gamesa – E-commerce Storefront',
     description:

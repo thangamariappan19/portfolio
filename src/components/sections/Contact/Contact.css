@@ -4,60 +4,72 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* Ensure vertical centering too if needed */
-  padding: 4rem 2rem;
-  background: var(--clr-bg-alt);
-  border-radius: 24px;
+  padding: 6rem 3rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 40px;
   box-shadow: var(--shadow-lg);
-  margin-top: 4rem;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  max-width: 800px;
+  margin-top: 3rem;
+  border: 1px solid var(--glass-border);
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  overflow: hidden;
 }
 
-.dark .contact {
-  background: rgba(17, 34, 64, 0.4);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.contact::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+  z-index: -1;
 }
 
 .contact__content {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
+  width: 100%;
 }
 
 .contact .btn--primary {
   background: var(--clr-primary);
-  color: var(--clr-primary-text);
-  padding: 1.2rem 3rem;
-  /* Larger touch target */
-  font-size: 1.2rem;
-  border-radius: 50px;
-  /* Pill shape */
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
-  /* Updated color to match variable roughly */
-  transition: all 0.2s ease;
-  min-width: 200px;
+  color: var(--clr-bg);
+  padding: 1.5rem 4rem;
+  font-size: 1.25rem;
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: none;
 }
 
 .contact .btn--primary:hover {
-  background: var(--clr-primary-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 118, 255, 0.23);
-  color: var(--clr-primary-text);
+  background: var(--clr-primary-light);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(16, 185, 129, 0.4);
+  color: var(--clr-bg);
 }
 
 @media (max-width: 768px) {
   .contact {
-    padding: 3rem 1.5rem;
+    padding: 2.5rem 1.5rem;
     margin-top: 3rem;
+    border-radius: 24px;
+  }
+
+  .contact__content {
+    margin-top: 1.75rem;
   }
 
   .contact .btn--primary {
-    padding: 1rem 2.5rem;
-    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
     width: 100%;
   }
 }

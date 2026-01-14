@@ -7,7 +7,7 @@ const Contact = () => {
   if (!contact.email) return null;
 
   return (
-    <SectionContainer id='contact' title='Contact' subtitle="Let's build something architecturally sound together." className='contact center'>
+    <SectionContainer id='contact' title='Work Together' subtitle="Let's build something architecturally sound." className='contact center'>
       <div className='contact__content'>
         <a href={`mailto:${contact.email}`}>
           <button type='button' className='btn btn--primary'>

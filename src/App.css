@@ -17,82 +17,158 @@
 .light {
   --clr-bg: #f8faff;
   --clr-bg-alt: #ffffff;
-  --clr-fg: #1e293b;
+  --clr-fg: #0f172a;
   --clr-fg-alt: #475569;
-  --clr-primary: #2563eb;
-  --clr-primary-light: #60a5fa;
+  --clr-primary: #3b82f6;
+  --clr-primary-light: #93c5fd;
   --clr-primary-dark: #1d4ed8;
   --clr-primary-text: #ffffff;
-  --clr-accent: #0f172a;
-  --border-sm: 1px solid rgba(0, 0, 0, 0.08);
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --clr-accent: #6366f1;
+  --border-sm: 1px solid rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
 }
 
 .dark {
-  --clr-bg: #0a192f;
-  --clr-bg-alt: #112240;
-  --clr-fg: #ccd6f6;
-  --clr-fg-alt: #8892b0;
-  --clr-primary: #64ffda;
-  --clr-primary-light: #99ffee;
-  --clr-primary-dark: #4cd6b3;
-  --clr-primary-text: #0a192f;
-  --clr-accent: #ffffff;
-  --border-sm: 1px solid rgba(255, 255, 255, 0.08);
-  --shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
-  --shadow-lg: 0 20px 30px -10px rgba(2, 12, 27, 0.7);
+  --clr-bg: #020617;
+  --clr-bg-alt: #0a1128;
+  --clr-fg: #f1f5f9;
+  --clr-fg-alt: #94a3b8;
+  --clr-primary: #10b981;
+  --clr-primary-light: #34d399;
+  --clr-primary-dark: #059669;
+  --clr-primary-text: #064e3b;
+  --clr-accent: #14b8a6;
+  --border-sm: 1px solid rgba(255, 255, 255, 0.05);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 1);
+  --shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 50px -15px rgba(0, 0, 0, 0.6);
+  --glass-bg: rgba(15, 23, 42, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+.app {
+  font-family: var(--font-body);
+  line-height: 1.6;
+  color: var(--clr-fg);
+  background-color: var(--clr-bg);
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.app::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 100;
+  filter: contrast(120%) brightness(120%);
+}
+
+.dark.app {
+  background-image:
+    radial-gradient(at 0% 0%, #0c1222 0, transparent 50%),
+    radial-gradient(at 50% 0%, #1e1b4b 0, transparent 50%),
+    radial-gradient(at 100% 0%, #312e81 0, transparent 50%);
+}
+
+.light.app {
+  background-image:
+    radial-gradient(at 0% 0%, #f1f5f9 0, transparent 50%),
+    radial-gradient(at 50% 0%, #e2e8f0 0, transparent 50%),
+    radial-gradient(at 100% 0%, #f1f5f9 0, transparent 50%);
+}
+
+.spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
+      rgba(59, 130, 246, 0.08),
+      transparent 80%);
+}
+
+.dark .spotlight {
+  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+      rgba(16, 185, 129, 0.05),
+      transparent 80%);
 }
 
 main {
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 2rem 2rem 4rem 2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .section {
-  margin-top: 6em;
+  margin-top: 3rem;
   scroll-margin-top: 80px;
 }
 
 .section__title {
   text-align: center;
-  margin-bottom: 3em;
-  text-transform: uppercase;
-  font-weight: 700;
+  margin-bottom: 3rem;
+  font-family: var(--font-heading);
+  font-weight: 800;
   position: relative;
-  font-size: 2.5rem;
-  letter-spacing: 1px;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: -0.02em;
+  color: var(--clr-fg);
+}
+
+.section__title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--clr-primary);
+  margin: 1rem auto 0;
+  border-radius: 2px;
 }
 
 @media (max-width: 768px) {
   main {
-    padding: 1.5rem 1rem;
+    padding: 5rem 1rem 2.5rem 1rem;
   }
 
   .section {
-    margin-top: 4em;
+    margin-top: 3rem;
   }
 
   .section__title {
-    font-size: 1.8rem;
-    margin-bottom: 2.5em;
+    font-size: 1.85rem;
+    margin-bottom: 2rem;
   }
 }
 
 @media (max-width: 600px) {
   main {
-    padding: 1rem;
+    padding: 4.5rem 1rem 2rem 1rem;
   }
 
   .section {
-    margin-top: 3em;
+    margin-top: 2.5rem;
   }
 
   .section__title {
-    font-size: 1.5rem;
-    margin-bottom: 2em;
+    font-size: 1.65rem;
+    margin-bottom: 1.75rem;
   }
 }
 
@@ -263,8 +339,8 @@ main {
 
 @media (max-width: 768px) {
   main {
-    width: 97%;
-    padding: 1.5rem 0;
+    width: 100%;
+    padding: 6rem 1rem 3rem 1rem;
   }
 
   .section {
