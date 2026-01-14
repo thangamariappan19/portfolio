@@ -1,88 +1,32 @@
 .footer {
-  padding: 4rem 2rem;
-  margin-top: 6rem;
-  text-align: center;
-  /* background: var(--clr-bg-alt); Remove BG so it blends or use faint bg if preferred */
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.dark .footer {
-  border-color: rgba(255, 255, 255, 0.05);
+  padding: 3rem 1rem;
+  margin-top: 4rem;
+  border-top: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
 }
 
 .footer__content {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   align-items: center;
+  gap: 1rem;
 }
 
 .footer__link {
-  font-family: var(--font-body);
-  font-size: 0.9rem;
-  color: var(--clr-fg-alt);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--clr-fg);
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.footer__link:hover {
-  color: var(--clr-primary);
 }
 
 .footer__legal {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: var(--clr-fg-alt);
-  opacity: 0.7;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-@media (max-width: 768px) {
-  .footer {
-    padding: 2.5em 1.5em;
-    margin-top: 4em;
-  }
-
-  .footer__content {
-    gap: 1.5em;
-    flex-direction: column;
-  }
-
-  .footer__text {
-    font-size: 0.95rem;
-  }
-
-  .footer__link {
-    padding: 0.65em 1.3em;
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .footer {
-    padding: 2em 1rem;
-    margin-top: 3em;
-  }
-
-  .footer__content {
-    gap: 1em;
-    flex-direction: column;
-    margin-bottom: 1.2em;
-  }
-
-  .footer__text {
-    font-size: 0.9rem;
-  }
-
-  .footer__link {
-    width: 100%;
-    justify-content: center;
-    padding: 0.6em 1.2em;
-    font-size: 0.8rem;
-  }
-
-  .footer__copyright {
-    font-size: 0.8rem;
-  }
+  letter-spacing: 0.1em;
 }

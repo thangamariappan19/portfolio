@@ -3,17 +3,17 @@
 
 export const header = {
     title: 'TM.',
-    subtitle: 'Principal Frontend Architect',
+    subtitle: 'Technology Lead | Frontend Architect',
     homepage: 'https://thangamariappan.vercel.app/',
 };
 
 export const about = {
     name: 'Thanga Mariappan Pandian',
-    role: 'Principal Frontend Architect',
-    headline: 'Architecting scalable enterprise frontends for global leaders.',
+    role: 'Technology Lead | Frontend Architect',
+    headline: 'Leading enterprise-scale frontend architecture and digital transformation.',
     description:
         'With over 9 years of specialized experience, I transform complex business requirements into high-performance, maintainable web ecosystems. I have led frontend architecture for Fortune 500 companies including Siemens Gamesa, BASF, and AGCO, focusing on scalability, developer experience, and business impact.',
-    resume: '/Thanga_Mariappan.pdf',
+    resume: null,
     metrics: [
         { label: 'Experience', value: '9+', suffix: 'Years' },
         { label: 'Enterprise Depts', value: '3', suffix: 'Global' },
@@ -26,6 +26,27 @@ export const about = {
 };
 
 export const projects = [
+    {
+        id: 'hybrid-rto',
+        name: 'Hybrid RTO Predictive Analytics',
+        title: 'Enterprise occupancy forecasting system',
+        role: 'Lead Architect',
+        description: 'A research-grade forecasting system designed to predict office occupancy patterns using multi-modal behavioral signals and privacy-preserving protocols.',
+        challenge: 'Predicting employee behavioral patterns in a hybrid work environment while maintaining strict data privacy and anonymity.',
+        solution: 'Developed a multi-modal forecasting engine combining badge swipes, calendar events, and weather signals. Implemented K-anonymity and differential privacy for ethical data processing.',
+        stack: ['Angular', 'FastAPI', 'Python', 'Chart.js', 'SCSS'],
+        metrics: [
+            { label: 'Privacy', value: 'K-Anon' },
+            { label: 'Frontend', value: 'Angular' },
+            { label: 'Backend', value: 'FastAPI' }
+        ],
+        category: 'Machine Learning',
+        links: {
+            live: 'https://returntooffice.vercel.app/',
+            code: 'https://github.com/thangamariappan19/rto',
+        },
+        featured: true,
+    },
     {
         id: 'siemens-gamesa',
         name: 'Siemens Gamesa',
@@ -61,7 +82,7 @@ export const projects = [
             { label: 'Uptime', value: '99.9%' },
         ],
         category: 'E-Commerce',
-        featured: true,
+        featured: false,
     },
     {
         id: 'agco-dealer',
@@ -77,17 +98,17 @@ export const projects = [
             { label: 'Build Time', value: '↓ 40%' },
         ],
         category: 'Enterprise',
-        featured: true,
+        featured: false,
     },
     {
         id: 'tech-sheet',
         name: 'Tech Sheet',
-        title: 'Developer Cheatsheets & Blog',
-        role: 'Creator & Architect',
-        description: 'A premium, markdown-powered platform for developers to manage cheatsheets and personal posts with dark mode support.',
-        challenge: 'Developing a zero-friction content management system that combines high performance with aesthetic flexibility.',
-        solution: 'Built with Next.js and Tailwind CSS for a refined developer experience. Featured MDX support for easy post writing and Vercel for world-class edge deployment.',
-        stack: ['Next.js', 'Tailwind CSS', 'Markdown', 'Vercel', 'VsCode'],
+        title: 'Developer Cheatsheets',
+        role: 'Creator',
+        description: 'A premium, markdown-powered platform for developers to manage cheatsheets with dark mode support.',
+        challenge: 'Developing a zero-friction content management system with aesthetic flexibility.',
+        solution: 'Built with Next.js and Tailwind CSS for a refined developer experience. Featured MDX support and Vercel edge deployment.',
+        stack: ['Next.js', 'Tailwind', 'Markdown', 'Vercel'],
         metrics: [
             { label: 'Lighthouse', value: '100/100' },
             { label: 'Dev Effort', value: 'Minimal' },
@@ -102,6 +123,7 @@ export const projects = [
     },
 ];
 
+
 export const skills = {
     frontend: {
         title: 'Frontend Ecosystem',
@@ -109,7 +131,7 @@ export const skills = {
     },
     backend: {
         title: 'Backend & Data',
-        items: ['Node.js', 'Express', 'GraphQL', 'REST Architecture', 'PostgreSQL']
+        items: ['Node.js', 'Python', 'FastAPI', 'GraphQL', 'REST Architecture', 'PostgreSQL']
     },
     architecture: {
         title: 'Architecture & DevOps',
@@ -117,7 +139,7 @@ export const skills = {
     },
     tools: {
         title: 'Tools & Methods',
-        items: ['Git', 'Jira', 'Agile/Scrum', 'Figma', 'Jest/Karma']
+        items: ['Git', 'Jira', 'Agile/Scrum', 'Figma', 'Jest/Karma', 'Chart.js']
     }
 };
 
