@@ -1,6 +1,6 @@
 
 import PropTypes from 'prop-types';
-import './Badge.css'; // Will convert to module
+import './Badge.css';
 
 const Badge = ({ children, variant = 'default', className = '' }) => {
     return (
