@@ -1,5 +1,4 @@
 
-import React from 'react';
 import './Marquee.css';
 
 const Marquee = ({ items, speed = 40, direction = 'left' }) => {
