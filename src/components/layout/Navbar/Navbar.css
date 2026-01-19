@@ -29,6 +29,11 @@
   letter-spacing: -0.02em;
 }
 
+.nav__controls {
+  display: flex;
+  align-items: center;
+}
+
 .nav__list {
   display: none;
   gap: 2rem;
@@ -84,8 +89,6 @@
   padding: 0;
   width: 32px;
   height: 32px;
-  align-items: center;
-  justify-content: center;
   margin-left: 0.75rem;
 }
 
