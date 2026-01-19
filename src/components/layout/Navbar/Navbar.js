@@ -18,7 +18,7 @@ const Navbar = () => {
         {header.title}
       </a>
 
-      <div className='nav__controls' style={{ display: 'flex', alignItems: 'center' }}>
+      <div className='nav__controls'>
         <ul
           className={`nav__list ${showNavList ? 'nav__list--active' : ''}`}
         >

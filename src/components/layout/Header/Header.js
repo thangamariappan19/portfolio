@@ -7,8 +7,6 @@ const Header = () => {
 
   return (
     <header id='about' className='header'>
-
-
       <div className='header__content'>
         <div className='header__status'>
           <span className='status-dot'></span>
