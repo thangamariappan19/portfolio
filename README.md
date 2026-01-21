@@ -1,6 +1,6 @@
 # Thanga Mariappan - Portfolio
 
-A modern, responsive portfolio website showcasing professional experience, projects, and skills.
+A modern, responsive portfolio website showcasing my professional experience, projects, and skills.
 
 ## Features
 
