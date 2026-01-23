@@ -10,7 +10,7 @@ const about = {
     'Senior engineer with 9+ years of experience building and scaling enterprise e-commerce and web platforms for global leaders. Lead Architect of the Hybrid RTO Predictive Analytics system, specializing in Angular, research-grade forecasting, and privacy-preserving data architectures.',
   resume: null,
   social: {
-    linkedin: 'https://www.linkedin.com/in/thanga-mariappan-p/',
+    linkedin: 'https://www.linkedin.com/in/thangamariappanpandian/',
     github: 'https://github.com/thangamariappan19',
   },
 }
