@@ -57,7 +57,7 @@ View metrics in [Google Analytics Dashboard](https://analytics.google.com/).
 ## Contact
 
 📧 Email: thangamariappancse@gmail.com  
-🔗 LinkedIn: [thanga-mariappan-p](https://www.linkedin.com/in/thangamariappanpandian/)  
+🔗 LinkedIn: [thanga-mariappan-pandian](https://www.linkedin.com/in/thangamariappanpandian/)  
 🐙 GitHub: [thangamariappan19](https://github.com/thangamariappan19)  
 
 ---
