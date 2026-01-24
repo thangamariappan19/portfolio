@@ -27,6 +27,27 @@ export const about = {
 
 export const projects = [
     {
+        id: 'rch-id-guide',
+        name: 'RCH ID Simple Guide',
+        title: 'Reproductive & Child Health ID Tool',
+        role: 'Creator & Architect',
+        description: 'A dedicated portal helping users locate and understand their RCH (Reproductive and Child Health) ID, featuring multi-language support and a clean, accessible UI.',
+        challenge: 'Simplifying the complex navigation of government health portals for non-technical users, particularly in regional languages.',
+        solution: 'Built a lightweight, high-performance Angular application with robust internationalization (English/Tamil) and a custom design system for optimal accessibility.',
+        stack: ['Angular', 'TypeScript', 'i18n', 'SCSS', 'Vercel'],
+        metrics: [
+             { label: 'Languages', value: '2' },
+             { label: 'UX Score', value: 'High' },
+             { label: 'Access', value: 'Global' }
+        ],
+        category: 'Health Tech',
+        links: {
+            live: 'https://rch-id-simple-guide.vercel.app/',
+            code: 'https://github.com/thangamariappan19/rch-id-simple-guide/tree/main/rch-id-simple-guide',
+        },
+        featured: true,
+    },
+    {
         id: 'hybrid-rto',
         name: 'Hybrid RTO Predictive Analytics',
         title: 'Enterprise occupancy forecasting system',

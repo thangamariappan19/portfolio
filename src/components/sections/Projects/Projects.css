@@ -26,9 +26,7 @@
   background: linear-gradient(135deg, var(--glass-bg) 0%, rgba(16, 185, 129, 0.05) 100%);
 }
 
-.project-card:nth-child(5) {
-  grid-column: span 2;
-}
+
 
 .project-card:hover {
   transform: translateY(-8px);
@@ -196,9 +194,7 @@
     border-radius: 20px;
   }
 
-  .project-card:nth-child(5) {
-    grid-column: span 1;
-  }
+
 
   .project-card__header {
     flex-direction: column;
