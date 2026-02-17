@@ -61,5 +61,4 @@ View metrics in [Google Analytics Dashboard](https://analytics.google.com/).
 🐙 GitHub: [thangamariappan19](https://github.com/thangamariappan19)  
 
 ---
-
 **Portfolio:** [thangamariappan.vercel.app](https://thangamariappan.vercel.app/)
