@@ -27,6 +27,27 @@ export const about = {
 
 export const projects = [
     {
+        id: 'svap',
+        name: '🛫 Smart Visa Assistant Platform (SVAP)',
+        title: 'Full-Stack AI Visa Intelligence',
+        role: 'Architect & Lead Developer',
+        description: 'An AI-powered ecosystem that simplifies international visa applications. Features a RAG-based assistant for real-time guidance on documentation and eligibility across 190+ countries.',
+        challenge: 'Navigating the fragmented and frequently changing landscape of international visa regulations which vary drastically by nationality and destination.',
+        solution: 'Engineered a high-performance web application using Angular 19 SSR and a Node.js/PostgreSQL backend. Integrated LLMs with specialized knowledge bases to provide accurate, context-aware visa advice.',
+        stack: ['Angular 19', 'Node.js', 'PostgreSQL', 'LangChain', 'OpenAI', 'Vercel'],
+        metrics: [
+            { label: 'Framework', value: 'Angular 19' },
+            { label: 'Core Tech', value: 'AI / RAG' },
+            { label: 'Reach', value: '190+ Countries' }
+        ],
+        category: 'AI / Full Stack',
+        links: {
+            live: 'https://smartvisa.vercel.app/',
+            code: 'https://github.com/thangamariappan19/svap',
+        },
+        featured: true,
+    },
+    {
         id: 'rch-id-guide',
         name: 'RCH ID Simple Guide',
         title: 'Reproductive & Child Health ID Tool',
@@ -36,9 +57,9 @@ export const projects = [
         solution: 'Built a lightweight, high-performance Angular application with robust internationalization (English/Tamil) and a custom design system for optimal accessibility.',
         stack: ['Angular', 'TypeScript', 'i18n', 'SCSS', 'Vercel'],
         metrics: [
-             { label: 'Languages', value: '2' },
-             { label: 'UX Score', value: 'High' },
-             { label: 'Access', value: 'Global' }
+            { label: 'Languages', value: '2' },
+            { label: 'UX Score', value: 'High' },
+            { label: 'Access', value: 'Global' }
         ],
         category: 'Health Tech',
         links: {

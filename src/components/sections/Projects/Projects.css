@@ -23,7 +23,26 @@
 }
 
 .project-card--featured {
-  background: linear-gradient(135deg, var(--glass-bg) 0%, rgba(16, 185, 129, 0.05) 100%);
+  background: linear-gradient(135deg, var(--glass-bg) 0%, rgba(16, 185, 129, 0.08) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.project-card--0 {
+  border-top: 4px solid var(--clr-primary);
+}
+
+.project-card--1 {
+  border-top: 4px solid var(--clr-accent);
+}
+
+.project-card--2 {
+  border-top: 4px solid #f59e0b;
+}
+
+/* Amber accent */
+
+.dark .project-card--featured {
+  box-shadow: 0 10px 40px -10px rgba(16, 185, 129, 0.15);
 }
 
 
