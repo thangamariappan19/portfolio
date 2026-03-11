@@ -1,26 +1,26 @@
-import { useContext, useEffect, useState } from 'react';
-import { ThemeContext } from './contexts/theme';
-import Header from './components/layout/Header/Header';
-import Navbar from './components/layout/Navbar/Navbar';
-import Projects from './components/sections/Projects/Projects';
-import Skills from './components/sections/Skills/Skills';
-import ScrollToTop from './components/layout/ScrollToTop/ScrollToTop';
-import Contact from './components/sections/Contact/Contact';
-import Footer from './components/layout/Footer/Footer';
-import './App.css';
+import { useContext, useEffect, useState } from 'react'
+import { ThemeContext } from './contexts/theme'
+import Header from './components/layout/Header/Header'
+import Navbar from './components/layout/Navbar/Navbar'
+import Projects from './components/sections/Projects/Projects'
+import Skills from './components/sections/Skills/Skills'
+import ScrollToTop from './components/layout/ScrollToTop/ScrollToTop'
+import Contact from './components/sections/Contact/Contact'
+import Footer from './components/layout/Footer/Footer'
+import './App.css'
 
 const App = () => {
-  const [{ themeName }] = useContext(ThemeContext);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [{ themeName }] = useContext(ThemeContext)
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      setMousePos({ x: e.clientX, y: e.clientY });
-    };
+      setMousePos({ x: e.clientX, y: e.clientY })
+    }
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
+    window.addEventListener('mousemove', handleMouseMove)
+    return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
 
   return (
     <div
@@ -31,7 +31,7 @@ const App = () => {
         '--mouse-y': `${mousePos.y}px`,
       }}
     >
-      <div className="spotlight"></div>
+      <div className='spotlight'></div>
       <Navbar />
 
       <main>
@@ -44,7 +44,7 @@ const App = () => {
       <ScrollToTop />
       <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

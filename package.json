@@ -25,7 +25,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lint": "eslint .",
-    "format": "prettier --write \"**/*.{js,jsx,json,css,md}\""
+    "format": "prettier --write \"**/*.{js,jsx,json,css,md}\"",
+    "daily:improve": "node scripts/daily-improve.js"
   },
   "browserslist": {
     "production": [

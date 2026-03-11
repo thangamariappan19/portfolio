@@ -1,5 +1,4 @@
-
-import './Footer.css';
+import './Footer.css'
 
 const Footer = () => (
   <footer className='footer'>
@@ -13,6 +12,6 @@ const Footer = () => (
       <span className='footer__legal'>Licensed under MIT</span>
     </div>
   </footer>
-);
+)
 
-export default Footer;
+export default Footer

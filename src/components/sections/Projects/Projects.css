@@ -23,7 +23,11 @@
 }
 
 .project-card--featured {
-  background: linear-gradient(135deg, var(--glass-bg) 0%, rgba(16, 185, 129, 0.08) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--glass-bg) 0%,
+    rgba(16, 185, 129, 0.08) 100%
+  );
   border: 1px solid rgba(16, 185, 129, 0.2);
 }
 
@@ -45,11 +49,11 @@
   box-shadow: 0 10px 40px -10px rgba(16, 185, 129, 0.15);
 }
 
-
-
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: var(--shadow-lg), 0 0 30px rgba(16, 185, 129, 0.1);
+  box-shadow:
+    var(--shadow-lg),
+    0 0 30px rgba(16, 185, 129, 0.1);
   border-color: var(--clr-primary);
 }
 
@@ -212,8 +216,6 @@
     padding: 1.5rem;
     border-radius: 20px;
   }
-
-
 
   .project-card__header {
     flex-direction: column;

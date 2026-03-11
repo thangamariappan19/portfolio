@@ -8,14 +8,14 @@ A modern, responsive portfolio website showcasing my professional experience, pr
 📱 **Fully Responsive** - Optimized for desktop, tablet, and mobile devices  
 📊 **Resume Analytics** - Download tracking with Google Analytics integration  
 ⚡ **Performance** - Fast, optimized builds with React 18  
-🎨 **Professional Layout** - Dedicated sections for About, Projects, Skills, Contact  
+🎨 **Professional Layout** - Dedicated sections for About, Projects, Skills, Contact
 
 ## Tech Stack
 
 **Frontend:** React 18, CSS3, Lucide React Icons  
 **Deployment:** Vercel  
 **Analytics:** Google Analytics  
-**Version Control:** Git/GitHub  
+**Version Control:** Git/GitHub
 
 ## Sections
 
@@ -58,7 +58,8 @@ View metrics in [Google Analytics Dashboard](https://analytics.google.com/).
 
 📧 Email: thangamariappancse@gmail.com  
 🔗 LinkedIn: [thanga-mariappan-pandian](https://www.linkedin.com/in/thangamariappanpandian/)  
-🐙 GitHub: [thangamariappan19](https://github.com/thangamariappan19)  
+🐙 GitHub: [thangamariappan19](https://github.com/thangamariappan19)
 
 ---
+
 **Portfolio:** [thangamariappan.vercel.app](https://thangamariappan.vercel.app/)

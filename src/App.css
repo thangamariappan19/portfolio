@@ -1,5 +1,10 @@
 .app {
-  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family:
+    'Poppins',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
   line-height: 1.6;
   color: var(--clr-fg);
   background-color: var(--clr-bg);
@@ -7,7 +12,6 @@
   min-height: 100vh;
   overflow-x: hidden;
 }
-
 
 :root {
   --font-heading: 'Outfit', sans-serif;
@@ -27,7 +31,8 @@
   --border-sm: 1px solid rgba(0, 0, 0, 0.05);
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-lg:
+    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --glass-bg: rgba(255, 255, 255, 0.7);
   --glass-border: rgba(255, 255, 255, 0.3);
 }
@@ -61,13 +66,13 @@
 }
 
 .app::before {
-  content: "";
+  content: '';
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  background-image: url('https://grainy-gradients.vercel.app/noise.svg');
   opacity: 0.05;
   pointer-events: none;
   z-index: 100;
@@ -96,15 +101,19 @@
   height: 100%;
   pointer-events: none;
   z-index: 1;
-  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y),
-      rgba(59, 130, 246, 0.08),
-      transparent 80%);
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(59, 130, 246, 0.08),
+    transparent 80%
+  );
 }
 
 .dark .spotlight {
-  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
-      rgba(16, 185, 129, 0.05),
-      transparent 80%);
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(16, 185, 129, 0.05),
+    transparent 80%
+  );
 }
 
 main {
@@ -198,7 +207,11 @@ main {
   height: 0.2em;
   position: absolute;
   bottom: 0;
-  background: linear-gradient(90deg, var(--clr-primary), var(--clr-primary-light));
+  background: linear-gradient(
+    90deg,
+    var(--clr-primary),
+    var(--clr-primary-light)
+  );
   transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -290,8 +303,6 @@ main {
   background: rgba(37, 99, 235, 0.05);
   transform: translateY(-2px);
 }
-
-
 
 .btn--plain {
   text-transform: initial;

@@ -1,5 +1,6 @@
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -17,7 +18,11 @@
   justify-content: center;
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-light));
+  background: linear-gradient(
+    135deg,
+    var(--clr-primary),
+    var(--clr-primary-light)
+  );
   color: var(--clr-bg);
   border-radius: 50%;
   text-decoration: none;

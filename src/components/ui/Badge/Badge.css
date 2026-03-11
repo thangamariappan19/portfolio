@@ -1,33 +1,33 @@
 .badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.4rem 0.8rem;
-    border-radius: 999px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    white-space: nowrap;
-    transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.2s ease;
 }
 
 .badge--outline {
-    background: transparent;
-    border: 1px solid var(--glass-border);
-    color: var(--clr-fg-alt);
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--clr-fg-alt);
 }
 
 .badge--outline:hover {
-    border-color: var(--clr-primary);
-    color: var(--clr-primary);
-    background: rgba(59, 130, 246, 0.05);
+  border-color: var(--clr-primary);
+  color: var(--clr-primary);
+  background: rgba(59, 130, 246, 0.05);
 }
 
 .badge--default {
-    background: var(--clr-bg-alt);
-    border: 1px solid var(--border-sm);
-    color: var(--clr-fg);
+  background: var(--clr-bg-alt);
+  border: 1px solid var(--border-sm);
+  color: var(--clr-fg);
 }
 
 .badge--solid {
-    background: var(--clr-primary);
-    color: white;
+  background: var(--clr-primary);
+  color: white;
 }

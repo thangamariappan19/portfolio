@@ -60,28 +60,39 @@ const projects = [
 const skills = {
   frontend: {
     title: 'Frontend',
-    items: ['Angular', 'React', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'SCSS', 'RxJS', 'NgRx', 'Tailwind CSS']
+    items: [
+      'Angular',
+      'React',
+      'TypeScript',
+      'JavaScript',
+      'HTML5',
+      'CSS3',
+      'SCSS',
+      'RxJS',
+      'NgRx',
+      'Tailwind CSS',
+    ],
   },
   backend: {
     title: 'Backend & APIs',
-    items: ['Node.js', 'Express.js', 'GraphQL', 'REST APIs']
+    items: ['Node.js', 'Express.js', 'GraphQL', 'REST APIs'],
   },
   cms: {
     title: 'CMS & E-Commerce',
-    items: ['Spartacus', 'Magnolia CMS', 'Contentful', 'WordPress', 'Shopify']
+    items: ['Spartacus', 'Magnolia CMS', 'Contentful', 'WordPress', 'Shopify'],
   },
   devops: {
     title: 'DevOps & Tools',
-    items: ['Git', 'Docker', 'AWS', 'Azure DevOps', 'CI/CD', 'Webpack']
+    items: ['Git', 'Docker', 'AWS', 'Azure DevOps', 'CI/CD', 'Webpack'],
   },
   testing: {
     title: 'Testing',
-    items: ['Karma', 'Jasmine']
+    items: ['Karma', 'Jasmine'],
   },
   methodologies: {
     title: 'Methodologies',
-    items: ['Agile', 'Scrum']
-  }
+    items: ['Agile', 'Scrum'],
+  },
 }
 
 const contact = {
