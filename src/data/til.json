@@ -5,5 +5,12 @@
     "title": "Security: HTTPS and HSTS",
     "category": "Security",
     "content": "HTTP Strict Transport Security (HSTS) tells browsers that they should only interact with a website using secure HTTPS connections."
+  },
+  {
+    "id": "2026-03-12",
+    "date": "2026-03-12",
+    "title": "JavaScript: Array.prototype.flatMap()",
+    "category": "JavaScript",
+    "content": "`flatMap()` is a combination of `map()` and `flat()` with a depth of 1. It is more efficient than calling them separately."
   }
 ]
