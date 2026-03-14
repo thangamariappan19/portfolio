@@ -19,5 +19,12 @@
     "title": "React: Use objects for multiple state variables",
     "category": "React",
     "content": "Instead of many `useState` hooks, consider using a single state object or `useReducer` when state transitions are complex."
+  },
+  {
+    "id": "2026-03-14",
+    "date": "2026-03-14",
+    "title": "Git: Squash and Merge",
+    "category": "DevOps",
+    "content": "Squashing commits keeps your history clean by combining all changes from a feature branch into a single commit on the main branch."
   }
 ]
