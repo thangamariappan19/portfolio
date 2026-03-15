@@ -26,5 +26,12 @@
     "title": "Git: Squash and Merge",
     "category": "DevOps",
     "content": "Squashing commits keeps your history clean by combining all changes from a feature branch into a single commit on the main branch."
+  },
+  {
+    "id": "2026-03-15",
+    "date": "2026-03-15",
+    "title": "JavaScript: Array.prototype.flatMap()",
+    "category": "JavaScript",
+    "content": "`flatMap()` is a combination of `map()` and `flat()` with a depth of 1. It is more efficient than calling them separately."
   }
 ]
