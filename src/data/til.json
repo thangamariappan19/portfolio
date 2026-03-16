@@ -33,5 +33,12 @@
     "title": "JavaScript: Array.prototype.flatMap()",
     "category": "JavaScript",
     "content": "`flatMap()` is a combination of `map()` and `flat()` with a depth of 1. It is more efficient than calling them separately."
+  },
+  {
+    "id": "2026-03-16",
+    "date": "2026-03-16",
+    "title": "React: Use objects for multiple state variables",
+    "category": "React",
+    "content": "Instead of many `useState` hooks, consider using a single state object or `useReducer` when state transitions are complex."
   }
 ]
