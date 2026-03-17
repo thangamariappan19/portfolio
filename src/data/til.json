@@ -40,5 +40,12 @@
     "title": "React: Use objects for multiple state variables",
     "category": "React",
     "content": "Instead of many `useState` hooks, consider using a single state object or `useReducer` when state transitions are complex."
+  },
+  {
+    "id": "2026-03-17",
+    "date": "2026-03-17",
+    "title": "Security: HTTPS and HSTS",
+    "category": "Security",
+    "content": "HTTP Strict Transport Security (HSTS) tells browsers that they should only interact with a website using secure HTTPS connections."
   }
 ]
