@@ -54,5 +54,12 @@
     "title": "JavaScript: The Nullish Coalescing Operator",
     "category": "JavaScript",
     "content": "The `??` operator returns its right-hand side operand when its left-hand side operand is `null` or `undefined`, unlike `||` which checks for falsy values."
+  },
+  {
+    "id": "2026-03-19",
+    "date": "2026-03-19",
+    "title": "React: Why unique keys matter",
+    "category": "React",
+    "content": "Keys help React identify which items have changed, are added, or are removed. They should be stable, predictable, and unique."
   }
 ]
