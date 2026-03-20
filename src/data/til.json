@@ -61,5 +61,12 @@
     "title": "React: Why unique keys matter",
     "category": "React",
     "content": "Keys help React identify which items have changed, are added, or are removed. They should be stable, predictable, and unique."
+  },
+  {
+    "id": "2026-03-20",
+    "date": "2026-03-20",
+    "title": "Node.js: The event loop",
+    "category": "Node.js",
+    "content": "The event loop allows Node.js to perform non-blocking I/O operations by offloading operations to the system kernel whenever possible."
   }
 ]
