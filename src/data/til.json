@@ -68,5 +68,12 @@
     "title": "Node.js: The event loop",
     "category": "Node.js",
     "content": "The event loop allows Node.js to perform non-blocking I/O operations by offloading operations to the system kernel whenever possible."
+  },
+  {
+    "id": "2026-03-21",
+    "date": "2026-03-21",
+    "title": "React: Use objects for multiple state variables",
+    "category": "React",
+    "content": "Instead of many `useState` hooks, consider using a single state object or `useReducer` when state transitions are complex."
   }
 ]
