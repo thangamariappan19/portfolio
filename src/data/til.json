@@ -75,5 +75,12 @@
     "title": "React: Use objects for multiple state variables",
     "category": "React",
     "content": "Instead of many `useState` hooks, consider using a single state object or `useReducer` when state transitions are complex."
+  },
+  {
+    "id": "2026-03-22",
+    "date": "2026-03-22",
+    "title": "Web Performance: Core Web Vitals",
+    "category": "Performance",
+    "content": "LCP (Largest Contentful Paint) measures loading performance. To provide a good user experience, LCP should occur within 2.5 seconds."
   }
 ]
