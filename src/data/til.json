@@ -82,5 +82,12 @@
     "title": "Web Performance: Core Web Vitals",
     "category": "Performance",
     "content": "LCP (Largest Contentful Paint) measures loading performance. To provide a good user experience, LCP should occur within 2.5 seconds."
+  },
+  {
+    "id": "2026-03-23",
+    "date": "2026-03-23",
+    "title": "Security: HTTPS and HSTS",
+    "category": "Security",
+    "content": "HTTP Strict Transport Security (HSTS) tells browsers that they should only interact with a website using secure HTTPS connections."
   }
 ]
