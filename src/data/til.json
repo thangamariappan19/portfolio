@@ -89,5 +89,12 @@
     "title": "Security: HTTPS and HSTS",
     "category": "Security",
     "content": "HTTP Strict Transport Security (HSTS) tells browsers that they should only interact with a website using secure HTTPS connections."
+  },
+  {
+    "id": "2026-03-24",
+    "date": "2026-03-24",
+    "title": "CSS: The Aspect Ratio Property",
+    "category": "CSS",
+    "content": "The `aspect-ratio` property allows you to create boxes that maintain their proportional dimensions, even as they resize."
   }
 ]
