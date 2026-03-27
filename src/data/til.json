@@ -110,5 +110,12 @@
     "title": "Security: HTTPS and HSTS",
     "category": "Security",
     "content": "HTTP Strict Transport Security (HSTS) tells browsers that they should only interact with a website using secure HTTPS connections."
+  },
+  {
+    "id": "2026-03-27",
+    "date": "2026-03-27",
+    "title": "React: Why unique keys matter",
+    "category": "React",
+    "content": "Keys help React identify which items have changed, are added, or are removed. They should be stable, predictable, and unique."
   }
 ]
