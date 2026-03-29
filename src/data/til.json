@@ -124,5 +124,12 @@
     "title": "Node.js: The event loop",
     "category": "Node.js",
     "content": "The event loop allows Node.js to perform non-blocking I/O operations by offloading operations to the system kernel whenever possible."
+  },
+  {
+    "id": "2026-03-29",
+    "date": "2026-03-29",
+    "title": "JavaScript: The Nullish Coalescing Operator",
+    "category": "JavaScript",
+    "content": "The `??` operator returns its right-hand side operand when its left-hand side operand is `null` or `undefined`, unlike `||` which checks for falsy values."
   }
 ]
