@@ -131,5 +131,12 @@
     "title": "JavaScript: The Nullish Coalescing Operator",
     "category": "JavaScript",
     "content": "The `??` operator returns its right-hand side operand when its left-hand side operand is `null` or `undefined`, unlike `||` which checks for falsy values."
+  },
+  {
+    "id": "2026-03-30",
+    "date": "2026-03-30",
+    "title": "JavaScript: Array.prototype.flatMap()",
+    "category": "JavaScript",
+    "content": "`flatMap()` is a combination of `map()` and `flat()` with a depth of 1. It is more efficient than calling them separately."
   }
 ]
