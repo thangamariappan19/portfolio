@@ -36,6 +36,12 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: daily improvement $(date +'%Y-%m-%d')"
+            # Check if commit_message.txt exists, otherwise use default
+            if [ -f commit_message.txt ]; then
+              git commit -F commit_message.txt
+              rm commit_message.txt
+            else
+              git commit -m "chore: daily improvement $(date +'%Y-%m-%d')"
+            fi
             git push
           fi

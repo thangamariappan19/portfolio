@@ -75,6 +75,60 @@ const tips = [
     content:
       'Squashing commits keeps your history clean by combining all changes from a feature branch into a single commit on the main branch.',
   },
+  {
+    title: 'TypeScript: Pick and Omit Utility Types',
+    category: 'TypeScript',
+    content:
+      'The `Pick<T, K>` type constructs a type by picking the set of properties `K` from `T`. Conversely, `Omit<T, K>` constructs a type by picking all properties from `T` and then removing `K`.',
+  },
+  {
+    title: 'React: useMemo vs useCallback',
+    category: 'React',
+    content:
+      '`useMemo` returns a memoized value, while `useCallback` returns a memoized callback function. Both help prevent unnecessary re-renders in performance-sensitive components.',
+  },
+  {
+    title: 'PostgreSQL: Indexing for performance',
+    category: 'Database',
+    content:
+      'B-tree indexes are the default and work for most common lookups. Use GIN indexes for full-text search and array mapping.',
+  },
+  {
+    title: 'Docker: Multi-stage builds',
+    category: 'DevOps',
+    content:
+      'Multi-stage builds allow you to use one image for building (with all tools) and a much smaller image for running, keep production images lean.',
+  },
+  {
+    title: 'JavaScript: Optional Chaining',
+    category: 'JavaScript',
+    content:
+      'The optional chaining (`?.`) operator enables reading the value of a property located deep within a chain of connected objects without having to check each reference.',
+  },
+  {
+    title: 'Clean Code: Meaningful Names',
+    category: 'Clean Code',
+    content:
+      'Avoid generic names like `data` or `info`. Use specific names that reveal intent, such as `userProfile` or `transactionDate`.',
+  },
+  {
+    title: 'React: Custom Hooks',
+    category: 'React',
+    content:
+      'Custom hooks allow you to extract component logic into reusable functions. They always start with the word `use`.',
+  },
+  {
+    title: 'CSS: Logical Properties',
+    category: 'CSS',
+    content:
+      'Logical properties like `margin-inline-start` instead of `margin-left` allow for better internationalization support (RTL/LTR).',
+  },
+  {
+    title: 'Node.js: Worker Threads',
+    category: 'Node.js',
+    content:
+      'The `worker_threads` module enables the use of threads that execute JavaScript in parallel, useful for CPU-intensive tasks.',
+  },
 ]
 
 // Pick a random tip
@@ -123,5 +177,18 @@ try {
 } catch (error) {
   console.error('Error running Prettier:', error.message)
 }
+
+// 4. Generate Commit Message
+const prefixes = [
+  `feat(til): added new tip on ${randomTip.category}`,
+  `docs: update daily knowledge - ${randomTip.title}`,
+  `chore: Daily TIL sync for ${today}`,
+  `feat: new learning on ${randomTip.category} - ${randomTip.title}`,
+  `docs(til): ${randomTip.title}`,
+  `refactor: polish daily content for ${randomTip.category}`,
+]
+
+const commitMsg = prefixes[Math.floor(Math.random() * prefixes.length)]
+fs.writeFileSync('commit_message.txt', commitMsg)
 
 console.log('Daily improvement completed successfully!')
