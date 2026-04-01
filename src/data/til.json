@@ -145,5 +145,12 @@
     "title": "System Design: Consistency vs Availability",
     "category": "System Design",
     "content": "In CAP theorem, you often have to trade off between Consistency and Availability during a network partition."
+  },
+  {
+    "id": "2026-04-01",
+    "date": "2026-04-01",
+    "title": "JavaScript: Optional Chaining",
+    "category": "JavaScript",
+    "content": "The optional chaining (`?.`) operator enables reading the value of a property located deep within a chain of connected objects without having to check each reference."
   }
 ]
