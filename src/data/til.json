@@ -152,5 +152,12 @@
     "title": "JavaScript: Optional Chaining",
     "category": "JavaScript",
     "content": "The optional chaining (`?.`) operator enables reading the value of a property located deep within a chain of connected objects without having to check each reference."
+  },
+  {
+    "id": "2026-04-02",
+    "date": "2026-04-02",
+    "title": "Web Performance: Core Web Vitals",
+    "category": "Performance",
+    "content": "LCP (Largest Contentful Paint) measures loading performance. To provide a good user experience, LCP should occur within 2.5 seconds."
   }
 ]
