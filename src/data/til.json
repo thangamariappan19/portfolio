@@ -159,5 +159,12 @@
     "title": "Web Performance: Core Web Vitals",
     "category": "Performance",
     "content": "LCP (Largest Contentful Paint) measures loading performance. To provide a good user experience, LCP should occur within 2.5 seconds."
+  },
+  {
+    "id": "2026-04-03",
+    "date": "2026-04-03",
+    "title": "Docker: Multi-stage builds",
+    "category": "DevOps",
+    "content": "Multi-stage builds allow you to use one image for building (with all tools) and a much smaller image for running, keep production images lean."
   }
 ]
