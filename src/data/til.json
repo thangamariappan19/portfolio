@@ -173,5 +173,12 @@
     "title": "Node.js: The event loop",
     "category": "Node.js",
     "content": "The event loop allows Node.js to perform non-blocking I/O operations by offloading operations to the system kernel whenever possible."
+  },
+  {
+    "id": "2026-04-05",
+    "date": "2026-04-05",
+    "title": "Security: HTTPS and HSTS",
+    "category": "Security",
+    "content": "HTTP Strict Transport Security (HSTS) tells browsers that they should only interact with a website using secure HTTPS connections."
   }
 ]
