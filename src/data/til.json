@@ -180,5 +180,12 @@
     "title": "Security: HTTPS and HSTS",
     "category": "Security",
     "content": "HTTP Strict Transport Security (HSTS) tells browsers that they should only interact with a website using secure HTTPS connections."
+  },
+  {
+    "id": "2026-04-06",
+    "date": "2026-04-06",
+    "title": "PostgreSQL: Indexing for performance",
+    "category": "Database",
+    "content": "B-tree indexes are the default and work for most common lookups. Use GIN indexes for full-text search and array mapping."
   }
 ]
