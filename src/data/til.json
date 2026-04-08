@@ -194,5 +194,12 @@
     "title": "Git: Squash and Merge",
     "category": "DevOps",
     "content": "Squashing commits keeps your history clean by combining all changes from a feature branch into a single commit on the main branch."
+  },
+  {
+    "id": "2026-04-08",
+    "date": "2026-04-08",
+    "title": "TypeScript: Pick and Omit Utility Types",
+    "category": "TypeScript",
+    "content": "The `Pick<T, K>` type constructs a type by picking the set of properties `K` from `T`. Conversely, `Omit<T, K>` constructs a type by picking all properties from `T` and then removing `K`."
   }
 ]
