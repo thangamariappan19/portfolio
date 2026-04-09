@@ -201,5 +201,12 @@
     "title": "TypeScript: Pick and Omit Utility Types",
     "category": "TypeScript",
     "content": "The `Pick<T, K>` type constructs a type by picking the set of properties `K` from `T`. Conversely, `Omit<T, K>` constructs a type by picking all properties from `T` and then removing `K`."
+  },
+  {
+    "id": "2026-04-09",
+    "date": "2026-04-09",
+    "title": "React: useMemo vs useCallback",
+    "category": "React",
+    "content": "`useMemo` returns a memoized value, while `useCallback` returns a memoized callback function. Both help prevent unnecessary re-renders in performance-sensitive components."
   }
 ]
