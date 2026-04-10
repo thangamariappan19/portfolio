@@ -208,5 +208,12 @@
     "title": "React: useMemo vs useCallback",
     "category": "React",
     "content": "`useMemo` returns a memoized value, while `useCallback` returns a memoized callback function. Both help prevent unnecessary re-renders in performance-sensitive components."
+  },
+  {
+    "id": "2026-04-10",
+    "date": "2026-04-10",
+    "title": "Git: Squash and Merge",
+    "category": "DevOps",
+    "content": "Squashing commits keeps your history clean by combining all changes from a feature branch into a single commit on the main branch."
   }
 ]
