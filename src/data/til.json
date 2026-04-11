@@ -215,5 +215,12 @@
     "title": "Git: Squash and Merge",
     "category": "DevOps",
     "content": "Squashing commits keeps your history clean by combining all changes from a feature branch into a single commit on the main branch."
+  },
+  {
+    "id": "2026-04-11",
+    "date": "2026-04-11",
+    "title": "Web Performance: Core Web Vitals",
+    "category": "Performance",
+    "content": "LCP (Largest Contentful Paint) measures loading performance. To provide a good user experience, LCP should occur within 2.5 seconds."
   }
 ]
