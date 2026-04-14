@@ -236,5 +236,12 @@
     "title": "CSS: The Aspect Ratio Property",
     "category": "CSS",
     "content": "The `aspect-ratio` property allows you to create boxes that maintain their proportional dimensions, even as they resize."
+  },
+  {
+    "id": "2026-04-14",
+    "date": "2026-04-14",
+    "title": "React: Custom Hooks",
+    "category": "React",
+    "content": "Custom hooks allow you to extract component logic into reusable functions. They always start with the word `use`."
   }
 ]
