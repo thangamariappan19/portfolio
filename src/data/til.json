@@ -243,5 +243,12 @@
     "title": "React: Custom Hooks",
     "category": "React",
     "content": "Custom hooks allow you to extract component logic into reusable functions. They always start with the word `use`."
+  },
+  {
+    "id": "2026-04-15",
+    "date": "2026-04-15",
+    "title": "TypeScript: Pick and Omit Utility Types",
+    "category": "TypeScript",
+    "content": "The `Pick<T, K>` type constructs a type by picking the set of properties `K` from `T`. Conversely, `Omit<T, K>` constructs a type by picking all properties from `T` and then removing `K`."
   }
 ]
