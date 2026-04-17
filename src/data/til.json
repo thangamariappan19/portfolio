@@ -257,5 +257,12 @@
     "title": "Security: HTTPS and HSTS",
     "category": "Security",
     "content": "HTTP Strict Transport Security (HSTS) tells browsers that they should only interact with a website using secure HTTPS connections."
+  },
+  {
+    "id": "2026-04-17",
+    "date": "2026-04-17",
+    "title": "Security: HTTPS and HSTS",
+    "category": "Security",
+    "content": "HTTP Strict Transport Security (HSTS) tells browsers that they should only interact with a website using secure HTTPS connections."
   }
 ]
