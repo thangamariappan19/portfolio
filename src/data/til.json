@@ -264,5 +264,12 @@
     "title": "Security: HTTPS and HSTS",
     "category": "Security",
     "content": "HTTP Strict Transport Security (HSTS) tells browsers that they should only interact with a website using secure HTTPS connections."
+  },
+  {
+    "id": "2026-04-18",
+    "date": "2026-04-18",
+    "title": "Git: Squash and Merge",
+    "category": "DevOps",
+    "content": "Squashing commits keeps your history clean by combining all changes from a feature branch into a single commit on the main branch."
   }
 ]
