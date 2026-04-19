@@ -271,5 +271,12 @@
     "title": "Git: Squash and Merge",
     "category": "DevOps",
     "content": "Squashing commits keeps your history clean by combining all changes from a feature branch into a single commit on the main branch."
+  },
+  {
+    "id": "2026-04-19",
+    "date": "2026-04-19",
+    "title": "JavaScript: The Nullish Coalescing Operator",
+    "category": "JavaScript",
+    "content": "The `??` operator returns its right-hand side operand when its left-hand side operand is `null` or `undefined`, unlike `||` which checks for falsy values."
   }
 ]
