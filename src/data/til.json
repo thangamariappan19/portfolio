@@ -278,5 +278,12 @@
     "title": "JavaScript: The Nullish Coalescing Operator",
     "category": "JavaScript",
     "content": "The `??` operator returns its right-hand side operand when its left-hand side operand is `null` or `undefined`, unlike `||` which checks for falsy values."
+  },
+  {
+    "id": "2026-04-20",
+    "date": "2026-04-20",
+    "title": "Security: HTTPS and HSTS",
+    "category": "Security",
+    "content": "HTTP Strict Transport Security (HSTS) tells browsers that they should only interact with a website using secure HTTPS connections."
   }
 ]
