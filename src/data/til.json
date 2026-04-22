@@ -292,5 +292,12 @@
     "title": "React: Why unique keys matter",
     "category": "React",
     "content": "Keys help React identify which items have changed, are added, or are removed. They should be stable, predictable, and unique."
+  },
+  {
+    "id": "2026-04-22",
+    "date": "2026-04-22",
+    "title": "React: Custom Hooks",
+    "category": "React",
+    "content": "Custom hooks allow you to extract component logic into reusable functions. They always start with the word `use`."
   }
 ]
