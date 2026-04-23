@@ -299,5 +299,12 @@
     "title": "React: Custom Hooks",
     "category": "React",
     "content": "Custom hooks allow you to extract component logic into reusable functions. They always start with the word `use`."
+  },
+  {
+    "id": "2026-04-23",
+    "date": "2026-04-23",
+    "title": "System Design: Consistency vs Availability",
+    "category": "System Design",
+    "content": "In CAP theorem, you often have to trade off between Consistency and Availability during a network partition."
   }
 ]
