@@ -306,5 +306,12 @@
     "title": "System Design: Consistency vs Availability",
     "category": "System Design",
     "content": "In CAP theorem, you often have to trade off between Consistency and Availability during a network partition."
+  },
+  {
+    "id": "2026-04-24",
+    "date": "2026-04-24",
+    "title": "React: Use objects for multiple state variables",
+    "category": "React",
+    "content": "Instead of many `useState` hooks, consider using a single state object or `useReducer` when state transitions are complex."
   }
 ]
