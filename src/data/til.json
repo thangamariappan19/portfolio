@@ -348,5 +348,12 @@
     "title": "React: Why unique keys matter",
     "category": "React",
     "content": "Keys help React identify which items have changed, are added, or are removed. They should be stable, predictable, and unique."
+  },
+  {
+    "id": "2026-04-30",
+    "date": "2026-04-30",
+    "title": "Git: Squash and Merge",
+    "category": "DevOps",
+    "content": "Squashing commits keeps your history clean by combining all changes from a feature branch into a single commit on the main branch."
   }
 ]
