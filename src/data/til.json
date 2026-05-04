@@ -376,5 +376,12 @@
     "title": "JavaScript: Array.prototype.flatMap()",
     "category": "JavaScript",
     "content": "`flatMap()` is a combination of `map()` and `flat()` with a depth of 1. It is more efficient than calling them separately."
+  },
+  {
+    "id": "2026-05-04",
+    "date": "2026-05-04",
+    "title": "CSS: Logical Properties",
+    "category": "CSS",
+    "content": "Logical properties like `margin-inline-start` instead of `margin-left` allow for better internationalization support (RTL/LTR)."
   }
 ]
