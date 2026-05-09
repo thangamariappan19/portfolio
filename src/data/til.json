@@ -411,5 +411,12 @@
     "title": "React: Custom Hooks",
     "category": "React",
     "content": "Custom hooks allow you to extract component logic into reusable functions. They always start with the word `use`."
+  },
+  {
+    "id": "2026-05-09",
+    "date": "2026-05-09",
+    "title": "Security: HTTPS and HSTS",
+    "category": "Security",
+    "content": "HTTP Strict Transport Security (HSTS) tells browsers that they should only interact with a website using secure HTTPS connections."
   }
 ]
