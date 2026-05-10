@@ -418,5 +418,12 @@
     "title": "Security: HTTPS and HSTS",
     "category": "Security",
     "content": "HTTP Strict Transport Security (HSTS) tells browsers that they should only interact with a website using secure HTTPS connections."
+  },
+  {
+    "id": "2026-05-10",
+    "date": "2026-05-10",
+    "title": "System Design: Consistency vs Availability",
+    "category": "System Design",
+    "content": "In CAP theorem, you often have to trade off between Consistency and Availability during a network partition."
   }
 ]
