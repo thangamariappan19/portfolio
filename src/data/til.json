@@ -453,5 +453,12 @@
     "title": "Docker: Multi-stage builds",
     "category": "DevOps",
     "content": "Multi-stage builds allow you to use one image for building (with all tools) and a much smaller image for running, keep production images lean."
+  },
+  {
+    "id": "2026-05-15",
+    "date": "2026-05-15",
+    "title": "React: useMemo vs useCallback",
+    "category": "React",
+    "content": "`useMemo` returns a memoized value, while `useCallback` returns a memoized callback function. Both help prevent unnecessary re-renders in performance-sensitive components."
   }
 ]
