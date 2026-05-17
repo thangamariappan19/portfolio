@@ -467,5 +467,12 @@
     "title": "Git: Squash and Merge",
     "category": "DevOps",
     "content": "Squashing commits keeps your history clean by combining all changes from a feature branch into a single commit on the main branch."
+  },
+  {
+    "id": "2026-05-17",
+    "date": "2026-05-17",
+    "title": "System Design: Consistency vs Availability",
+    "category": "System Design",
+    "content": "In CAP theorem, you often have to trade off between Consistency and Availability during a network partition."
   }
 ]
