@@ -481,5 +481,12 @@
     "title": "JavaScript: Optional Chaining",
     "category": "JavaScript",
     "content": "The optional chaining (`?.`) operator enables reading the value of a property located deep within a chain of connected objects without having to check each reference."
+  },
+  {
+    "id": "2026-05-19",
+    "date": "2026-05-19",
+    "title": "JavaScript: The Nullish Coalescing Operator",
+    "category": "JavaScript",
+    "content": "The `??` operator returns its right-hand side operand when its left-hand side operand is `null` or `undefined`, unlike `||` which checks for falsy values."
   }
 ]
