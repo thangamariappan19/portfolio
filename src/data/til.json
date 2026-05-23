@@ -509,5 +509,12 @@
     "title": "CSS: The Aspect Ratio Property",
     "category": "CSS",
     "content": "The `aspect-ratio` property allows you to create boxes that maintain their proportional dimensions, even as they resize."
+  },
+  {
+    "id": "2026-05-23",
+    "date": "2026-05-23",
+    "title": "Node.js: The event loop",
+    "category": "Node.js",
+    "content": "The event loop allows Node.js to perform non-blocking I/O operations by offloading operations to the system kernel whenever possible."
   }
 ]
