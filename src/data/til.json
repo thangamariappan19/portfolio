@@ -523,5 +523,12 @@
     "title": "React: Why unique keys matter",
     "category": "React",
     "content": "Keys help React identify which items have changed, are added, or are removed. They should be stable, predictable, and unique."
+  },
+  {
+    "id": "2026-05-25",
+    "date": "2026-05-25",
+    "title": "CSS: The Aspect Ratio Property",
+    "category": "CSS",
+    "content": "The `aspect-ratio` property allows you to create boxes that maintain their proportional dimensions, even as they resize."
   }
 ]
