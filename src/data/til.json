@@ -614,5 +614,12 @@
     "title": "React: Use objects for multiple state variables",
     "category": "React",
     "content": "Instead of many `useState` hooks, consider using a single state object or `useReducer` when state transitions are complex."
+  },
+  {
+    "id": "2026-06-06-2",
+    "date": "2026-06-06",
+    "title": "React: Custom Hooks",
+    "category": "React",
+    "content": "Custom hooks allow you to extract component logic into reusable functions. They always start with the word `use`."
   }
 ]

@@ -4,13 +4,17 @@ const { execSync } = require('child_process')
 
 // Today's Date
 const today = new Date().toISOString().split('T')[0]
-const notePath = path.join(__dirname, '../content/notes', `${today}.md`)
 const tilDataPath = path.join(__dirname, '../src/data/til.json')
 
-// Check if already exists
-if (fs.existsSync(notePath)) {
-  console.log(`Note for ${today} already exists. Skipping.`)
-  process.exit(0)
+// Determine unique note filename & ID for today
+let counter = 1
+let notePath = path.join(__dirname, '../content/notes', `${today}.md`)
+let fileBaseName = today
+
+while (fs.existsSync(notePath)) {
+  counter++
+  fileBaseName = `${today}-${counter}`
+  notePath = path.join(__dirname, '../content/notes', `${fileBaseName}.md`)
 }
 
 // TIL Database (A small collection to pick from)
@@ -162,7 +166,7 @@ if (fs.existsSync(tilDataPath)) {
 }
 
 tilData.push({
-  id: today,
+  id: fileBaseName,
   date: today,
   ...randomTip,
 })
@@ -182,7 +186,7 @@ try {
 const prefixes = [
   `feat(til): added new tip on ${randomTip.category}`,
   `docs: update daily knowledge - ${randomTip.title}`,
-  `chore: Daily TIL sync for ${today}`,
+  `chore: Daily TIL sync for ${fileBaseName}`,
   `feat: new learning on ${randomTip.category} - ${randomTip.title}`,
   `docs(til): ${randomTip.title}`,
   `refactor: polish daily content for ${randomTip.category}`,
