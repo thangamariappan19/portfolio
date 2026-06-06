@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useState, useEffect } from 'react'
 import { Moon, Sun, Menu, X } from 'lucide-react'
 import { ThemeContext } from '../../../contexts/theme'
 import { header } from '../../../data/portfolio'
@@ -11,44 +11,58 @@ const Navbar = () => {
   const toggleNavList = () => setShowNavList(!showNavList)
   const closeNav = () => setShowNavList(false)
 
+  // Close mobile menu on Escape key
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape' && showNavList) {
+        closeNav()
+      }
+    }
+
+    if (showNavList) {
+      document.addEventListener('keydown', handleEscape)
+      return () => document.removeEventListener('keydown', handleEscape)
+    }
+  }, [showNavList])
+
+  const navItems = [
+    { href: '#about', label: 'About' },
+    { href: '#projects', label: 'Work' },
+    { href: '#skills', label: 'Skills' },
+    { href: '#contact', label: 'Contact' },
+  ]
+
   return (
-    <nav className='nav'>
-      <a href='#top' className='nav__brand'>
+    <nav className='nav' role='navigation' aria-label='Main navigation'>
+      <a href='#top' className='nav__brand' aria-current='page'>
         {header.title}
       </a>
 
       <div className='nav__controls'>
-        <ul className={`nav__list ${showNavList ? 'nav__list--active' : ''}`}>
-          <li className='nav__list-item'>
-            <a href='#about' onClick={closeNav} className='link link--nav'>
-              About
-            </a>
-          </li>
-
-          <li className='nav__list-item'>
-            <a href='#projects' onClick={closeNav} className='link link--nav'>
-              Work
-            </a>
-          </li>
-
-          <li className='nav__list-item'>
-            <a href='#skills' onClick={closeNav} className='link link--nav'>
-              Skills
-            </a>
-          </li>
-
-          <li className='nav__list-item'>
-            <a href='#contact' onClick={closeNav} className='link link--nav'>
-              Contact
-            </a>
-          </li>
+        <ul
+          className={`nav__list ${showNavList ? 'nav__list--active' : ''}`}
+          role='menubar'
+        >
+          {navItems.map((item) => (
+            <li key={item.href} className='nav__list-item' role='none'>
+              <a
+                href={item.href}
+                onClick={closeNav}
+                className='link link--nav'
+                role='menuitem'
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
         </ul>
 
         <button
           type='button'
           onClick={toggleTheme}
           className='nav__theme'
-          aria-label='toggle theme'
+          aria-label={`Switch to ${themeName === 'dark' ? 'light' : 'dark'} theme`}
+          title={`Switch to ${themeName === 'dark' ? 'light' : 'dark'} theme`}
         >
           {themeName === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
         </button>
@@ -57,7 +71,10 @@ const Navbar = () => {
           type='button'
           onClick={toggleNavList}
           className='nav__hamburger'
-          aria-label='toggle navigation'
+          aria-label='Toggle navigation menu'
+          aria-expanded={showNavList}
+          aria-controls='nav-menu'
+          title='Toggle navigation menu'
         >
           {showNavList ? <X size={24} /> : <Menu size={24} />}
         </button>

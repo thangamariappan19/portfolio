@@ -278,6 +278,11 @@ main {
   text-decoration: none;
 }
 
+.btn:focus-visible {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 2px;
+}
+
 .btn--primary {
   background: var(--clr-primary);
   color: var(--clr-primary-text);
@@ -291,6 +296,10 @@ main {
   color: var(--clr-primary-text);
 }
 
+.btn--primary:focus-visible {
+  outline-offset: -4px;
+}
+
 .btn--outline {
   color: var(--clr-fg);
   border: 1px solid var(--clr-fg-alt);
@@ -302,6 +311,12 @@ main {
   color: var(--clr-primary);
   background: rgba(37, 99, 235, 0.05);
   transform: translateY(-2px);
+}
+
+.btn--outline:focus-visible {
+  border-color: var(--clr-primary);
+  color: var(--clr-primary);
+  background: rgba(37, 99, 235, 0.05);
 }
 
 .btn--plain {
