@@ -17,13 +17,15 @@ const IMPROVEMENTS = [
   {
     id: 'a11y',
     name: 'Accessibility Enhancement',
-    description: 'Add ARIA labels, improve focus states, or enhance semantic HTML',
+    description:
+      'Add ARIA labels, improve focus states, or enhance semantic HTML',
     weight: 0.25,
   },
   {
     id: 'perf',
     name: 'Performance Optimization',
-    description: 'Optimize bundle size, improve load times, or add lazy loading',
+    description:
+      'Optimize bundle size, improve load times, or add lazy loading',
     weight: 0.25,
   },
   {
@@ -35,7 +37,8 @@ const IMPROVEMENTS = [
   {
     id: 'dev-dx',
     name: 'Developer Experience',
-    description: 'Refactor components, improve documentation, or add utility functions',
+    description:
+      'Refactor components, improve documentation, or add utility functions',
     weight: 0.25,
   },
 ]
@@ -115,7 +118,7 @@ function createDummyCommit(improvement) {
     // Create a small tracking file
     fs.writeFileSync(
       filename,
-      `Improvement ID: ${improvement.id}\nDate: ${today}\nCategory: ${improvement.name}\n`
+      `Improvement ID: ${improvement.id}\nDate: ${today}\nCategory: ${improvement.name}\n`,
     )
 
     return filename
@@ -134,10 +137,9 @@ function executeCommit(improvement, commitMessage) {
       execSync('git add -A', { stdio: 'inherit' })
     }
 
-    execSync(
-      `git commit -m "${commitMessage}" --allow-empty`,
-      { stdio: 'inherit' }
-    )
+    execSync(`git commit -m "${commitMessage}" --allow-empty`, {
+      stdio: 'inherit',
+    })
 
     console.log(`✅ Created commit: ${commitMessage}`)
     return true
@@ -179,9 +181,7 @@ function run() {
 
   console.log(`───────────────────────────────────────`)
   console.log(`✨ Generated ${successCount}/${improvementCount} commits`)
-  console.log(
-    `\n💡 Tip: Push changes with: git push origin main\n`
-  )
+  console.log(`\n💡 Tip: Push changes with: git push origin main\n`)
 }
 
 // Run the generator

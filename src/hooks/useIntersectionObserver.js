@@ -9,10 +9,7 @@ import { useEffect, useRef } from 'react'
  * @returns {Object} - { ref, isVisible }
  */
 const useIntersectionObserver = (options = {}) => {
-  const {
-    threshold = 0.1,
-    margin = '-100px',
-  } = options
+  const { threshold = 0.1, margin = '-100px' } = options
 
   const ref = useRef(null)
   const isVisibleRef = useRef(false)
@@ -30,7 +27,7 @@ const useIntersectionObserver = (options = {}) => {
       {
         threshold,
         rootMargin: margin,
-      }
+      },
     )
 
     observer.observe(ref.current)

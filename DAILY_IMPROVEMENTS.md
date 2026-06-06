@@ -12,6 +12,7 @@ The system generates **3-4 meaningful commits daily** covering different improve
 - 👨‍💻 **Developer Experience** - Component refactoring, documentation, utilities
 
 Each commit has:
+
 - ✅ Clear, descriptive message
 - 📝 Meaningful category classification
 - 🎯 Production-grade quality
@@ -24,6 +25,7 @@ Each commit has:
 The GitHub Actions workflow runs automatically **every day at 9:00 AM UTC**.
 
 #### Prerequisites
+
 1. Your repository must be on GitHub
 2. Ensure the `.github/workflows/daily-improvements.yml` file exists (✅ already added)
 
@@ -35,12 +37,13 @@ The GitHub Actions workflow runs automatically **every day at 9:00 AM UTC**.
 on:
   schedule:
     # Change the cron expression (cron format: minute hour day month weekday)
-    - cron: '0 9 * * *'  # 9 AM UTC every day
+    - cron: '0 9 * * *' # 9 AM UTC every day
 ```
 
 Common schedules:
+
 - `'0 9 * * *'` - 9:00 AM UTC
-- `'0 18 * * *'` - 6:00 PM UTC  
+- `'0 18 * * *'` - 6:00 PM UTC
 - `'0 9 * * 1'` - Every Monday at 9:00 AM UTC
 - `'0 */12 * * *'` - Every 12 hours
 
@@ -69,6 +72,7 @@ git push origin main
 Use your OS scheduler to run the script at specific times:
 
 **Windows (Task Scheduler):**
+
 ```bash
 # Create a task that runs daily at 9:00 AM
 # Action: C:\Program Files\nodejs\node.exe
@@ -76,6 +80,7 @@ Use your OS scheduler to run the script at specific times:
 ```
 
 **Mac/Linux (Crontab):**
+
 ```bash
 # Edit crontab
 crontab -e
@@ -121,6 +126,7 @@ run: |
 ## Best Practices
 
 ✅ **Do:**
+
 - Review commits in your git history
 - Customize improvement templates for your goals
 - Adjust schedule to align with team timezone
@@ -128,6 +134,7 @@ run: |
 - Build locally first before automation
 
 ❌ **Don't:**
+
 - Disable linting or build checks
 - Create breaking changes
 - Push without testing
@@ -137,20 +144,24 @@ run: |
 ## Troubleshooting
 
 **❌ "Git not initialized" error**
+
 - Ensure the repo is cloned and `.git` folder exists
 - Run `git init` if needed
 
 **❌ Push fails**
+
 - Check branch protection rules
 - Verify GitHub token/SSH keys are configured
 - Ensure default branch is `main` or `master`
 
 **❌ No commits created**
+
 - Check if workflow is enabled in GitHub
 - Verify cron schedule syntax
 - Check GitHub Actions logs for errors
 
 **❌ Duplicates or missed runs**
+
 - GitHub Actions may skip on multiple triggers
 - Check workflow logs: Settings → Actions → Workflows
 
@@ -216,6 +227,7 @@ When you run `npm run daily:commit`:
 ## Support
 
 For issues or customizations, check:
+
 - GitHub Actions logs: Repository → Actions
 - Workflow details: `.github/workflows/daily-improvements.yml`
 - Script source: `scripts/daily-improve-enhanced.js`
