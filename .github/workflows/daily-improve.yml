@@ -30,7 +30,7 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git config --global user.name "thangamariappan19"
+          git config --global user.name "Thanga Mariappan"
           git config --global user.email "thangamariappancse@gmail.com"
           git add .
           if git diff --staged --quiet; then
