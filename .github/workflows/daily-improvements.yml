@@ -1,0 +1,62 @@
+name: Daily Portfolio Improvements
+
+on:
+  schedule:
+    # Run every day at 9:00 AM UTC (adjustable)
+    - cron: '0 9 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  daily-improvements:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: 📥 Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: ⚙️ Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: 👤 Configure Git
+        run: |
+          git config --global user.name "Portfolio Bot"
+          git config --global user.email "portfolio-bot@github.com"
+
+      - name: 🔨 Install dependencies
+        run: npm ci
+
+      - name: 🎨 Build project
+        run: npm run build --if-present
+        continue-on-error: true
+
+      - name: 📋 Run daily improvement generator
+        run: node scripts/daily-improve-enhanced.js
+
+      - name: 🚀 Push improvements
+        run: |
+          # Check if there are changes
+          if [ -n "$(git status --porcelain)" ]; then
+            git push origin main
+            echo "✅ Daily improvements pushed successfully"
+          else
+            echo "ℹ️ No changes to push today"
+          fi
+        continue-on-error: true
+
+      - name: 📊 Log daily summary
+        if: always()
+        run: |
+          echo "## Daily Improvement Summary" >> $GITHUB_STEP_SUMMARY
+          echo "Date: $(date -u +'%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Recent Commits:**" >> $GITHUB_STEP_SUMMARY
+          git log --oneline -5 >> $GITHUB_STEP_SUMMARY

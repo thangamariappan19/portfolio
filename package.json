@@ -26,7 +26,8 @@
     "deploy": "gh-pages -d build",
     "lint": "eslint .",
     "format": "prettier --write \"**/*.{js,jsx,json,css,md}\"",
-    "daily:improve": "node scripts/daily-improve.js"
+    "daily:improve": "node scripts/daily-improve.js",
+    "daily:commit": "node scripts/daily-improve-enhanced.js"
   },
   "browserslist": {
     "production": [
