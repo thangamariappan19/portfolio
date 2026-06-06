@@ -1,0 +1,3 @@
+Improvement ID: ux
+Date: 2026-06-06
+Category: UX/UI Refinement
