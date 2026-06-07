@@ -656,5 +656,12 @@
     "title": "Security: HTTPS and HSTS",
     "category": "Security",
     "content": "HTTP Strict Transport Security (HSTS) tells browsers that they should only interact with a website using secure HTTPS connections."
+  },
+  {
+    "id": "2026-06-07-3",
+    "date": "2026-06-07",
+    "title": "JavaScript: Optional Chaining",
+    "category": "JavaScript",
+    "content": "The optional chaining (`?.`) operator enables reading the value of a property located deep within a chain of connected objects without having to check each reference."
   }
 ]
