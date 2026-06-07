@@ -649,5 +649,12 @@
     "title": "Node.js: Worker Threads",
     "category": "Node.js",
     "content": "The `worker_threads` module enables the use of threads that execute JavaScript in parallel, useful for CPU-intensive tasks."
+  },
+  {
+    "id": "2026-06-07-2",
+    "date": "2026-06-07",
+    "title": "Security: HTTPS and HSTS",
+    "category": "Security",
+    "content": "HTTP Strict Transport Security (HSTS) tells browsers that they should only interact with a website using secure HTTPS connections."
   }
 ]
