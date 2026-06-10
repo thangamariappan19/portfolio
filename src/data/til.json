@@ -719,5 +719,12 @@
     "title": "JavaScript: Array.prototype.flatMap()",
     "category": "JavaScript",
     "content": "`flatMap()` is a combination of `map()` and `flat()` with a depth of 1. It is more efficient than calling them separately."
+  },
+  {
+    "id": "2026-06-10-3",
+    "date": "2026-06-10",
+    "title": "Docker: Multi-stage builds",
+    "category": "DevOps",
+    "content": "Multi-stage builds allow you to use one image for building (with all tools) and a much smaller image for running, keep production images lean."
   }
 ]
