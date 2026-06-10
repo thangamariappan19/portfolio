@@ -705,5 +705,12 @@
     "title": "Web Performance: Core Web Vitals",
     "category": "Performance",
     "content": "LCP (Largest Contentful Paint) measures loading performance. To provide a good user experience, LCP should occur within 2.5 seconds."
+  },
+  {
+    "id": "2026-06-10",
+    "date": "2026-06-10",
+    "title": "JavaScript: Array.prototype.flatMap()",
+    "category": "JavaScript",
+    "content": "`flatMap()` is a combination of `map()` and `flat()` with a depth of 1. It is more efficient than calling them separately."
   }
 ]
