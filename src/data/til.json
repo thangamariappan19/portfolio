@@ -726,5 +726,12 @@
     "title": "Docker: Multi-stage builds",
     "category": "DevOps",
     "content": "Multi-stage builds allow you to use one image for building (with all tools) and a much smaller image for running, keep production images lean."
+  },
+  {
+    "id": "2026-06-11",
+    "date": "2026-06-11",
+    "title": "React: Use objects for multiple state variables",
+    "category": "React",
+    "content": "Instead of many `useState` hooks, consider using a single state object or `useReducer` when state transitions are complex."
   }
 ]
