@@ -740,5 +740,12 @@
     "title": "PostgreSQL: Indexing for performance",
     "category": "Database",
     "content": "B-tree indexes are the default and work for most common lookups. Use GIN indexes for full-text search and array mapping."
+  },
+  {
+    "id": "2026-06-11-3",
+    "date": "2026-06-11",
+    "title": "JavaScript: Array.prototype.flatMap()",
+    "category": "JavaScript",
+    "content": "`flatMap()` is a combination of `map()` and `flat()` with a depth of 1. It is more efficient than calling them separately."
   }
 ]
