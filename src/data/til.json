@@ -754,5 +754,12 @@
     "title": "System Design: Consistency vs Availability",
     "category": "System Design",
     "content": "In CAP theorem, you often have to trade off between Consistency and Availability during a network partition."
+  },
+  {
+    "id": "2026-06-12-2",
+    "date": "2026-06-12",
+    "title": "React: Why unique keys matter",
+    "category": "React",
+    "content": "Keys help React identify which items have changed, are added, or are removed. They should be stable, predictable, and unique."
   }
 ]
