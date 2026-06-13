@@ -768,5 +768,12 @@
     "title": "TypeScript: Pick and Omit Utility Types",
     "category": "TypeScript",
     "content": "The `Pick<T, K>` type constructs a type by picking the set of properties `K` from `T`. Conversely, `Omit<T, K>` constructs a type by picking all properties from `T` and then removing `K`."
+  },
+  {
+    "id": "2026-06-13",
+    "date": "2026-06-13",
+    "title": "JavaScript: The Nullish Coalescing Operator",
+    "category": "JavaScript",
+    "content": "The `??` operator returns its right-hand side operand when its left-hand side operand is `null` or `undefined`, unlike `||` which checks for falsy values."
   }
 ]
