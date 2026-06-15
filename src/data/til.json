@@ -824,5 +824,12 @@
     "title": "Security: HTTPS and HSTS",
     "category": "Security",
     "content": "HTTP Strict Transport Security (HSTS) tells browsers that they should only interact with a website using secure HTTPS connections."
+  },
+  {
+    "id": "2026-06-15-3",
+    "date": "2026-06-15",
+    "title": "Web Performance: Core Web Vitals",
+    "category": "Performance",
+    "content": "LCP (Largest Contentful Paint) measures loading performance. To provide a good user experience, LCP should occur within 2.5 seconds."
   }
 ]
