@@ -838,5 +838,12 @@
     "title": "Docker: Multi-stage builds",
     "category": "DevOps",
     "content": "Multi-stage builds allow you to use one image for building (with all tools) and a much smaller image for running, keep production images lean."
+  },
+  {
+    "id": "2026-06-16-2",
+    "date": "2026-06-16",
+    "title": "Git: Squash and Merge",
+    "category": "DevOps",
+    "content": "Squashing commits keeps your history clean by combining all changes from a feature branch into a single commit on the main branch."
   }
 ]
