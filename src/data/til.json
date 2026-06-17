@@ -859,5 +859,12 @@
     "title": "Node.js: Worker Threads",
     "category": "Node.js",
     "content": "The `worker_threads` module enables the use of threads that execute JavaScript in parallel, useful for CPU-intensive tasks."
+  },
+  {
+    "id": "2026-06-17",
+    "date": "2026-06-17",
+    "title": "React: useMemo vs useCallback",
+    "category": "React",
+    "content": "`useMemo` returns a memoized value, while `useCallback` returns a memoized callback function. Both help prevent unnecessary re-renders in performance-sensitive components."
   }
 ]
