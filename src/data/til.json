@@ -866,5 +866,12 @@
     "title": "React: useMemo vs useCallback",
     "category": "React",
     "content": "`useMemo` returns a memoized value, while `useCallback` returns a memoized callback function. Both help prevent unnecessary re-renders in performance-sensitive components."
+  },
+  {
+    "id": "2026-06-17-2",
+    "date": "2026-06-17",
+    "title": "CSS: Logical Properties",
+    "category": "CSS",
+    "content": "Logical properties like `margin-inline-start` instead of `margin-left` allow for better internationalization support (RTL/LTR)."
   }
 ]
