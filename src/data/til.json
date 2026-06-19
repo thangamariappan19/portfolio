@@ -901,5 +901,12 @@
     "title": "Web Performance: Core Web Vitals",
     "category": "Performance",
     "content": "LCP (Largest Contentful Paint) measures loading performance. To provide a good user experience, LCP should occur within 2.5 seconds."
+  },
+  {
+    "id": "2026-06-19",
+    "date": "2026-06-19",
+    "title": "Clean Code: Meaningful Names",
+    "category": "Clean Code",
+    "content": "Avoid generic names like `data` or `info`. Use specific names that reveal intent, such as `userProfile` or `transactionDate`."
   }
 ]
