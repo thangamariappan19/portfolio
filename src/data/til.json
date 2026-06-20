@@ -936,5 +936,12 @@
     "title": "JavaScript: Array.prototype.flatMap()",
     "category": "JavaScript",
     "content": "`flatMap()` is a combination of `map()` and `flat()` with a depth of 1. It is more efficient than calling them separately."
+  },
+  {
+    "id": "2026-06-20-3",
+    "date": "2026-06-20",
+    "title": "JavaScript: Optional Chaining",
+    "category": "JavaScript",
+    "content": "The optional chaining (`?.`) operator enables reading the value of a property located deep within a chain of connected objects without having to check each reference."
   }
 ]
