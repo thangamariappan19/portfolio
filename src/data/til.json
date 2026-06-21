@@ -943,5 +943,12 @@
     "title": "JavaScript: Optional Chaining",
     "category": "JavaScript",
     "content": "The optional chaining (`?.`) operator enables reading the value of a property located deep within a chain of connected objects without having to check each reference."
+  },
+  {
+    "id": "2026-06-21",
+    "date": "2026-06-21",
+    "title": "Git: Squash and Merge",
+    "category": "DevOps",
+    "content": "Squashing commits keeps your history clean by combining all changes from a feature branch into a single commit on the main branch."
   }
 ]
