@@ -957,5 +957,12 @@
     "title": "JavaScript: Array.prototype.flatMap()",
     "category": "JavaScript",
     "content": "`flatMap()` is a combination of `map()` and `flat()` with a depth of 1. It is more efficient than calling them separately."
+  },
+  {
+    "id": "2026-06-21-3",
+    "date": "2026-06-21",
+    "title": "Node.js: The event loop",
+    "category": "Node.js",
+    "content": "The event loop allows Node.js to perform non-blocking I/O operations by offloading operations to the system kernel whenever possible."
   }
 ]
