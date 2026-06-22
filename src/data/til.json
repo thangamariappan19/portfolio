@@ -978,5 +978,12 @@
     "title": "React: Use objects for multiple state variables",
     "category": "React",
     "content": "Instead of many `useState` hooks, consider using a single state object or `useReducer` when state transitions are complex."
+  },
+  {
+    "id": "2026-06-22-3",
+    "date": "2026-06-22",
+    "title": "React: useMemo vs useCallback",
+    "category": "React",
+    "content": "`useMemo` returns a memoized value, while `useCallback` returns a memoized callback function. Both help prevent unnecessary re-renders in performance-sensitive components."
   }
 ]
