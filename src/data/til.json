@@ -985,5 +985,12 @@
     "title": "React: useMemo vs useCallback",
     "category": "React",
     "content": "`useMemo` returns a memoized value, while `useCallback` returns a memoized callback function. Both help prevent unnecessary re-renders in performance-sensitive components."
+  },
+  {
+    "id": "2026-06-23",
+    "date": "2026-06-23",
+    "title": "PostgreSQL: Indexing for performance",
+    "category": "Database",
+    "content": "B-tree indexes are the default and work for most common lookups. Use GIN indexes for full-text search and array mapping."
   }
 ]
