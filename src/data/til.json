@@ -999,5 +999,12 @@
     "title": "React: Why unique keys matter",
     "category": "React",
     "content": "Keys help React identify which items have changed, are added, or are removed. They should be stable, predictable, and unique."
+  },
+  {
+    "id": "2026-06-23-3",
+    "date": "2026-06-23",
+    "title": "Clean Code: Meaningful Names",
+    "category": "Clean Code",
+    "content": "Avoid generic names like `data` or `info`. Use specific names that reveal intent, such as `userProfile` or `transactionDate`."
   }
 ]
