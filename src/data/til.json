@@ -992,5 +992,12 @@
     "title": "PostgreSQL: Indexing for performance",
     "category": "Database",
     "content": "B-tree indexes are the default and work for most common lookups. Use GIN indexes for full-text search and array mapping."
+  },
+  {
+    "id": "2026-06-23-2",
+    "date": "2026-06-23",
+    "title": "React: Why unique keys matter",
+    "category": "React",
+    "content": "Keys help React identify which items have changed, are added, or are removed. They should be stable, predictable, and unique."
   }
 ]
