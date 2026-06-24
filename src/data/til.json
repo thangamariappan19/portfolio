@@ -1020,5 +1020,12 @@
     "title": "Node.js: The event loop",
     "category": "Node.js",
     "content": "The event loop allows Node.js to perform non-blocking I/O operations by offloading operations to the system kernel whenever possible."
+  },
+  {
+    "id": "2026-06-24-3",
+    "date": "2026-06-24",
+    "title": "JavaScript: Optional Chaining",
+    "category": "JavaScript",
+    "content": "The optional chaining (`?.`) operator enables reading the value of a property located deep within a chain of connected objects without having to check each reference."
   }
 ]
