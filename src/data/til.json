@@ -1034,5 +1034,12 @@
     "title": "CSS: The Aspect Ratio Property",
     "category": "CSS",
     "content": "The `aspect-ratio` property allows you to create boxes that maintain their proportional dimensions, even as they resize."
+  },
+  {
+    "id": "2026-06-25-2",
+    "date": "2026-06-25",
+    "title": "System Design: Consistency vs Availability",
+    "category": "System Design",
+    "content": "In CAP theorem, you often have to trade off between Consistency and Availability during a network partition."
   }
 ]
