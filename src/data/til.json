@@ -1055,5 +1055,12 @@
     "title": "JavaScript: The Nullish Coalescing Operator",
     "category": "JavaScript",
     "content": "The `??` operator returns its right-hand side operand when its left-hand side operand is `null` or `undefined`, unlike `||` which checks for falsy values."
+  },
+  {
+    "id": "2026-06-26-2",
+    "date": "2026-06-26",
+    "title": "JavaScript: The Nullish Coalescing Operator",
+    "category": "JavaScript",
+    "content": "The `??` operator returns its right-hand side operand when its left-hand side operand is `null` or `undefined`, unlike `||` which checks for falsy values."
   }
 ]
