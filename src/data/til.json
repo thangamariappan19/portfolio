@@ -1069,5 +1069,12 @@
     "title": "React: useMemo vs useCallback",
     "category": "React",
     "content": "`useMemo` returns a memoized value, while `useCallback` returns a memoized callback function. Both help prevent unnecessary re-renders in performance-sensitive components."
+  },
+  {
+    "id": "2026-06-27",
+    "date": "2026-06-27",
+    "title": "React: Use objects for multiple state variables",
+    "category": "React",
+    "content": "Instead of many `useState` hooks, consider using a single state object or `useReducer` when state transitions are complex."
   }
 ]
