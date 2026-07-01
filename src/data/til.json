@@ -1167,5 +1167,12 @@
     "title": "JavaScript: The Nullish Coalescing Operator",
     "category": "JavaScript",
     "content": "The `??` operator returns its right-hand side operand when its left-hand side operand is `null` or `undefined`, unlike `||` which checks for falsy values."
+  },
+  {
+    "id": "2026-07-01-3",
+    "date": "2026-07-01",
+    "title": "System Design: Consistency vs Availability",
+    "category": "System Design",
+    "content": "In CAP theorem, you often have to trade off between Consistency and Availability during a network partition."
   }
 ]
