@@ -1181,5 +1181,12 @@
     "title": "CSS: The Aspect Ratio Property",
     "category": "CSS",
     "content": "The `aspect-ratio` property allows you to create boxes that maintain their proportional dimensions, even as they resize."
+  },
+  {
+    "id": "2026-07-02-2",
+    "date": "2026-07-02",
+    "title": "React: useMemo vs useCallback",
+    "category": "React",
+    "content": "`useMemo` returns a memoized value, while `useCallback` returns a memoized callback function. Both help prevent unnecessary re-renders in performance-sensitive components."
   }
 ]
