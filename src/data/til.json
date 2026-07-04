@@ -1230,5 +1230,12 @@
     "title": "React: useMemo vs useCallback",
     "category": "React",
     "content": "`useMemo` returns a memoized value, while `useCallback` returns a memoized callback function. Both help prevent unnecessary re-renders in performance-sensitive components."
+  },
+  {
+    "id": "2026-07-04-3",
+    "date": "2026-07-04",
+    "title": "React: Custom Hooks",
+    "category": "React",
+    "content": "Custom hooks allow you to extract component logic into reusable functions. They always start with the word `use`."
   }
 ]
