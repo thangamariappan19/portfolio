@@ -1244,5 +1244,12 @@
     "title": "Clean Code: Meaningful Names",
     "category": "Clean Code",
     "content": "Avoid generic names like `data` or `info`. Use specific names that reveal intent, such as `userProfile` or `transactionDate`."
+  },
+  {
+    "id": "2026-07-05-2",
+    "date": "2026-07-05",
+    "title": "TypeScript: Pick and Omit Utility Types",
+    "category": "TypeScript",
+    "content": "The `Pick<T, K>` type constructs a type by picking the set of properties `K` from `T`. Conversely, `Omit<T, K>` constructs a type by picking all properties from `T` and then removing `K`."
   }
 ]
