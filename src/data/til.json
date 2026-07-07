@@ -1286,5 +1286,12 @@
     "title": "CSS: Logical Properties",
     "category": "CSS",
     "content": "Logical properties like `margin-inline-start` instead of `margin-left` allow for better internationalization support (RTL/LTR)."
+  },
+  {
+    "id": "2026-07-07-2",
+    "date": "2026-07-07",
+    "title": "Security: HTTPS and HSTS",
+    "category": "Security",
+    "content": "HTTP Strict Transport Security (HSTS) tells browsers that they should only interact with a website using secure HTTPS connections."
   }
 ]
