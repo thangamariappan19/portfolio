@@ -1279,5 +1279,12 @@
     "title": "JavaScript: The Nullish Coalescing Operator",
     "category": "JavaScript",
     "content": "The `??` operator returns its right-hand side operand when its left-hand side operand is `null` or `undefined`, unlike `||` which checks for falsy values."
+  },
+  {
+    "id": "2026-07-07",
+    "date": "2026-07-07",
+    "title": "CSS: Logical Properties",
+    "category": "CSS",
+    "content": "Logical properties like `margin-inline-start` instead of `margin-left` allow for better internationalization support (RTL/LTR)."
   }
 ]
