@@ -1307,5 +1307,12 @@
     "title": "System Design: Consistency vs Availability",
     "category": "System Design",
     "content": "In CAP theorem, you often have to trade off between Consistency and Availability during a network partition."
+  },
+  {
+    "id": "2026-07-08-2",
+    "date": "2026-07-08",
+    "title": "Web Performance: Core Web Vitals",
+    "category": "Performance",
+    "content": "LCP (Largest Contentful Paint) measures loading performance. To provide a good user experience, LCP should occur within 2.5 seconds."
   }
 ]
