@@ -1349,5 +1349,12 @@
     "title": "React: Use objects for multiple state variables",
     "category": "React",
     "content": "Instead of many `useState` hooks, consider using a single state object or `useReducer` when state transitions are complex."
+  },
+  {
+    "id": "2026-07-10-2",
+    "date": "2026-07-10",
+    "title": "CSS: Logical Properties",
+    "category": "CSS",
+    "content": "Logical properties like `margin-inline-start` instead of `margin-left` allow for better internationalization support (RTL/LTR)."
   }
 ]
