@@ -1419,5 +1419,12 @@
     "title": "CSS: The Aspect Ratio Property",
     "category": "CSS",
     "content": "The `aspect-ratio` property allows you to create boxes that maintain their proportional dimensions, even as they resize."
+  },
+  {
+    "id": "2026-07-13-3",
+    "date": "2026-07-13",
+    "title": "CSS: Logical Properties",
+    "category": "CSS",
+    "content": "Logical properties like `margin-inline-start` instead of `margin-left` allow for better internationalization support (RTL/LTR)."
   }
 ]
