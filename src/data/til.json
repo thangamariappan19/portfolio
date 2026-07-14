@@ -1433,5 +1433,12 @@
     "title": "System Design: Consistency vs Availability",
     "category": "System Design",
     "content": "In CAP theorem, you often have to trade off between Consistency and Availability during a network partition."
+  },
+  {
+    "id": "2026-07-14-2",
+    "date": "2026-07-14",
+    "title": "Node.js: Worker Threads",
+    "category": "Node.js",
+    "content": "The `worker_threads` module enables the use of threads that execute JavaScript in parallel, useful for CPU-intensive tasks."
   }
 ]
