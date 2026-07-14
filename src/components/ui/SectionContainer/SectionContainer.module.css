@@ -14,10 +14,18 @@
   width: 100%;
 }
 
-.section__content--md   { max-width: 768px; }
-.section__content--lg   { max-width: 1024px; }
-.section__content--xl   { max-width: 1280px; }
-.section__content--full { max-width: 100%; }
+.section__content--md {
+  max-width: 768px;
+}
+.section__content--lg {
+  max-width: 1024px;
+}
+.section__content--xl {
+  max-width: 1280px;
+}
+.section__content--full {
+  max-width: 100%;
+}
 
 .section__header {
   margin-bottom: 3rem;

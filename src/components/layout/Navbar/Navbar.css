@@ -42,7 +42,9 @@
 }
 
 .nav--scrolled {
-  box-shadow: var(--shadow-lg), 0 0 0 1px var(--glass-border);
+  box-shadow:
+    var(--shadow-lg),
+    0 0 0 1px var(--glass-border);
 }
 
 /* ── Brand ───────────────────────────────────────────────────────────────── */

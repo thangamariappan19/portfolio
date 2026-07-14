@@ -35,8 +35,7 @@
   --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.07), 0 1px 2px -1px rgb(0 0 0 / 0.07);
   --shadow: 0 4px 12px -1px rgb(0 0 0 / 0.1), 0 2px 6px -2px rgb(0 0 0 / 0.06);
   --shadow-lg:
-    0 10px 30px -3px rgb(0 0 0 / 0.1),
-    0 4px 10px -4px rgb(0 0 0 / 0.08);
+    0 10px 30px -3px rgb(0 0 0 / 0.1), 0 4px 10px -4px rgb(0 0 0 / 0.08);
   --shadow-xl: 0 20px 50px -10px rgb(0 0 0 / 0.12);
   --glass-bg: rgba(255, 255, 255, 0.8);
   --glass-border: rgba(148, 163, 184, 0.2);
@@ -93,17 +92,41 @@
 /* Dark mode mesh gradient background */
 .dark.app {
   background-image:
-    radial-gradient(ellipse 80% 60% at 10% 5%, rgba(16, 23, 45, 0.9) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 90% 10%, rgba(16, 60, 60, 0.35) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 40% at 50% 100%, rgba(5, 30, 50, 0.5) 0%, transparent 50%);
+    radial-gradient(
+      ellipse 80% 60% at 10% 5%,
+      rgba(16, 23, 45, 0.9) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse 60% 50% at 90% 10%,
+      rgba(16, 60, 60, 0.35) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 50% 100%,
+      rgba(5, 30, 50, 0.5) 0%,
+      transparent 50%
+    );
 }
 
 /* Light mode subtle gradient */
 .light.app {
   background-image:
-    radial-gradient(ellipse 70% 50% at 0% 0%, rgba(219, 234, 254, 0.8) 0%, transparent 55%),
-    radial-gradient(ellipse 50% 40% at 100% 10%, rgba(238, 242, 255, 0.7) 0%, transparent 50%),
-    radial-gradient(ellipse 40% 50% at 50% 100%, rgba(224, 231, 255, 0.5) 0%, transparent 50%);
+    radial-gradient(
+      ellipse 70% 50% at 0% 0%,
+      rgba(219, 234, 254, 0.8) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 50% 40% at 100% 10%,
+      rgba(238, 242, 255, 0.7) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 40% 50% at 50% 100%,
+      rgba(224, 231, 255, 0.5) 0%,
+      transparent 50%
+    );
 }
 
 /* Mouse spotlight effect */
@@ -166,7 +189,11 @@ main {
 
 /* ── Typography Utilities ────────────────────────────────────────────────── */
 .text-gradient {
-  background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-accent) 60%);
+  background: linear-gradient(
+    135deg,
+    var(--clr-primary) 0%,
+    var(--clr-accent) 60%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -191,7 +218,11 @@ main {
   height: 0.2em;
   position: absolute;
   bottom: 0;
-  background: linear-gradient(90deg, var(--clr-primary), var(--clr-primary-light));
+  background: linear-gradient(
+    90deg,
+    var(--clr-primary),
+    var(--clr-primary-light)
+  );
   transition: width var(--transition-base);
 }
 

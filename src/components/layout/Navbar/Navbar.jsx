@@ -47,7 +47,7 @@ const Navbar = () => {
         ([entry]) => {
           if (entry.isIntersecting) setActiveSection(id)
         },
-        { rootMargin: '-40% 0px -55% 0px' }
+        { rootMargin: '-40% 0px -55% 0px' },
       )
       observer.observe(el)
       observers.push(observer)

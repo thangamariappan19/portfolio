@@ -8,8 +8,16 @@ import './Projects.css'
 
 const FILTERS = [
   { key: 'All', label: 'All Work' },
-  { key: 'AI', label: 'AI & ML', match: ['AI / Full Stack', 'Machine Learning', 'Health Tech'] },
-  { key: 'Enterprise', label: 'Enterprise', match: ['Enterprise', 'E-Commerce'] },
+  {
+    key: 'AI',
+    label: 'AI & ML',
+    match: ['AI / Full Stack', 'Machine Learning', 'Health Tech'],
+  },
+  {
+    key: 'Enterprise',
+    label: 'Enterprise',
+    match: ['Enterprise', 'E-Commerce'],
+  },
   { key: 'Open Source', label: 'Open Source', match: ['Open Source'] },
 ]
 
@@ -58,7 +66,11 @@ const Projects = () => {
       maxWidth='xl'
     >
       {/* Filter tabs */}
-      <div className='projects__filters' role='tablist' aria-label='Filter projects'>
+      <div
+        className='projects__filters'
+        role='tablist'
+        aria-label='Filter projects'
+      >
         {FILTERS.map((f) => (
           <button
             key={f.key}
@@ -103,12 +115,19 @@ const Projects = () => {
                 <div className='project-card__title-group'>
                   <motion.h3
                     className='project-card__title'
-                    animate={{ color: hoveredId === project.id ? 'var(--clr-primary)' : 'var(--clr-fg)' }}
+                    animate={{
+                      color:
+                        hoveredId === project.id
+                          ? 'var(--clr-primary)'
+                          : 'var(--clr-fg)',
+                    }}
                     transition={{ duration: 0.25 }}
                   >
                     {project.name}
                   </motion.h3>
-                  <span className='project-card__category'>{project.category}</span>
+                  <span className='project-card__category'>
+                    {project.category}
+                  </span>
                 </div>
 
                 <div className='project-card__links'>
@@ -162,7 +181,9 @@ const Projects = () => {
                   </Badge>
                 ))}
                 {project.stack.length > 5 && (
-                  <span className='stack-more'>+{project.stack.length - 5}</span>
+                  <span className='stack-more'>
+                    +{project.stack.length - 5}
+                  </span>
                 )}
               </div>
             </motion.div>

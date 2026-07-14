@@ -4,11 +4,11 @@ import SectionContainer from '../../ui/SectionContainer/SectionContainer'
 import './Skills.css'
 
 const CATEGORY_META = {
-  'Frontend Ecosystem':   { icon: '⚛️', accent: 'var(--clr-primary)' },
-  'Backend & APIs':       { icon: '⚙️', accent: 'var(--clr-accent)' },
+  'Frontend Ecosystem': { icon: '⚛️', accent: 'var(--clr-primary)' },
+  'Backend & APIs': { icon: '⚙️', accent: 'var(--clr-accent)' },
   'AI & Agentic Systems': { icon: '🤖', accent: '#818cf8' },
-  'Architecture & DevOps':{ icon: '🏗️', accent: '#f59e0b' },
-  'Tools & Methods':      { icon: '🛠️', accent: '#f59e0b' },
+  'Architecture & DevOps': { icon: '🏗️', accent: '#f59e0b' },
+  'Tools & Methods': { icon: '🛠️', accent: '#f59e0b' },
 }
 
 const Skills = () => {
@@ -20,12 +20,19 @@ const Skills = () => {
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.15 } },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1, delayChildren: 0.15 },
+    },
   }
 
   const groupVariants = {
     hidden: { opacity: 0, y: 24 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+    },
   }
 
   return (
@@ -67,7 +74,10 @@ const Skills = () => {
         viewport={{ once: true, margin: '-80px' }}
       >
         {Object.values(skills).map((skillGroup) => {
-          const meta = CATEGORY_META[skillGroup.title] || { icon: '💡', accent: 'var(--clr-primary)' }
+          const meta = CATEGORY_META[skillGroup.title] || {
+            icon: '💡',
+            accent: 'var(--clr-primary)',
+          }
           return (
             <motion.div
               key={skillGroup.title}
@@ -79,7 +89,9 @@ const Skills = () => {
               <div className='skills__group-header'>
                 <div className='skills__group-icon'>{meta.icon}</div>
                 <h3 className='skills__group-title'>{skillGroup.title}</h3>
-                <span className='skills__group-count'>{skillGroup.items.length}</span>
+                <span className='skills__group-count'>
+                  {skillGroup.items.length}
+                </span>
               </div>
 
               <div className='skills__tag-cloud'>

@@ -1440,5 +1440,12 @@
     "title": "Node.js: Worker Threads",
     "category": "Node.js",
     "content": "The `worker_threads` module enables the use of threads that execute JavaScript in parallel, useful for CPU-intensive tasks."
+  },
+  {
+    "id": "2026-07-14-3",
+    "date": "2026-07-14",
+    "title": "Docker: Multi-stage builds",
+    "category": "DevOps",
+    "content": "Multi-stage builds allow you to use one image for building (with all tools) and a much smaller image for running, keep production images lean."
   }
 ]

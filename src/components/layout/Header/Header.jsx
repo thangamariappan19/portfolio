@@ -23,12 +23,19 @@ const Header = () => {
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.12, delayChildren: 0.1 },
+    },
   }
 
   const itemVariants = {
     hidden: { opacity: 0, y: 24 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+    },
   }
 
   return (
@@ -102,7 +109,21 @@ const Header = () => {
                 className='btn btn--primary'
               >
                 Resume
-                <svg width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='currentColor' strokeWidth='2.5' strokeLinecap='round' strokeLinejoin='round' aria-hidden='true'><path d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4'/><polyline points='7 10 12 15 17 10'/><line x1='12' y1='15' x2='12' y2='3'/></svg>
+                <svg
+                  width='14'
+                  height='14'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  stroke='currentColor'
+                  strokeWidth='2.5'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  aria-hidden='true'
+                >
+                  <path d='M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4' />
+                  <polyline points='7 10 12 15 17 10' />
+                  <line x1='12' y1='15' x2='12' y2='3' />
+                </svg>
               </a>
             )}
             <a
@@ -139,33 +160,29 @@ const Header = () => {
             </div>
             <div className='terminal__body'>
               <div className='terminal__line'>
-                <span className='t-keyword'>const</span>
-                {' '}
-                <span className='t-var'>architect</span>
-                {' '}
+                <span className='t-keyword'>const</span>{' '}
+                <span className='t-var'>architect</span>{' '}
                 <span className='t-op'>=</span>
                 {' {'}
               </div>
               <div className='terminal__line terminal__line--indent'>
                 <span className='t-key'>name</span>
-                <span className='t-op'>:</span>
-                {' '}
+                <span className='t-op'>:</span>{' '}
                 <span className='t-string'>&quot;Thanga Mariappan&quot;</span>
                 <span className='t-op'>,</span>
               </div>
               <div className='terminal__line terminal__line--indent'>
                 <span className='t-key'>role</span>
-                <span className='t-op'>:</span>
-                {' '}
-                <span className='t-string'>&quot;Full-Stack Architect&quot;</span>
+                <span className='t-op'>:</span>{' '}
+                <span className='t-string'>
+                  &quot;Full-Stack Architect&quot;
+                </span>
                 <span className='t-op'>,</span>
               </div>
               <div className='terminal__line terminal__line--indent'>
                 <span className='t-key'>exp</span>
-                <span className='t-op'>:</span>
-                {' '}
-                <span className='t-number'>10</span>
-                {' '}
+                <span className='t-op'>:</span>{' '}
+                <span className='t-number'>10</span>{' '}
                 <span className='t-comment'>{'/* years */'}</span>
                 <span className='t-op'>,</span>
               </div>
@@ -182,17 +199,14 @@ const Header = () => {
               </div>
               <div className='terminal__line terminal__line--indent'>
                 <span className='t-key'>loves</span>
-                <span className='t-op'>:</span>
-                {' '}
+                <span className='t-op'>:</span>{' '}
                 <span className='t-string'>&quot;Full-Stack Systems&quot;</span>
                 <span className='t-op'>,</span>
               </div>
               <div className='terminal__line terminal__line--indent'>
                 <span className='t-key'>open</span>
-                <span className='t-op'>:</span>
-                {' '}
-                <span className='t-boolean'>true</span>
-                {' '}
+                <span className='t-op'>:</span>{' '}
+                <span className='t-boolean'>true</span>{' '}
                 <span className='t-comment'>{'// hire me!'}</span>
               </div>
               <div className='terminal__line'>{'}'}</div>
@@ -213,14 +227,24 @@ const Header = () => {
           <motion.div
             className='float-badge float-badge--2'
             animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+            transition={{
+              duration: 3.5,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: 0.5,
+            }}
           >
             🔥 Angular 19
           </motion.div>
           <motion.div
             className='float-badge float-badge--3'
             animate={{ y: [0, -6, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: 1,
+            }}
           >
             🤖 AI / RAG
           </motion.div>

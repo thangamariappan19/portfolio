@@ -59,7 +59,8 @@
   font-weight: 700;
 }
 
-.projects__filter-btn:not(.projects__filter-btn--active) .projects__filter-count {
+.projects__filter-btn:not(.projects__filter-btn--active)
+  .projects__filter-count {
   background: var(--border-md);
   color: var(--clr-fg-muted);
 }
