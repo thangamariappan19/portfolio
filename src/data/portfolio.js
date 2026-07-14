@@ -10,7 +10,7 @@ export const about = {
   headline:
     'Building end-to-end systems — from pixel-perfect UIs to intelligent APIs and agentic AI.',
   description:
-    'With over 10 years of experience, I own the full stack. I architect scalable frontends, design RESTful and GraphQL APIs, build AI-powered backends with LangChain and RAG pipelines, and ship to production — all under one roof. I have led delivery for Fortune 500 companies including Siemens Gamesa, BASF, and AGCO, and shipped agentic AI products used across 190+ countries.',
+    'With over 10 years of experience, I own the full stack. I architect scalable frontends, design RESTful and GraphQL APIs, build AI-powered backends with LangChain and RAG pipelines, and ship to production — all under one roof. I have led delivery for Fortune 500 enterprises and shipped agentic AI products used across 190+ countries.',
   resume: '/Thanga_Mariappan.pdf',
   metrics: [
     { label: 'Experience', value: '10+', suffix: 'Years' },

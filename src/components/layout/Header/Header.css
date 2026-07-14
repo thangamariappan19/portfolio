@@ -126,11 +126,15 @@
 }
 
 .header__role-cursor {
-  color: var(--clr-primary);
-  font-weight: 300;
-  animation: blink 1.1s step-end infinite;
-  margin-left: 1px;
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: var(--clr-primary);
+  border-radius: 1px;
+  margin-left: 4px;
+  vertical-align: middle;
   flex-shrink: 0;
+  animation: blink 1.1s step-end infinite;
 }
 
 @keyframes blink {

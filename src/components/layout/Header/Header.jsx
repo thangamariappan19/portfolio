@@ -68,8 +68,8 @@ const Header = () => {
                   {ROLES[roleIndex]}
                 </motion.span>
               </AnimatePresence>
+              <span className='header__role-cursor' aria-hidden='true' />
             </div>
-            <span className='header__role-cursor' aria-hidden='true'>_</span>
           </motion.div>
 
           <motion.p className='header__headline' variants={itemVariants}>
