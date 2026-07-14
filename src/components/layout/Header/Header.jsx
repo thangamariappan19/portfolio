@@ -5,9 +5,9 @@ import './Header.css'
 
 const ROLES = [
   'Technology Lead',
-  'Frontend Architect',
-  'React / Angular Expert',
-  'System Designer',
+  'Full-Stack Architect',
+  'AI Systems Builder',
+  'API & UI Engineer',
 ]
 
 const Header = () => {
@@ -48,11 +48,13 @@ const Header = () => {
 
           <motion.h1 className='header__name' variants={itemVariants}>
             <span className='header__greeting'>Hi, I&apos;m</span>
-            <span className='text-gradient'>{name}</span>
+            <span className='text-gradient'>
+              {name.split(' ').slice(0, 2).join(' ')}
+            </span>
           </motion.h1>
 
           <motion.div className='header__role-row' variants={itemVariants}>
-            <span className='header__role-prefix'>I design&nbsp;</span>
+            <span className='header__role-prefix'>I&apos;m a&nbsp;</span>
             <div className='header__role-cycle' aria-live='polite'>
               <AnimatePresence mode='wait'>
                 <motion.span
@@ -155,14 +157,14 @@ const Header = () => {
                 <span className='t-key'>role</span>
                 <span className='t-op'>:</span>
                 {' '}
-                <span className='t-string'>&quot;Technology Lead&quot;</span>
+                <span className='t-string'>&quot;Full-Stack Architect&quot;</span>
                 <span className='t-op'>,</span>
               </div>
               <div className='terminal__line terminal__line--indent'>
                 <span className='t-key'>exp</span>
                 <span className='t-op'>:</span>
                 {' '}
-                <span className='t-number'>9</span>
+                <span className='t-number'>10</span>
                 {' '}
                 <span className='t-comment'>{'/* years */'}</span>
                 <span className='t-op'>,</span>
@@ -171,16 +173,18 @@ const Header = () => {
                 <span className='t-key'>stack</span>
                 <span className='t-op'>:</span>
                 {' ['}
-                <span className='t-string'>&quot;Angular&quot;</span>
+                <span className='t-string'>&quot;UI&quot;</span>
                 {', '}
-                <span className='t-string'>&quot;React&quot;</span>
+                <span className='t-string'>&quot;API&quot;</span>
+                {', '}
+                <span className='t-string'>&quot;AI&quot;</span>
                 {'],'}
               </div>
               <div className='terminal__line terminal__line--indent'>
                 <span className='t-key'>loves</span>
                 <span className='t-op'>:</span>
                 {' '}
-                <span className='t-string'>&quot;Architecture&quot;</span>
+                <span className='t-string'>&quot;Full-Stack Systems&quot;</span>
                 <span className='t-op'>,</span>
               </div>
               <div className='terminal__line terminal__line--indent'>

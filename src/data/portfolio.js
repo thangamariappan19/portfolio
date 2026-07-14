@@ -1,19 +1,19 @@
 export const header = {
   title: 'TM.',
-  subtitle: 'Technology Lead | Frontend Architect',
+  subtitle: 'Technology Lead | Full-Stack Architect',
   homepage: 'https://thangamariappan.vercel.app/',
 }
 
 export const about = {
   name: 'Thanga Mariappan Pandian',
-  role: 'Technology Lead | Frontend Architect',
+  role: 'Technology Lead | Full-Stack Architect',
   headline:
-    'Leading enterprise-scale frontend architecture and digital transformation.',
+    'Building end-to-end systems — from pixel-perfect UIs to intelligent APIs and agentic AI.',
   description:
-    'With over 9 years of specialized experience, I transform complex business requirements into high-performance, maintainable web ecosystems. I have led frontend architecture for Fortune 500 companies including Siemens Gamesa, BASF, and AGCO, focusing on scalability, developer experience, and business impact.',
+    'With over 10 years of experience, I own the full stack. I architect scalable frontends, design RESTful and GraphQL APIs, build AI-powered backends with LangChain and RAG pipelines, and ship to production — all under one roof. I have led delivery for Fortune 500 companies including Siemens Gamesa, BASF, and AGCO, and shipped agentic AI products used across 190+ countries.',
   resume: '/Thanga_Mariappan.pdf',
   metrics: [
-    { label: 'Experience', value: '9+', suffix: 'Years' },
+    { label: 'Experience', value: '10+', suffix: 'Years' },
     { label: 'Enterprise Depts', value: '3', suffix: 'Global' },
     { label: 'Users Impacted', value: '100', suffix: 'k+' },
   ],
@@ -200,18 +200,32 @@ export const skills = {
       'TypeScript',
       'Next.js',
       'RxJS',
-      'Redux/NgRx',
+      'Redux / NgRx',
+      'SCSS / Tailwind',
     ],
   },
   backend: {
-    title: 'Backend & Data',
+    title: 'Backend & APIs',
     items: [
       'Node.js',
       'Python',
       'FastAPI',
       'GraphQL',
-      'REST Architecture',
+      'REST APIs',
       'PostgreSQL',
+      'WebSockets',
+    ],
+  },
+  ai: {
+    title: 'AI & Agentic Systems',
+    items: [
+      'LangChain',
+      'OpenAI API',
+      'RAG Pipelines',
+      'Vector Databases',
+      'Prompt Engineering',
+      'AI Agents',
+      'LLM Integration',
     ],
   },
   architecture: {
@@ -222,12 +236,8 @@ export const skills = {
       'Docker',
       'AWS',
       'Nx Monorepo',
-      'Webpack',
+      'System Design',
     ],
-  },
-  tools: {
-    title: 'Tools & Methods',
-    items: ['Git', 'Jira', 'Agile/Scrum', 'Figma', 'Jest/Karma', 'Chart.js'],
   },
 }
 

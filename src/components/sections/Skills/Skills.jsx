@@ -4,10 +4,11 @@ import SectionContainer from '../../ui/SectionContainer/SectionContainer'
 import './Skills.css'
 
 const CATEGORY_META = {
-  'Frontend Ecosystem': { icon: '⚛️', accent: 'var(--clr-primary)' },
-  'Backend & Data':     { icon: '⚙️', accent: 'var(--clr-accent)' },
-  'Architecture & DevOps': { icon: '🏗️', accent: '#818cf8' },
-  'Tools & Methods':    { icon: '🛠️', accent: '#f59e0b' },
+  'Frontend Ecosystem':   { icon: '⚛️', accent: 'var(--clr-primary)' },
+  'Backend & APIs':       { icon: '⚙️', accent: 'var(--clr-accent)' },
+  'AI & Agentic Systems': { icon: '🤖', accent: '#818cf8' },
+  'Architecture & DevOps':{ icon: '🏗️', accent: '#f59e0b' },
+  'Tools & Methods':      { icon: '🛠️', accent: '#f59e0b' },
 }
 
 const Skills = () => {
@@ -42,7 +43,7 @@ const Skills = () => {
         </div>
         <div className='skills__stat-divider' aria-hidden='true' />
         <div className='skills__stat'>
-          <span className='skills__stat-value'>9+</span>
+          <span className='skills__stat-value'>10+</span>
           <span className='skills__stat-label'>Years</span>
         </div>
         <div className='skills__stat-divider' aria-hidden='true' />

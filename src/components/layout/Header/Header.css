@@ -73,7 +73,7 @@
 
 .header__name {
   font-family: var(--font-heading);
-  font-size: clamp(2.4rem, 5.5vw, 5rem);
+  font-size: clamp(2rem, 4vw, 3.75rem);
   font-weight: 800;
   line-height: 1.05;
   margin: 0;
@@ -96,7 +96,7 @@
   align-items: center;
   gap: 0.3rem;
   font-family: var(--font-heading);
-  font-size: clamp(1.1rem, 2.4vw, 1.65rem);
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
   font-weight: 700;
   color: var(--clr-fg-alt);
   letter-spacing: -0.01em;
