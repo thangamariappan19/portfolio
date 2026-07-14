@@ -1,11 +1,11 @@
 .section {
-  padding: 4rem 1.5rem;
+  padding: 5rem 1.5rem;
   width: 100%;
 }
 
 @media (min-width: 768px) {
   .section {
-    padding: 6rem 2rem;
+    padding: 7rem 2rem;
   }
 }
 
@@ -14,21 +14,10 @@
   width: 100%;
 }
 
-.section__content--md {
-  max-width: 768px;
-}
-
-.section__content--lg {
-  max-width: 1024px;
-}
-
-.section__content--xl {
-  max-width: 1280px;
-}
-
-.section__content--full {
-  max-width: 100%;
-}
+.section__content--md   { max-width: 768px; }
+.section__content--lg   { max-width: 1024px; }
+.section__content--xl   { max-width: 1280px; }
+.section__content--full { max-width: 100%; }
 
 .section__header {
   margin-bottom: 3rem;
@@ -37,31 +26,30 @@
 
 .section__title {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 5vw, 2.5rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  font-weight: 800;
+  margin-bottom: 0.75rem;
   color: var(--clr-fg);
-  /* Changed from primary to fg for cleaner look, primary used for accents */
+  letter-spacing: -0.03em;
   position: relative;
   display: inline-block;
 }
 
-/* Add a subtle underline decoration */
 .section__title::after {
   content: '';
   display: block;
-  width: 60px;
-  height: 4px;
-  background: var(--clr-primary);
-  margin: 0.5rem auto 0;
-  /* Center aligned */
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
+  margin: 0.65rem auto 0;
   border-radius: 2px;
 }
 
 .section__subtitle {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--clr-fg-alt);
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
+  max-width: 560px;
+  margin: 0.75rem auto 0;
+  line-height: 1.65;
+  font-weight: 500;
 }

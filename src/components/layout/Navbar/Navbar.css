@@ -1,114 +1,144 @@
+/* ── Scroll progress bar ─────────────────────────────────────────────────── */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: transparent;
+  z-index: 1100;
+}
+
+.scroll-progress__bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
+  border-radius: 0 2px 2px 0;
+  transition: width 0.1s linear;
+}
+
+/* ── Navbar ──────────────────────────────────────────────────────────────── */
 .nav {
   position: fixed;
-  top: 2rem;
+  top: 1.5rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  max-width: 1200px;
-  height: 64px;
+  width: 92%;
+  max-width: 1100px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   z-index: 1000;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    box-shadow 0.3s ease,
+    background 0.3s ease;
   box-shadow: var(--shadow);
 }
 
+.nav--scrolled {
+  box-shadow: var(--shadow-lg), 0 0 0 1px var(--glass-border);
+}
+
+/* ── Brand ───────────────────────────────────────────────────────────────── */
 .nav__brand {
   font-family: var(--font-heading);
   font-weight: 800;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   color: var(--clr-fg);
   text-decoration: none;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+  transition: color var(--transition-fast);
 }
 
+.nav__brand:hover {
+  color: var(--clr-primary);
+}
+
+/* ── Controls row ────────────────────────────────────────────────────────── */
 .nav__controls {
   display: flex;
   align-items: center;
+  gap: 0.25rem;
 }
 
+/* ── Desktop nav list ────────────────────────────────────────────────────── */
 .nav__list {
   display: none;
-  gap: 2rem;
+  gap: 0.15rem;
   list-style: none;
   margin: 0;
+  align-items: center;
 }
 
 @media (min-width: 769px) {
   .nav__list {
     display: flex;
-    align-items: center;
   }
 }
 
-.link--nav {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--clr-fg-alt);
-  font-family: var(--font-body);
-  transition: all 0.2s ease;
-  position: relative;
-  padding: 0.5rem 0.75rem;
-  border-radius: 8px;
-}
-
-.link--nav:hover {
+/* Active state for nav links */
+.link--nav.active {
   color: var(--clr-primary);
+  background: rgba(16, 185, 129, 0.08);
 }
 
-.link--nav:focus-visible {
-  outline: 2px solid var(--clr-primary);
-  outline-offset: 2px;
-  background: rgba(16, 185, 129, 0.1);
-  color: var(--clr-primary);
+.light .link--nav.active {
+  background: rgba(59, 130, 246, 0.08);
 }
 
+/* ── Theme toggle ────────────────────────────────────────────────────────── */
 .nav__theme {
-  margin-left: 1.5rem;
-  color: var(--clr-fg);
+  margin-left: 0.75rem;
+  color: var(--clr-fg-alt);
   cursor: pointer;
   background: transparent;
   border: none;
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  transition: transform 0.3s ease;
-  border-radius: 8px;
+  transition: all var(--transition-fast);
+  border-radius: var(--radius-sm);
 }
 
 .nav__theme:hover {
-  transform: rotate(15deg) scale(1.1);
   color: var(--clr-primary);
+  transform: rotate(20deg) scale(1.1);
+  background: rgba(16, 185, 129, 0.08);
 }
 
 .nav__theme:focus-visible {
   outline: 2px solid var(--clr-primary);
   outline-offset: 2px;
-  transform: scale(1.05);
 }
 
+/* ── Hamburger ───────────────────────────────────────────────────────────── */
 .nav__hamburger {
   display: none;
-  color: var(--clr-fg);
+  color: var(--clr-fg-alt);
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
-  width: 32px;
-  height: 32px;
-  margin-left: 0.75rem;
-  border-radius: 8px;
-  transition: background-color 0.2s ease;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.nav__hamburger:hover {
+  color: var(--clr-primary);
+  background: rgba(16, 185, 129, 0.08);
 }
 
 .nav__hamburger:focus-visible {
@@ -116,43 +146,40 @@
   outline-offset: 2px;
 }
 
-@media (min-width: 769px) {
-  .nav__hamburger {
-    display: none !important;
-  }
-}
-
+/* ── Mobile nav ──────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
   .nav {
     top: 1rem;
-    height: 56px;
-    padding: 0 1.5rem;
+    height: 54px;
+    padding: 0 1.25rem;
+    width: 94%;
   }
 
   .nav__hamburger {
     display: flex;
-    cursor: pointer;
   }
 
   .nav__list {
     position: fixed;
     top: 5rem;
     left: 50%;
-    transform: translateX(-50%) translateY(-20px);
+    transform: translateX(-50%) translateY(-16px);
     width: 90%;
+    max-width: 360px;
     background: var(--glass-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
     border-radius: 24px;
-    padding: 2rem;
+    padding: 1.5rem;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    gap: 0.25rem;
     box-shadow: var(--shadow-lg);
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 999;
   }
 
   .nav__list--active {
@@ -163,10 +190,15 @@
   }
 
   .nav__list-item {
-    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
   }
 
   .link--nav {
-    font-size: 1.25rem;
+    display: block;
+    font-size: 1.1rem;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-md);
+    width: 100%;
   }
 }

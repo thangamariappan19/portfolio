@@ -11,7 +11,7 @@ export const about = {
     'Leading enterprise-scale frontend architecture and digital transformation.',
   description:
     'With over 9 years of specialized experience, I transform complex business requirements into high-performance, maintainable web ecosystems. I have led frontend architecture for Fortune 500 companies including Siemens Gamesa, BASF, and AGCO, focusing on scalability, developer experience, and business impact.',
-  resume: null,
+  resume: '/Thanga_Mariappan.pdf',
   metrics: [
     { label: 'Experience', value: '9+', suffix: 'Years' },
     { label: 'Enterprise Depts', value: '3', suffix: 'Global' },

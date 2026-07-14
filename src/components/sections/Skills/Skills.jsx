@@ -1,99 +1,104 @@
 import { motion } from 'framer-motion'
 import { skills } from '../../../data/portfolio'
 import SectionContainer from '../../ui/SectionContainer/SectionContainer'
-import Marquee from '../../features/Marquee/Marquee'
 import './Skills.css'
+
+const CATEGORY_META = {
+  'Frontend Ecosystem': { icon: '⚛️', accent: 'var(--clr-primary)' },
+  'Backend & Data':     { icon: '⚙️', accent: 'var(--clr-accent)' },
+  'Architecture & DevOps': { icon: '🏗️', accent: '#818cf8' },
+  'Tools & Methods':    { icon: '🛠️', accent: '#f59e0b' },
+}
 
 const Skills = () => {
   if (!skills) return null
 
-  // Flatten skills for marquees
-  const allSkills = Object.values(skills).flatMap((group) => group.items)
-  const topSkills = allSkills.slice(0, Math.ceil(allSkills.length / 2))
-  const bottomSkills = allSkills.slice(Math.ceil(allSkills.length / 2))
-
-  // Icon mapping for each skill category
-  const skillIcons = {
-    'Frontend Ecosystem': '⚛️',
-    'Backend & Data': '🔧',
-    'Architecture & DevOps': '🏗️',
-    'Tools & Methods': '🛠️',
-  }
+  const allSkills = Object.values(skills).flatMap((g) => g.items)
+  const totalSkills = allSkills.length
+  const categories = Object.values(skills).length
 
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
+    visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.15 } },
   }
 
   const groupVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: 'easeOut' },
-    },
+    hidden: { opacity: 0, y: 24 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
   }
 
   return (
-    <SectionContainer id='skills' title='Technical Expertise' maxWidth='full'>
-      <div className='skills__marquee-wrapper'>
-        <Marquee items={topSkills} speed={30} direction='left' />
-        <Marquee items={bottomSkills} speed={40} direction='right' />
+    <SectionContainer
+      id='skills'
+      title='Technical Expertise'
+      subtitle={`${totalSkills} skills across ${categories} domains`}
+      maxWidth='xl'
+    >
+      {/* Stats row */}
+      <div className='skills__stats'>
+        <div className='skills__stat'>
+          <span className='skills__stat-value'>{totalSkills}+</span>
+          <span className='skills__stat-label'>Technologies</span>
+        </div>
+        <div className='skills__stat-divider' aria-hidden='true' />
+        <div className='skills__stat'>
+          <span className='skills__stat-value'>9+</span>
+          <span className='skills__stat-label'>Years</span>
+        </div>
+        <div className='skills__stat-divider' aria-hidden='true' />
+        <div className='skills__stat'>
+          <span className='skills__stat-value'>100k+</span>
+          <span className='skills__stat-label'>Users Served</span>
+        </div>
+        <div className='skills__stat-divider' aria-hidden='true' />
+        <div className='skills__stat'>
+          <span className='skills__stat-value'>F500</span>
+          <span className='skills__stat-label'>Clients</span>
+        </div>
       </div>
 
+      {/* Skill groups grid */}
       <motion.div
         className='skills__grid'
         variants={containerVariants}
         initial='hidden'
         whileInView='visible'
-        viewport={{ once: true, margin: '-100px' }}
+        viewport={{ once: true, margin: '-80px' }}
       >
-        {Object.values(skills).map((skillGroup) => (
-          <motion.div
-            key={skillGroup.title}
-            className='skills__group'
-            variants={groupVariants}
-            whileHover={{ y: -5 }}
-          >
-            <div className='skills__header'>
-              <motion.div
-                className='skills__icon'
-                whileHover={{ scale: 1.2, rotate: 10 }}
-                transition={{ type: 'spring', stiffness: 200 }}
-              >
-                {skillIcons[skillGroup.title] || '💡'}
-              </motion.div>
-              <h3 className='skills__title'>{skillGroup.title}</h3>
-            </div>
+        {Object.values(skills).map((skillGroup) => {
+          const meta = CATEGORY_META[skillGroup.title] || { icon: '💡', accent: 'var(--clr-primary)' }
+          return (
             <motion.div
-              className='skills__content'
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              key={skillGroup.title}
+              className='skills__group'
+              variants={groupVariants}
+              whileHover={{ y: -4 }}
+              style={{ '--group-accent': meta.accent }}
             >
-              <div className='skills__list'>
+              <div className='skills__group-header'>
+                <div className='skills__group-icon'>{meta.icon}</div>
+                <h3 className='skills__group-title'>{skillGroup.title}</h3>
+                <span className='skills__group-count'>{skillGroup.items.length}</span>
+              </div>
+
+              <div className='skills__tag-cloud'>
                 {skillGroup.items.map((skill, idx) => (
-                  <motion.div
+                  <motion.span
                     key={skill}
-                    className='skill-item'
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.3, delay: idx * 0.05 }}
+                    className='skill-tag'
+                    initial={{ opacity: 0, scale: 0.85 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: idx * 0.04 }}
+                    whileHover={{ scale: 1.06 }}
                   >
-                    <span className='skill-item__icon'>▸</span>
                     {skill}
-                  </motion.div>
+                  </motion.span>
                 ))}
               </div>
             </motion.div>
-          </motion.div>
-        ))}
+          )
+        })}
       </motion.div>
     </SectionContainer>
   )
