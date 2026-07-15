@@ -1461,5 +1461,12 @@
     "title": "CSS: Logical Properties",
     "category": "CSS",
     "content": "Logical properties like `margin-inline-start` instead of `margin-left` allow for better internationalization support (RTL/LTR)."
+  },
+  {
+    "id": "2026-07-15-3",
+    "date": "2026-07-15",
+    "title": "Node.js: Worker Threads",
+    "category": "Node.js",
+    "content": "The `worker_threads` module enables the use of threads that execute JavaScript in parallel, useful for CPU-intensive tasks."
   }
 ]
