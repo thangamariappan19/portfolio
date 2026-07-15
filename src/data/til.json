@@ -1454,5 +1454,12 @@
     "title": "System Design: Consistency vs Availability",
     "category": "System Design",
     "content": "In CAP theorem, you often have to trade off between Consistency and Availability during a network partition."
+  },
+  {
+    "id": "2026-07-15-2",
+    "date": "2026-07-15",
+    "title": "CSS: Logical Properties",
+    "category": "CSS",
+    "content": "Logical properties like `margin-inline-start` instead of `margin-left` allow for better internationalization support (RTL/LTR)."
   }
 ]
