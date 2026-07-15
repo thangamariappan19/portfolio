@@ -1447,5 +1447,12 @@
     "title": "Docker: Multi-stage builds",
     "category": "DevOps",
     "content": "Multi-stage builds allow you to use one image for building (with all tools) and a much smaller image for running, keep production images lean."
+  },
+  {
+    "id": "2026-07-15",
+    "date": "2026-07-15",
+    "title": "System Design: Consistency vs Availability",
+    "category": "System Design",
+    "content": "In CAP theorem, you often have to trade off between Consistency and Availability during a network partition."
   }
 ]
