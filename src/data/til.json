@@ -1475,5 +1475,12 @@
     "title": "Web Performance: Core Web Vitals",
     "category": "Performance",
     "content": "LCP (Largest Contentful Paint) measures loading performance. To provide a good user experience, LCP should occur within 2.5 seconds."
+  },
+  {
+    "id": "2026-07-16-2",
+    "date": "2026-07-16",
+    "title": "JavaScript: The Nullish Coalescing Operator",
+    "category": "JavaScript",
+    "content": "The `??` operator returns its right-hand side operand when its left-hand side operand is `null` or `undefined`, unlike `||` which checks for falsy values."
   }
 ]
