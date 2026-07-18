@@ -1517,5 +1517,12 @@
     "title": "React: Custom Hooks",
     "category": "React",
     "content": "Custom hooks allow you to extract component logic into reusable functions. They always start with the word `use`."
+  },
+  {
+    "id": "2026-07-18-2",
+    "date": "2026-07-18",
+    "title": "Node.js: Worker Threads",
+    "category": "Node.js",
+    "content": "The `worker_threads` module enables the use of threads that execute JavaScript in parallel, useful for CPU-intensive tasks."
   }
 ]
