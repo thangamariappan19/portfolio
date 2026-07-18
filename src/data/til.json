@@ -1524,5 +1524,12 @@
     "title": "Node.js: Worker Threads",
     "category": "Node.js",
     "content": "The `worker_threads` module enables the use of threads that execute JavaScript in parallel, useful for CPU-intensive tasks."
+  },
+  {
+    "id": "2026-07-18-3",
+    "date": "2026-07-18",
+    "title": "JavaScript: Optional Chaining",
+    "category": "JavaScript",
+    "content": "The optional chaining (`?.`) operator enables reading the value of a property located deep within a chain of connected objects without having to check each reference."
   }
 ]
