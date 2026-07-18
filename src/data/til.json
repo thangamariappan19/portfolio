@@ -1510,5 +1510,12 @@
     "title": "JavaScript: Array.prototype.flatMap()",
     "category": "JavaScript",
     "content": "`flatMap()` is a combination of `map()` and `flat()` with a depth of 1. It is more efficient than calling them separately."
+  },
+  {
+    "id": "2026-07-18",
+    "date": "2026-07-18",
+    "title": "React: Custom Hooks",
+    "category": "React",
+    "content": "Custom hooks allow you to extract component logic into reusable functions. They always start with the word `use`."
   }
 ]
