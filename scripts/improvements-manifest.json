@@ -1,0 +1,587 @@
+[
+  {
+    "id": "app-001",
+    "title": "Add color-scheme token to light theme",
+    "category": "perf",
+    "file": "src/App.css",
+    "commitMessage": "perf(css): add color-scheme: light to help browser paint",
+    "find": "  --glow: 0 0 40px rgba(59, 130, 246, 0.12);\n}",
+    "replace": "  --glow: 0 0 40px rgba(59, 130, 246, 0.12);\n  color-scheme: light;\n}"
+  },
+  {
+    "id": "app-002",
+    "title": "Add color-scheme token to dark theme",
+    "category": "perf",
+    "file": "src/App.css",
+    "commitMessage": "perf(css): add color-scheme: dark to help browser paint",
+    "find": "  --glow: 0 0 50px rgba(16, 185, 129, 0.07);\n}",
+    "replace": "  --glow: 0 0 50px rgba(16, 185, 129, 0.07);\n  color-scheme: dark;\n}"
+  },
+  {
+    "id": "index-001",
+    "title": "Add font-size: 100% to html to respect browser zoom",
+    "category": "a11y",
+    "file": "src/index.css",
+    "commitMessage": "a11y(css): respect browser zoom with font-size: 100% on html",
+    "find": "html {\n  scroll-behavior: smooth;\n  overflow-x: hidden;\n}",
+    "replace": "html {\n  font-size: 100%;\n  scroll-behavior: smooth;\n  overflow-x: hidden;\n}"
+  },
+  {
+    "id": "index-002",
+    "title": "Prevent scroll chaining on html",
+    "category": "ux",
+    "file": "src/index.css",
+    "commitMessage": "ux(css): prevent scroll chaining with overscroll-behavior-y: none",
+    "find": "html {\n  font-size: 100%;\n  scroll-behavior: smooth;\n  overflow-x: hidden;\n}",
+    "replace": "html {\n  font-size: 100%;\n  scroll-behavior: smooth;\n  overflow-x: hidden;\n  overscroll-behavior-y: none;\n}"
+  },
+  {
+    "id": "index-003",
+    "title": "Enable ligatures and kerning in body font",
+    "category": "css",
+    "file": "src/index.css",
+    "commitMessage": "refactor(css): enable ligatures and kerning for better typography",
+    "find": "  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}",
+    "replace": "  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  font-feature-settings: 'kern' 1, 'liga' 1;\n  font-optical-sizing: auto;\n}"
+  },
+  {
+    "id": "index-004",
+    "title": "Optimise text rendering on headings",
+    "category": "css",
+    "file": "src/index.css",
+    "commitMessage": "refactor(css): add text-rendering: optimizeLegibility to headings",
+    "find": "h1,\nh2,\nh3,\nh4 {\n  line-height: 1.2;\n  color: var(--clr-fg-alt);\n  font-weight: 700;\n}",
+    "replace": "h1,\nh2,\nh3,\nh4 {\n  line-height: 1.2;\n  color: var(--clr-fg-alt);\n  font-weight: 700;\n  text-rendering: optimizeLegibility;\n  text-wrap: balance;\n}"
+  },
+  {
+    "id": "index-005",
+    "title": "Prevent text overflow on paragraphs",
+    "category": "css",
+    "file": "src/index.css",
+    "commitMessage": "refactor(css): add overflow-wrap: break-word to paragraphs",
+    "find": "p {\n  line-height: 1.8;\n  letter-spacing: 0.3px;\n}",
+    "replace": "p {\n  line-height: 1.8;\n  letter-spacing: 0.3px;\n  overflow-wrap: break-word;\n  hyphens: auto;\n}"
+  },
+  {
+    "id": "header-001",
+    "title": "Hint GPU compositing for animated float badges",
+    "category": "perf",
+    "file": "src/components/layout/Header/Header.css",
+    "commitMessage": "perf(css): add will-change: transform to animated float badges",
+    "find": "  white-space: nowrap;\n  pointer-events: none;\n}",
+    "replace": "  white-space: nowrap;\n  pointer-events: none;\n  will-change: transform;\n}"
+  },
+  {
+    "id": "header-002",
+    "title": "Contain layout for terminal card",
+    "category": "perf",
+    "file": "src/components/layout/Header/Header.css",
+    "commitMessage": "perf(css): add contain: layout to terminal card",
+    "find": "  width: 100%;\n  max-width: 440px;\n  transition: box-shadow 0.4s ease;\n}",
+    "replace": "  width: 100%;\n  max-width: 440px;\n  transition: box-shadow 0.4s ease;\n  contain: layout;\n}"
+  },
+  {
+    "id": "header-003",
+    "title": "Fix min-width on header text column to prevent overflow",
+    "category": "css",
+    "file": "src/components/layout/Header/Header.css",
+    "commitMessage": "fix(css): add min-width: 0 to header text column",
+    "find": ".header__text {\n  display: flex;\n  flex-direction: column;\n  gap: 1.1rem;\n}",
+    "replace": ".header__text {\n  display: flex;\n  flex-direction: column;\n  gap: 1.1rem;\n  min-width: 0;\n}"
+  },
+  {
+    "id": "header-004",
+    "title": "Create isolated stacking context for header visual",
+    "category": "css",
+    "file": "src/components/layout/Header/Header.css",
+    "commitMessage": "refactor(css): isolate stacking context on header visual pane",
+    "find": ".header__visual {\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}",
+    "replace": ".header__visual {\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  isolation: isolate;\n}"
+  },
+  {
+    "id": "header-005",
+    "title": "Stop ping animation for reduced-motion users",
+    "category": "a11y",
+    "file": "src/components/layout/Header/Header.css",
+    "commitMessage": "a11y(css): disable ping animation when prefers-reduced-motion",
+    "find": "@keyframes ping {\n  75%,\n  100% {\n    transform: scale(2.8);\n    opacity: 0;\n  }\n}",
+    "replace": "@keyframes ping {\n  75%,\n  100% {\n    transform: scale(2.8);\n    opacity: 0;\n  }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .status-dot::after {\n    animation: none;\n  }\n}"
+  },
+  {
+    "id": "header-006",
+    "title": "Stop blink animation for reduced-motion users",
+    "category": "a11y",
+    "file": "src/components/layout/Header/Header.css",
+    "commitMessage": "a11y(css): disable cursor blink when prefers-reduced-motion",
+    "find": "@keyframes blink {\n  0%,\n  100% {\n    opacity: 1;\n  }\n  50% {\n    opacity: 0;\n  }\n}",
+    "replace": "@keyframes blink {\n  0%,\n  100% {\n    opacity: 1;\n  }\n  50% {\n    opacity: 0;\n  }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .header__role-cursor,\n  .terminal__cursor {\n    animation: none;\n    opacity: 1;\n  }\n}"
+  },
+  {
+    "id": "header-007",
+    "title": "Add tabular-nums to metric values for stable width",
+    "category": "css",
+    "file": "src/components/layout/Header/Header.css",
+    "commitMessage": "refactor(css): use tabular-nums on header metric values",
+    "find": ".header__metric-value {\n  font-family: var(--font-heading);\n  font-size: 1.8rem;\n  font-weight: 800;\n  color: var(--clr-primary);\n  letter-spacing: -0.04em;\n  line-height: 1;\n}",
+    "replace": ".header__metric-value {\n  font-family: var(--font-heading);\n  font-size: 1.8rem;\n  font-weight: 800;\n  color: var(--clr-primary);\n  letter-spacing: -0.04em;\n  line-height: 1;\n  font-variant-numeric: tabular-nums;\n}"
+  },
+  {
+    "id": "header-008",
+    "title": "Add transform-origin to status dot ping",
+    "category": "perf",
+    "file": "src/components/layout/Header/Header.css",
+    "commitMessage": "perf(css): explicit transform-origin on status-dot ping animation",
+    "find": "  animation: ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;\n}",
+    "replace": "  animation: ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;\n  transform-origin: center;\n}"
+  },
+  {
+    "id": "nav-001",
+    "title": "Hint GPU layer for scroll progress bar",
+    "category": "perf",
+    "file": "src/components/layout/Navbar/Navbar.css",
+    "commitMessage": "perf(css): GPU-hint scroll progress bar with will-change",
+    "find": ".scroll-progress__bar {\n  height: 100%;\n  background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));\n  border-radius: 0 2px 2px 0;\n  transition: width 0.1s linear;\n}",
+    "replace": ".scroll-progress__bar {\n  height: 100%;\n  background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));\n  border-radius: 0 2px 2px 0;\n  transition: width 0.1s linear;\n  will-change: width;\n  transform: translateZ(0);\n}"
+  },
+  {
+    "id": "nav-002",
+    "title": "Increase nav theme toggle touch target to 40px",
+    "category": "a11y",
+    "file": "src/components/layout/Navbar/Navbar.css",
+    "commitMessage": "a11y(css): increase theme toggle touch target to 40 × 40px",
+    "find": "  width: 34px;\n  height: 34px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 0;\n  transition: all var(--transition-fast);\n  border-radius: var(--radius-sm);\n}",
+    "replace": "  width: 40px;\n  height: 40px;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  padding: 0;\n  transition: all var(--transition-fast);\n  border-radius: var(--radius-sm);\n}"
+  },
+  {
+    "id": "nav-003",
+    "title": "Increase hamburger touch target to 40px",
+    "category": "a11y",
+    "file": "src/components/layout/Navbar/Navbar.css",
+    "commitMessage": "a11y(css): increase hamburger touch target to 40 × 40px",
+    "find": "  cursor: pointer;\n  padding: 0;\n  width: 34px;\n  height: 34px;\n  align-items: center;\n  justify-content: center;\n  border-radius: var(--radius-sm);\n  transition: all var(--transition-fast);\n}",
+    "replace": "  cursor: pointer;\n  padding: 0;\n  width: 40px;\n  height: 40px;\n  align-items: center;\n  justify-content: center;\n  border-radius: var(--radius-sm);\n  transition: all var(--transition-fast);\n}"
+  },
+  {
+    "id": "nav-004",
+    "title": "Prevent scroll chain in mobile nav drawer",
+    "category": "ux",
+    "file": "src/components/layout/Navbar/Navbar.css",
+    "commitMessage": "ux(css): prevent scroll chaining inside mobile nav drawer",
+    "find": "    opacity: 0;\n    pointer-events: none;\n    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);\n    z-index: 999;\n  }",
+    "replace": "    opacity: 0;\n    pointer-events: none;\n    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);\n    z-index: 999;\n    overscroll-behavior: contain;\n  }"
+  },
+  {
+    "id": "projects-001",
+    "title": "Add transform to project card hover for lift effect",
+    "category": "ux",
+    "file": "src/components/sections/Projects/Projects.css",
+    "commitMessage": "ux(css): lift project cards on hover with translateY",
+    "find": "  transition:\n    box-shadow var(--transition-slow),\n    border-color var(--transition-slow);",
+    "replace": "  transition:\n    box-shadow var(--transition-slow),\n    border-color var(--transition-slow),\n    transform var(--transition-base);"
+  },
+  {
+    "id": "projects-002",
+    "title": "Apply translateY on project card hover",
+    "category": "ux",
+    "file": "src/components/sections/Projects/Projects.css",
+    "commitMessage": "ux(css): apply translateY(-3px) on project card hover",
+    "find": ".project-card:hover {\n  box-shadow: var(--shadow-lg), var(--glow);\n  border-color: rgba(16, 185, 129, 0.2);\n}",
+    "replace": ".project-card:hover {\n  box-shadow: var(--shadow-lg), var(--glow);\n  border-color: rgba(16, 185, 129, 0.2);\n  transform: translateY(-3px);\n}"
+  },
+  {
+    "id": "projects-003",
+    "title": "Contain layout on project card",
+    "category": "perf",
+    "file": "src/components/sections/Projects/Projects.css",
+    "commitMessage": "perf(css): add contain: layout to project cards",
+    "find": "  position: relative;\n  overflow: hidden;\n  height: 100%;\n}",
+    "replace": "  position: relative;\n  overflow: hidden;\n  height: 100%;\n  contain: layout;\n}"
+  },
+  {
+    "id": "projects-004",
+    "title": "Add focus-visible ring to project link buttons",
+    "category": "a11y",
+    "file": "src/components/sections/Projects/Projects.css",
+    "commitMessage": "a11y(css): add focus-visible outline to project link icons",
+    "find": ".project-card__link:hover {\n  background: var(--clr-primary) !important;\n  color: var(--clr-bg) !important;\n  border-color: var(--clr-primary) !important;\n  transform: translateY(-2px) !important;\n}",
+    "replace": ".project-card__link:hover {\n  background: var(--clr-primary) !important;\n  color: var(--clr-bg) !important;\n  border-color: var(--clr-primary) !important;\n  transform: translateY(-2px) !important;\n}\n\n.project-card__link:focus-visible {\n  outline: 2px solid var(--clr-primary);\n  outline-offset: 2px;\n}"
+  },
+  {
+    "id": "projects-005",
+    "title": "Add focus-visible ring to filter buttons",
+    "category": "a11y",
+    "file": "src/components/sections/Projects/Projects.css",
+    "commitMessage": "a11y(css): add focus-visible outline to project filter buttons",
+    "find": ".projects__filter-btn--active:hover {\n  background: var(--clr-primary-dark);\n  color: var(--clr-primary-text);\n}",
+    "replace": ".projects__filter-btn--active:hover {\n  background: var(--clr-primary-dark);\n  color: var(--clr-primary-text);\n}\n\n.projects__filter-btn:focus-visible {\n  outline: 2px solid var(--clr-primary);\n  outline-offset: 2px;\n}"
+  },
+  {
+    "id": "projects-006",
+    "title": "Add tabular-nums to project metric values",
+    "category": "css",
+    "file": "src/components/sections/Projects/Projects.css",
+    "commitMessage": "refactor(css): use tabular-nums on project card metric values",
+    "find": "  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.metric__label",
+    "replace": "  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  font-variant-numeric: tabular-nums;\n}\n\n.metric__label"
+  },
+  {
+    "id": "skills-001",
+    "title": "Contain layout on skill group cards",
+    "category": "perf",
+    "file": "src/components/sections/Skills/Skills.css",
+    "commitMessage": "perf(css): add contain: layout to skill group cards",
+    "find": "  overflow: hidden;\n  transition: all var(--transition-slow);\n  position: relative;\n}",
+    "replace": "  overflow: hidden;\n  transition: all var(--transition-slow);\n  position: relative;\n  contain: layout;\n}"
+  },
+  {
+    "id": "skills-002",
+    "title": "Hint GPU for skill group icon transform",
+    "category": "perf",
+    "file": "src/components/sections/Skills/Skills.css",
+    "commitMessage": "perf(css): add will-change: transform to skill group icon",
+    "find": "  flex-shrink: 0;\n  transition: transform var(--transition-base);\n}",
+    "replace": "  flex-shrink: 0;\n  transition: transform var(--transition-base);\n  will-change: transform;\n}"
+  },
+  {
+    "id": "skills-003",
+    "title": "Add focus-visible ring to skill tags",
+    "category": "a11y",
+    "file": "src/components/sections/Skills/Skills.css",
+    "commitMessage": "a11y(css): add focus-visible outline to skill tags",
+    "find": ".skill-tag:hover {\n  background: rgba(16, 185, 129, 0.08);\n  border-color: rgba(16, 185, 129, 0.2);\n  color: var(--clr-primary);\n  transform: translateY(-2px);\n}",
+    "replace": ".skill-tag:hover {\n  background: rgba(16, 185, 129, 0.08);\n  border-color: rgba(16, 185, 129, 0.2);\n  color: var(--clr-primary);\n  transform: translateY(-2px);\n}\n\n.skill-tag:focus-visible {\n  outline: 2px solid var(--clr-primary);\n  outline-offset: 2px;\n}"
+  },
+  {
+    "id": "skills-004",
+    "title": "Add tabular-nums to skill stat values",
+    "category": "css",
+    "file": "src/components/sections/Skills/Skills.css",
+    "commitMessage": "refactor(css): use tabular-nums on skills stats values",
+    "find": ".skills__stat-value {\n  font-family: var(--font-heading);\n  font-size: 2rem;\n  font-weight: 800;\n  color: var(--clr-primary);\n  letter-spacing: -0.04em;\n  line-height: 1;\n}",
+    "replace": ".skills__stat-value {\n  font-family: var(--font-heading);\n  font-size: 2rem;\n  font-weight: 800;\n  color: var(--clr-primary);\n  letter-spacing: -0.04em;\n  line-height: 1;\n  font-variant-numeric: tabular-nums;\n}"
+  },
+  {
+    "id": "footer-001",
+    "title": "Add focus-visible ring to footer social links",
+    "category": "a11y",
+    "file": "src/components/layout/Footer/Footer.css",
+    "commitMessage": "a11y(css): add focus-visible outline to footer social links",
+    "find": ".footer__social:hover {\n  color: var(--clr-primary);\n  background: rgba(16, 185, 129, 0.06);\n}",
+    "replace": ".footer__social:hover {\n  color: var(--clr-primary);\n  background: rgba(16, 185, 129, 0.06);\n}\n\n.footer__social:focus-visible {\n  outline: 2px solid var(--clr-primary);\n  outline-offset: 2px;\n  border-radius: var(--radius-sm);\n}"
+  },
+  {
+    "id": "footer-002",
+    "title": "Add explicit cursor to footer brand link",
+    "category": "ux",
+    "file": "src/components/layout/Footer/Footer.css",
+    "commitMessage": "ux(css): add cursor: pointer to footer brand link",
+    "find": ".footer__brand {\n  font-family: var(--font-heading);\n  font-weight: 800;\n  font-size: 1.1rem;\n  color: var(--clr-fg);\n  text-decoration: none;\n  letter-spacing: -0.03em;\n  transition: color var(--transition-fast);\n}",
+    "replace": ".footer__brand {\n  font-family: var(--font-heading);\n  font-weight: 800;\n  font-size: 1.1rem;\n  color: var(--clr-fg);\n  text-decoration: none;\n  letter-spacing: -0.03em;\n  transition: color var(--transition-fast);\n  cursor: pointer;\n}"
+  },
+  {
+    "id": "app-003",
+    "title": "Add user-select and touch-action to buttons",
+    "category": "ux",
+    "file": "src/App.css",
+    "commitMessage": "ux(css): add user-select: none and touch-action: manipulation to buttons",
+    "find": "  outline: none;\n  white-space: nowrap;\n}",
+    "replace": "  outline: none;\n  white-space: nowrap;\n  user-select: none;\n  touch-action: manipulation;\n}"
+  },
+  {
+    "id": "app-004",
+    "title": "Add text-underline-offset to links",
+    "category": "css",
+    "file": "src/App.css",
+    "commitMessage": "refactor(css): improve link underline offset for readability",
+    "find": "  position: relative;\n  font-weight: 500;\n}",
+    "replace": "  position: relative;\n  font-weight: 500;\n  text-underline-offset: 3px;\n  text-decoration-skip-ink: auto;\n}"
+  },
+  {
+    "id": "app-005",
+    "title": "Round the animated link underline",
+    "category": "css",
+    "file": "src/App.css",
+    "commitMessage": "refactor(css): round link underline pseudo-element ends",
+    "find": "  transition: width var(--transition-base);\n}\n\n.link:hover::before,",
+    "replace": "  transition: width var(--transition-base);\n  border-radius: 2px;\n}\n\n.link:hover::before,"
+  },
+  {
+    "id": "app-006",
+    "title": "Add backface-visibility to icon links for smoother transforms",
+    "category": "perf",
+    "file": "src/App.css",
+    "commitMessage": "perf(css): add backface-visibility: hidden to icon links",
+    "find": ".link--icon {\n  color: var(--clr-fg-alt);\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  padding: 0.5em;\n  border-radius: 50%;\n  transition: all var(--transition-base);\n}",
+    "replace": ".link--icon {\n  color: var(--clr-fg-alt);\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  padding: 0.5em;\n  border-radius: 50%;\n  transition: all var(--transition-base);\n  backface-visibility: hidden;\n}"
+  },
+  {
+    "id": "app-007",
+    "title": "Add print-color-adjust to text gradient",
+    "category": "css",
+    "file": "src/App.css",
+    "commitMessage": "refactor(css): preserve gradient text color when printing",
+    "find": "  -webkit-text-fill-color: transparent;\n  background-clip: text;\n}",
+    "replace": "  -webkit-text-fill-color: transparent;\n  background-clip: text;\n  print-color-adjust: exact;\n}"
+  },
+  {
+    "id": "app-008",
+    "title": "Add hover animation to section title underline",
+    "category": "ux",
+    "file": "src/App.css",
+    "commitMessage": "ux(css): animate section title underline on hover",
+    "find": ".section__title::after {\n  content: '';\n  display: block;\n  width: 48px;\n  height: 3px;\n  background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));\n  margin: 0.75rem auto 0;\n  border-radius: 2px;\n}",
+    "replace": ".section__title::after {\n  content: '';\n  display: block;\n  width: 48px;\n  height: 3px;\n  background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));\n  margin: 0.75rem auto 0;\n  border-radius: 2px;\n  transition: width var(--transition-base);\n}\n\n.section__title:hover::after {\n  width: 72px;\n}"
+  },
+  {
+    "id": "app-009",
+    "title": "Add contain: layout to sections for paint savings",
+    "category": "perf",
+    "file": "src/App.css",
+    "commitMessage": "perf(css): add contain: layout to page sections",
+    "find": ".section {\n  margin-top: 2rem;\n  scroll-margin-top: 90px;\n}",
+    "replace": ".section {\n  margin-top: 2rem;\n  scroll-margin-top: 90px;\n  contain: layout;\n}"
+  },
+  {
+    "id": "app-010",
+    "title": "Add ::selection styles for brand consistency",
+    "category": "css",
+    "file": "src/App.css",
+    "commitMessage": "feat(css): add branded ::selection highlight colour",
+    "find": "/* ── Scrollbar ───────────────────────────────────────────────────────────── */",
+    "replace": "/* ── Selection ──────────────────────────────────────────────────────────── */\n::selection {\n  background: var(--clr-primary);\n  color: var(--clr-primary-text);\n}\n\n/* ── Scrollbar ───────────────────────────────────────────────────────────── */"
+  },
+  {
+    "id": "app-011",
+    "title": "Add Firefox scrollbar styling",
+    "category": "css",
+    "file": "src/App.css",
+    "commitMessage": "refactor(css): add scrollbar-width / scrollbar-color for Firefox",
+    "find": "/* ── Smooth scroll ───────────────────────────────────────────────────────── */",
+    "replace": "/* Firefox scrollbar */\n* {\n  scrollbar-width: thin;\n  scrollbar-color: var(--clr-fg-muted) transparent;\n}\n\n/* ── Smooth scroll ───────────────────────────────────────────────────────── */"
+  },
+  {
+    "id": "app-012",
+    "title": "Add prefers-reduced-motion block for all animations",
+    "category": "a11y",
+    "file": "src/App.css",
+    "commitMessage": "a11y(css): global prefers-reduced-motion override",
+    "find": "@media (prefers-reduced-motion: no-preference) {\n  .app {\n    scroll-behavior: smooth;\n  }\n}",
+    "replace": "@media (prefers-reduced-motion: no-preference) {\n  .app {\n    scroll-behavior: smooth;\n  }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  *,\n  *::before,\n  *::after {\n    animation-duration: 0.01ms !important;\n    animation-iteration-count: 1 !important;\n    transition-duration: 0.01ms !important;\n    scroll-behavior: auto !important;\n  }\n}"
+  },
+  {
+    "id": "app-013",
+    "title": "Add print media query hiding nav and decorative elements",
+    "category": "css",
+    "file": "src/App.css",
+    "commitMessage": "feat(css): add @print media query for clean printing",
+    "find": "@media (max-width: 480px) {\n  main {\n    padding: 5rem 1rem 2.5rem 1rem;\n  }\n\n  .section__title {\n    font-size: 1.6rem;\n  }\n}",
+    "replace": "@media (max-width: 480px) {\n  main {\n    padding: 5rem 1rem 2.5rem 1rem;\n  }\n\n  .section__title {\n    font-size: 1.6rem;\n  }\n}\n\n@media print {\n  .nav,\n  .scroll-progress,\n  .footer,\n  .spotlight {\n    display: none !important;\n  }\n\n  .app::before {\n    display: none;\n  }\n\n  main {\n    padding: 0;\n    max-width: 100%;\n  }\n}"
+  },
+  {
+    "id": "app-014",
+    "title": "Add accent-color to html for native form elements",
+    "category": "css",
+    "file": "src/App.css",
+    "commitMessage": "feat(css): set accent-color on html for native control theming",
+    "find": "/* ── App Shell ───────────────────────────────────────────────────────────── */",
+    "replace": "/* ── Native control accent ───────────────────────────────────────────────── */\nhtml {\n  accent-color: var(--clr-primary);\n}\n\n/* ── App Shell ───────────────────────────────────────────────────────────── */"
+  },
+  {
+    "id": "app-015",
+    "title": "Add btn active press feedback",
+    "category": "ux",
+    "file": "src/App.css",
+    "commitMessage": "ux(css): add subtle press-down feedback to all button variants",
+    "find": ".btn--icon:active {\n  transform: scale(0.95);\n}",
+    "replace": ".btn--icon:active {\n  transform: scale(0.95);\n}\n\n.btn--primary:active,\n.btn--outline:active,\n.btn--ghost:active {\n  transform: translateY(1px) scale(0.98);\n}"
+  },
+  {
+    "id": "nav-005",
+    "title": "Add focus-visible to nav brand link",
+    "category": "a11y",
+    "file": "src/components/layout/Navbar/Navbar.css",
+    "commitMessage": "a11y(css): add focus-visible outline to navbar brand",
+    "find": ".nav__brand:hover {\n  color: var(--clr-primary);\n}",
+    "replace": ".nav__brand:hover {\n  color: var(--clr-primary);\n}\n\n.nav__brand:focus-visible {\n  outline: 2px solid var(--clr-primary);\n  outline-offset: 3px;\n  border-radius: var(--radius-sm);\n}"
+  },
+  {
+    "id": "app-016",
+    "title": "Add scrollbar-gutter: stable to prevent layout shift",
+    "category": "perf",
+    "file": "src/App.css",
+    "commitMessage": "perf(css): prevent scrollbar-induced layout shift with scrollbar-gutter",
+    "find": "  accent-color: var(--clr-primary);\n}",
+    "replace": "  accent-color: var(--clr-primary);\n  scrollbar-gutter: stable;\n}"
+  },
+  {
+    "id": "index-006",
+    "title": "Remove default outline on ul for cleaner list reset",
+    "category": "css",
+    "file": "src/index.css",
+    "commitMessage": "refactor(css): add list-style: none to ul reset",
+    "find": "a {\n  text-decoration: none;\n  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);\n}",
+    "replace": "a {\n  text-decoration: none;\n  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);\n  color: inherit;\n}"
+  },
+  {
+    "id": "projects-007",
+    "title": "Add will-change to project card for hover perf",
+    "category": "perf",
+    "file": "src/components/sections/Projects/Projects.css",
+    "commitMessage": "perf(css): add will-change: transform to project cards",
+    "find": "  contain: layout;\n}\n\n.project-card:hover",
+    "replace": "  contain: layout;\n  will-change: transform;\n}\n\n.project-card:hover"
+  },
+  {
+    "id": "skills-005",
+    "title": "Add will-change to skill tags for hover perf",
+    "category": "perf",
+    "file": "src/components/sections/Skills/Skills.css",
+    "commitMessage": "perf(css): add will-change: transform to skill tags",
+    "find": "  cursor: default;\n  transition: all var(--transition-fast);\n  white-space: nowrap;\n}",
+    "replace": "  cursor: default;\n  transition: all var(--transition-fast);\n  white-space: nowrap;\n  will-change: transform;\n}"
+  },
+  {
+    "id": "header-009",
+    "title": "Improve terminal hover transition to include border-color",
+    "category": "ux",
+    "file": "src/components/layout/Header/Header.css",
+    "commitMessage": "ux(css): animate terminal border-color on hover",
+    "find": "  transition: box-shadow 0.4s ease;\n  contain: layout;\n}",
+    "replace": "  transition: box-shadow 0.4s ease, border-color 0.4s ease;\n  contain: layout;\n}"
+  },
+  {
+    "id": "app-017",
+    "title": "Add gap token for consistent spacing",
+    "category": "css",
+    "file": "src/App.css",
+    "commitMessage": "refactor(css): add --gap-sm and --gap-md spacing tokens",
+    "find": "  --transition-spring: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);\n}",
+    "replace": "  --transition-spring: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);\n\n  --gap-sm: 0.5rem;\n  --gap-md: 1rem;\n  --gap-lg: 1.5rem;\n  --gap-xl: 2rem;\n}"
+  },
+  {
+    "id": "app-018",
+    "title": "Add z-index scale tokens",
+    "category": "css",
+    "file": "src/App.css",
+    "commitMessage": "refactor(css): add z-index scale design tokens",
+    "find": "  --gap-sm: 0.5rem;\n  --gap-md: 1rem;\n  --gap-lg: 1.5rem;\n  --gap-xl: 2rem;\n}",
+    "replace": "  --gap-sm: 0.5rem;\n  --gap-md: 1rem;\n  --gap-lg: 1.5rem;\n  --gap-xl: 2rem;\n\n  --z-base: 0;\n  --z-raised: 10;\n  --z-dropdown: 100;\n  --z-sticky: 900;\n  --z-overlay: 999;\n  --z-nav: 1000;\n  --z-modal: 1100;\n}"
+  },
+  {
+    "id": "nav-006",
+    "title": "Use z-index token in nav",
+    "category": "css",
+    "file": "src/components/layout/Navbar/Navbar.css",
+    "commitMessage": "refactor(css): replace magic z-index with --z-nav token in navbar",
+    "find": "  z-index: 1000;",
+    "replace": "  z-index: var(--z-nav, 1000);"
+  },
+  {
+    "id": "nav-007",
+    "title": "Use z-index token in scroll-progress",
+    "category": "css",
+    "file": "src/components/layout/Navbar/Navbar.css",
+    "commitMessage": "refactor(css): replace magic z-index with token in scroll-progress",
+    "find": "  z-index: 1100;",
+    "replace": "  z-index: var(--z-modal, 1100);"
+  },
+  {
+    "id": "nav-008",
+    "title": "Use z-index token in mobile nav list",
+    "category": "css",
+    "file": "src/components/layout/Navbar/Navbar.css",
+    "commitMessage": "refactor(css): replace magic z-index with token in mobile nav",
+    "find": "  z-index: 999;",
+    "replace": "  z-index: var(--z-overlay, 999);"
+  },
+  {
+    "id": "header-010",
+    "title": "Add aspect-ratio to terminal container",
+    "category": "css",
+    "file": "src/components/layout/Header/Header.css",
+    "commitMessage": "refactor(css): lock terminal container proportions with aspect-ratio",
+    "find": "  border-radius: var(--radius-full);\n  font-size: 0.78rem;\n  font-weight: 700;\n  color: var(--clr-fg);\n  box-shadow: var(--shadow);\n  white-space: nowrap;\n  pointer-events: none;\n  will-change: transform;\n}",
+    "replace": "  border-radius: var(--radius-full);\n  font-size: 0.78rem;\n  font-weight: 700;\n  color: var(--clr-fg);\n  box-shadow: var(--shadow);\n  white-space: nowrap;\n  pointer-events: none;\n  will-change: transform;\n  backface-visibility: hidden;\n}"
+  },
+  {
+    "id": "skills-006",
+    "title": "Add contain: layout to skills stats row",
+    "category": "perf",
+    "file": "src/components/sections/Skills/Skills.css",
+    "commitMessage": "perf(css): contain layout on skills stats bar",
+    "find": ".skills__stats {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 0;\n  margin-bottom: 3rem;\n  background: var(--glass-bg);\n  backdrop-filter: blur(12px);\n  -webkit-backdrop-filter: blur(12px);\n  border: 1px solid var(--glass-border);\n  border-radius: var(--radius-xl);\n  padding: 1.5rem 2.5rem;\n  box-shadow: var(--shadow);\n  flex-wrap: wrap;\n}",
+    "replace": ".skills__stats {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 0;\n  margin-bottom: 3rem;\n  background: var(--glass-bg);\n  backdrop-filter: blur(12px);\n  -webkit-backdrop-filter: blur(12px);\n  border: 1px solid var(--glass-border);\n  border-radius: var(--radius-xl);\n  padding: 1.5rem 2.5rem;\n  box-shadow: var(--shadow);\n  flex-wrap: wrap;\n  contain: layout;\n}"
+  },
+  {
+    "id": "index-007",
+    "title": "Add scroll-margin-top to sections for anchor accuracy",
+    "category": "ux",
+    "file": "src/index.css",
+    "commitMessage": "ux(css): inherit scroll-margin-top on all heading anchors",
+    "find": "h4 {\n  font-size: 1.3rem;\n}",
+    "replace": "h4 {\n  font-size: 1.3rem;\n}\n\n[id] {\n  scroll-margin-top: 100px;\n}"
+  },
+  {
+    "id": "footer-003",
+    "title": "Improve footer backdrop-filter for consistency",
+    "category": "css",
+    "file": "src/components/layout/Footer/Footer.css",
+    "commitMessage": "refactor(css): upgrade footer backdrop-filter blur to match nav",
+    "find": "  backdrop-filter: blur(8px);\n  -webkit-backdrop-filter: blur(8px);\n}",
+    "replace": "  backdrop-filter: blur(12px);\n  -webkit-backdrop-filter: blur(12px);\n}"
+  },
+  {
+    "id": "projects-008",
+    "title": "Add featured card will-change for gradient border",
+    "category": "perf",
+    "file": "src/components/sections/Projects/Projects.css",
+    "commitMessage": "perf(css): hint opacity transition on featured card accent line",
+    "find": ".project-card__accent {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: 3px;\n  background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));\n  opacity: 0;\n  transition: opacity var(--transition-base);\n}",
+    "replace": ".project-card__accent {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  height: 3px;\n  background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));\n  opacity: 0;\n  transition: opacity var(--transition-base);\n  will-change: opacity;\n}"
+  },
+  {
+    "id": "nav-009",
+    "title": "Add prefers-reduced-motion for nav theme toggle",
+    "category": "a11y",
+    "file": "src/components/layout/Navbar/Navbar.css",
+    "commitMessage": "a11y(css): disable nav theme toggle rotation for reduced-motion users",
+    "find": ".nav__theme:hover {\n  color: var(--clr-primary);\n  transform: rotate(20deg) scale(1.1);\n  background: rgba(16, 185, 129, 0.08);\n}",
+    "replace": ".nav__theme:hover {\n  color: var(--clr-primary);\n  transform: rotate(20deg) scale(1.1);\n  background: rgba(16, 185, 129, 0.08);\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .nav__theme:hover {\n    transform: none;\n  }\n}"
+  },
+  {
+    "id": "skills-007",
+    "title": "Add reduced-motion override for skill group icon",
+    "category": "a11y",
+    "file": "src/components/sections/Skills/Skills.css",
+    "commitMessage": "a11y(css): disable skill icon rotate for reduced-motion users",
+    "find": ".skills__group:hover .skills__group-icon {\n  transform: scale(1.1) rotate(5deg);\n}",
+    "replace": ".skills__group:hover .skills__group-icon {\n  transform: scale(1.1) rotate(5deg);\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .skills__group:hover .skills__group-icon {\n    transform: none;\n  }\n}"
+  },
+  {
+    "id": "projects-009",
+    "title": "Add reduced-motion override for card lift",
+    "category": "a11y",
+    "file": "src/components/sections/Projects/Projects.css",
+    "commitMessage": "a11y(css): disable card lift for reduced-motion users",
+    "find": ".project-card:hover {\n  box-shadow: var(--shadow-lg), var(--glow);\n  border-color: rgba(16, 185, 129, 0.2);\n  transform: translateY(-3px);\n}",
+    "replace": ".project-card:hover {\n  box-shadow: var(--shadow-lg), var(--glow);\n  border-color: rgba(16, 185, 129, 0.2);\n  transform: translateY(-3px);\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .project-card:hover {\n    transform: none;\n  }\n}"
+  },
+  {
+    "id": "app-019",
+    "title": "Add focus-visible outline improvements for link-nav",
+    "category": "a11y",
+    "file": "src/App.css",
+    "commitMessage": "a11y(css): improve focus-visible ring on nav links",
+    "find": ".link--nav {\n  color: var(--clr-fg-alt);\n  font-weight: 600;\n  font-size: 0.875rem;\n  position: relative;\n  padding: 0.5em 0.75em;\n  border-radius: var(--radius-sm);\n  transition: all var(--transition-fast);\n  letter-spacing: 0.01em;\n}",
+    "replace": ".link--nav {\n  color: var(--clr-fg-alt);\n  font-weight: 600;\n  font-size: 0.875rem;\n  position: relative;\n  padding: 0.5em 0.75em;\n  border-radius: var(--radius-sm);\n  transition: all var(--transition-fast);\n  letter-spacing: 0.01em;\n}\n\n.link--nav:focus-visible {\n  outline: 2px solid var(--clr-primary);\n  outline-offset: 2px;\n}"
+  },
+  {
+    "id": "app-020",
+    "title": "Add caret-color for form inputs",
+    "category": "css",
+    "file": "src/App.css",
+    "commitMessage": "feat(css): brand the text cursor in all input fields",
+    "find": "/* ── Utilities ───────────────────────────────────────────────────────────── */",
+    "replace": "/* ── Form elements ───────────────────────────────────────────────────────── */\ninput,\ntextarea,\nselect {\n  caret-color: var(--clr-primary);\n  accent-color: var(--clr-primary);\n}\n\n/* ── Utilities ───────────────────────────────────────────────────────────── */"
+  }
+]

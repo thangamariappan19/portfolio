@@ -1,47 +1,34 @@
-name: Daily Improve
+name: Daily Code Improvements
 
 on:
   schedule:
-    - cron: '0 */8 * * *' # Runs 3 times a day (every 8 hours)
-  workflow_dispatch: # Allows manual trigger
+    - cron: '0 9 * * *' # 9 AM UTC daily — one run, three real commits
+  workflow_dispatch:
 
 jobs:
   improve:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: '20'
 
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Run Daily Improve Script
-        run: npm run daily:improve
-
-      - name: Commit and Push Changes
+      - name: Configure git
         run: |
-          git config --global user.name "Thanga Mariappan"
-          git config --global user.email "thangamariappancse@gmail.com"
-          git add .
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            # Check if commit_message.txt exists, otherwise use default
-            if [ -f commit_message.txt ]; then
-              git commit -F commit_message.txt
-              rm commit_message.txt
-            else
-              git commit -m "chore: daily improvement $(date +'%Y-%m-%d')"
-            fi
-            git push
-          fi
+          git config user.name "Thanga Mariappan"
+          git config user.email "thangamariappancse@gmail.com"
+
+      - name: Apply daily improvements
+        run: node scripts/daily-code-improve.js
+
+      - name: Push
+        run: git push

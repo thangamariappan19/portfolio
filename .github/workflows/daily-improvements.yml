@@ -1,10 +1,7 @@
 name: Daily Portfolio Improvements
 
 on:
-  schedule:
-    # Run every day at 9:00 AM UTC (adjustable)
-    - cron: '0 9 * * *'
-  workflow_dispatch: # Allow manual trigger
+  workflow_dispatch: # disabled — replaced by daily-improve.yml
 
 jobs:
   daily-improvements:
