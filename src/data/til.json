@@ -1531,5 +1531,12 @@
     "title": "JavaScript: Optional Chaining",
     "category": "JavaScript",
     "content": "The optional chaining (`?.`) operator enables reading the value of a property located deep within a chain of connected objects without having to check each reference."
+  },
+  {
+    "id": "2026-07-19",
+    "date": "2026-07-19",
+    "title": "CSS: Logical Properties",
+    "category": "CSS",
+    "content": "Logical properties like `margin-inline-start` instead of `margin-left` allow for better internationalization support (RTL/LTR)."
   }
 ]
