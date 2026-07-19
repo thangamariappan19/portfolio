@@ -1,4 +1,8 @@
 {
-  "applied": [],
+  "applied": [
+    "app-001",
+    "app-002",
+    "index-001"
+  ],
   "skipped": []
 }
