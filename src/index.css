@@ -41,6 +41,8 @@ h4 {
   line-height: 1.2;
   color: var(--clr-fg-alt);
   font-weight: 700;
+  text-rendering: optimizeLegibility;
+  text-wrap: balance;
 }
 
 h1 {
