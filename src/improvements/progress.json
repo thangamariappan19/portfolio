@@ -10,5 +10,5 @@
     "header-001",
     "header-002"
   ],
-  "skipped": []
+  "skipped": ["app-007"]
 }

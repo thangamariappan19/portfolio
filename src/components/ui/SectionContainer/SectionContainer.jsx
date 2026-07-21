@@ -9,10 +9,10 @@ const SectionContainer = ({
   subtitle,
   children,
   className = '',
-  maxWidth = 'xl', // 'md' | 'lg' | 'xl' | 'full'
+  maxWidth = 'xl',
 }) => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: '-100px' })
+  const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
     <section id={id} ref={ref} className={`section ${className}`}>
@@ -21,24 +21,24 @@ const SectionContainer = ({
           <div className='section__header'>
             {title && (
               <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={
-                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                }
-                transition={{ duration: 0.5 }}
                 className='section__title'
+                initial={{ opacity: 0, clipPath: 'inset(0 0 100% 0)' }}
+                animate={
+                  isInView
+                    ? { opacity: 1, clipPath: 'inset(0 0 0% 0)' }
+                    : { opacity: 0, clipPath: 'inset(0 0 100% 0)' }
+                }
+                transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
               >
                 {title}
               </motion.h2>
             )}
             {subtitle && (
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={
-                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-                }
-                transition={{ duration: 0.5, delay: 0.2 }}
                 className='section__subtitle'
+                initial={{ opacity: 0, y: 16 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
+                transition={{ duration: 0.6, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
               >
                 {subtitle}
               </motion.p>
@@ -47,9 +47,9 @@ const SectionContainer = ({
         )}
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
+          initial={{ opacity: 0, y: 28 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
+          transition={{ duration: 0.6, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
         >
           {children}
         </motion.div>

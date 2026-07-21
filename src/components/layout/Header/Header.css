@@ -5,6 +5,31 @@
   flex-direction: column;
   justify-content: center;
   padding: 130px 1rem 4rem 1rem;
+  position: relative;
+}
+
+/* Subtle dot-grid overlay — fades out toward edges */
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(16, 185, 129, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 185, 129, 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 65% at 50% 0%, black 35%, transparent 80%);
+  mask-image: radial-gradient(ellipse 80% 65% at 50% 0%, black 35%, transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+}
+.light .header::before {
+  background-image:
+    linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.05) 1px, transparent 1px);
+}
+.header__content {
+  position: relative;
+  z-index: 1;
 }
 
 .header__content {

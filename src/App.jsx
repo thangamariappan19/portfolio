@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState, Suspense, lazy } from 'react'
+import { useContext, useEffect, useRef, Suspense, lazy } from 'react'
 import { ThemeContext } from './contexts/theme'
 import Header from './components/layout/Header/Header'
 import Navbar from './components/layout/Navbar/Navbar'
@@ -7,34 +7,32 @@ import Footer from './components/layout/Footer/Footer'
 import SectionLoader from './components/ui/SectionLoader/SectionLoader'
 import './App.css'
 
-// Code split heavy sections for better performance
 const Projects = lazy(() => import('./components/sections/Projects/Projects'))
 const Skills = lazy(() => import('./components/sections/Skills/Skills'))
 const Contact = lazy(() => import('./components/sections/Contact/Contact'))
 
 const App = () => {
   const [{ themeName }] = useContext(ThemeContext)
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+  const appRef = useRef(null)
 
+  // Write CSS vars directly — zero React re-renders per mousemove
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      setMousePos({ x: e.clientX, y: e.clientY })
+    const el = appRef.current
+    const onMove = (e) => {
+      el?.style.setProperty('--mouse-x', `${e.clientX}px`)
+      el?.style.setProperty('--mouse-y', `${e.clientY}px`)
     }
-
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
+    window.addEventListener('mousemove', onMove, { passive: true })
+    return () => window.removeEventListener('mousemove', onMove)
   }, [])
 
   return (
-    <div
-      id='top'
-      className={`${themeName} app`}
-      style={{
-        '--mouse-x': `${mousePos.x}px`,
-        '--mouse-y': `${mousePos.y}px`,
-      }}
-    >
-      <div className='spotlight'></div>
+    <div ref={appRef} id='top' className={`${themeName} app`}>
+      <div className='spotlight' aria-hidden='true' />
+      <div className='orb orb--1' aria-hidden='true' />
+      <div className='orb orb--2' aria-hidden='true' />
+      <div className='orb orb--3' aria-hidden='true' />
+
       <Navbar />
 
       <main>

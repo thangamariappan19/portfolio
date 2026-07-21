@@ -137,17 +137,18 @@
   inset: 0;
   pointer-events: none;
   z-index: 1;
+  will-change: background;
   background: radial-gradient(
-    700px circle at var(--mouse-x) var(--mouse-y),
-    rgba(59, 130, 246, 0.06),
+    550px circle at var(--mouse-x) var(--mouse-y),
+    rgba(59, 130, 246, 0.09),
     transparent 80%
   );
 }
 
 .dark .spotlight {
   background: radial-gradient(
-    900px circle at var(--mouse-x) var(--mouse-y),
-    rgba(16, 185, 129, 0.04),
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(16, 185, 129, 0.07),
     transparent 80%
   );
 }
@@ -190,15 +191,27 @@ main {
 }
 
 /* ── Typography Utilities ────────────────────────────────────────────────── */
+@keyframes shimmer-text {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .text-gradient {
   background: linear-gradient(
     135deg,
-    var(--clr-primary) 0%,
-    var(--clr-accent) 60%
+    var(--clr-primary)       0%,
+    var(--clr-accent)        25%,
+    var(--clr-primary-light) 50%,
+    var(--clr-accent)        75%,
+    var(--clr-primary)       100%
   );
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  print-color-adjust: exact;
+  animation: shimmer-text 6s ease infinite;
 }
 
 /* ── Link Utilities ──────────────────────────────────────────────────────── */
@@ -438,5 +451,69 @@ main {
 
   .section__title {
     font-size: 1.6rem;
+  }
+}
+
+/* ── Ambient gradient orbs (dark mode only) ──────────────────────────────── */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+  filter: blur(72px);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.dark .orb { opacity: 1; }
+
+@keyframes orb-float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25%       { transform: translate(24px, -18px) scale(1.04); }
+  50%       { transform: translate(-14px, 30px) scale(0.96); }
+  75%       { transform: translate(30px, 12px) scale(1.02); }
+}
+
+.orb--1 {
+  width: 640px;
+  height: 640px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.14) 0%, transparent 70%);
+  top: -220px;
+  right: -160px;
+  animation: orb-float 20s ease-in-out infinite;
+}
+.orb--2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(129, 140, 248, 0.11) 0%, transparent 70%);
+  bottom: 8%;
+  left: -160px;
+  animation: orb-float 26s ease-in-out infinite reverse;
+  animation-delay: -9s;
+}
+.orb--3 {
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.09) 0%, transparent 70%);
+  top: 45%;
+  right: 8%;
+  animation: orb-float 18s ease-in-out infinite;
+  animation-delay: -5s;
+}
+
+/* ── Section title underline glow ───────────────────────────────────────── */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 8px rgba(16, 185, 129, 0.5); opacity: 0.85; }
+  50%       { box-shadow: 0 0 22px rgba(16, 185, 129, 0.8); opacity: 1; }
+}
+.dark .section__title::after {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* ── Reduced-motion safety net ───────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .orb,
+  .text-gradient,
+  .dark .section__title::after {
+    animation: none !important;
   }
 }
