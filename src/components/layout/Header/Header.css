@@ -232,6 +232,7 @@
   width: 100%;
   max-width: 440px;
   transition: box-shadow 0.4s ease;
+  contain: layout;
 }
 
 .dark .terminal {
