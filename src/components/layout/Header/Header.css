@@ -374,6 +374,7 @@
   box-shadow: var(--shadow);
   white-space: nowrap;
   pointer-events: none;
+  will-change: transform;
 }
 
 .float-badge--1 {
