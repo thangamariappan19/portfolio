@@ -8,7 +8,12 @@
     "index-004",
     "index-005",
     "header-001",
-    "header-002"
+    "header-002",
+    "header-003",
+    "header-004",
+    "header-005"
   ],
-  "skipped": ["app-007"]
+  "skipped": [
+    "app-007"
+  ]
 }
