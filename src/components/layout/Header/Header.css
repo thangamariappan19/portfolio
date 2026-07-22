@@ -90,6 +90,12 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .status-dot::after {
+    animation: none;
+  }
+}
+
 /* ── Name ────────────────────────────────────────────────────────────────── */
 .header__text {
   display: flex;
