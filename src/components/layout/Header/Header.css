@@ -247,6 +247,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  isolation: isolate;
 }
 
 .terminal {
