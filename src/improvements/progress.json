@@ -11,7 +11,10 @@
     "header-002",
     "header-003",
     "header-004",
-    "header-005"
+    "header-005",
+    "header-006",
+    "header-007",
+    "header-008"
   ],
   "skipped": [
     "app-007"
