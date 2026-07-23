@@ -180,6 +180,14 @@
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .header__role-cursor,
+  .terminal__cursor {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 /* ── Description ─────────────────────────────────────────────────────────── */
 .header__headline {
   max-width: 600px;
