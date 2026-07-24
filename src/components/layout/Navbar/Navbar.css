@@ -14,6 +14,8 @@
   background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
   border-radius: 0 2px 2px 0;
   transition: width 0.1s linear;
+  will-change: width;
+  transform: translateZ(0);
 }
 
 /* ── Navbar ──────────────────────────────────────────────────────────────── */
