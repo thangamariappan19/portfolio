@@ -84,7 +84,8 @@
   border: 1px solid var(--glass-border);
   transition:
     box-shadow var(--transition-slow),
-    border-color var(--transition-slow);
+    border-color var(--transition-slow),
+    transform var(--transition-base);
   display: flex;
   flex-direction: column;
   position: relative;
