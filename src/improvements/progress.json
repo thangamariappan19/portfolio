@@ -17,7 +17,10 @@
     "header-008",
     "nav-001",
     "nav-002",
-    "nav-003"
+    "nav-003",
+    "nav-004",
+    "projects-001",
+    "projects-002"
   ],
   "skipped": [
     "app-007"
