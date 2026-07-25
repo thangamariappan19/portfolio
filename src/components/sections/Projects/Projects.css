@@ -96,6 +96,7 @@
 .project-card:hover {
   box-shadow: var(--shadow-lg), var(--glow);
   border-color: rgba(16, 185, 129, 0.2);
+  transform: translateY(-3px);
 }
 
 .light .project-card:hover {
