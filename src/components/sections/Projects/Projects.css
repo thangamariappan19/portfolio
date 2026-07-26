@@ -214,6 +214,11 @@
   transform: translateY(-2px) !important;
 }
 
+.project-card__link:focus-visible {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 2px;
+}
+
 /* ── Role / subtitle ─────────────────────────────────────────────────────── */
 .project-card__role {
   font-size: 0.88rem;
