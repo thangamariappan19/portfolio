@@ -91,6 +91,7 @@
   position: relative;
   overflow: hidden;
   height: 100%;
+  contain: layout;
 }
 
 .project-card:hover {
