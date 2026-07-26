@@ -46,6 +46,11 @@
   color: var(--clr-primary-text);
 }
 
+.projects__filter-btn:focus-visible {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 2px;
+}
+
 .projects__filter-count {
   display: inline-flex;
   align-items: center;
