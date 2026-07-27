@@ -1,4 +1,5 @@
 import { about } from '../../../data/portfolio'
+import VisitorCounter from '../../features/VisitorCounter/VisitorCounter'
 import './Footer.css'
 
 const Footer = () => (
@@ -47,10 +48,22 @@ const Footer = () => (
         </a>
       </div>
 
-      <p className='footer__copy'>
-        &copy; {new Date().getFullYear()} Thanga Mariappan Pandian &middot;
-        Built with React
-      </p>
+      <div className='footer__bottom'>
+        <p className='footer__copy'>
+          &copy; {new Date().getFullYear()} Thanga Mariappan Pandian &middot;
+          Built with React
+        </p>
+        <div className='footer__meta'>
+          <VisitorCounter />
+          <button
+            className='footer__cookie-btn'
+            onClick={() => window.dispatchEvent(new Event('openCookieSettings'))}
+            aria-label='Open cookie preferences'
+          >
+            Cookie Settings
+          </button>
+        </div>
+      </div>
     </div>
   </footer>
 )

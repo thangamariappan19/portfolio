@@ -5,6 +5,7 @@ import Navbar from './components/layout/Navbar/Navbar'
 import ScrollToTop from './components/layout/ScrollToTop/ScrollToTop'
 import Footer from './components/layout/Footer/Footer'
 import SectionLoader from './components/ui/SectionLoader/SectionLoader'
+import CookieConsent from './components/features/CookieConsent/CookieConsent'
 import './App.css'
 
 const Projects = lazy(() => import('./components/sections/Projects/Projects'))
@@ -50,6 +51,7 @@ const App = () => {
 
       <ScrollToTop />
       <Footer />
+      <CookieConsent />
     </div>
   )
 }
