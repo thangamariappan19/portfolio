@@ -120,6 +120,7 @@
   font-size: 1.3rem;
   flex-shrink: 0;
   transition: transform var(--transition-base);
+  will-change: transform;
 }
 
 .skills__group:hover .skills__group-icon {
