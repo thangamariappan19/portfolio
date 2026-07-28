@@ -67,6 +67,7 @@
   overflow: hidden;
   transition: all var(--transition-slow);
   position: relative;
+  contain: layout;
 }
 
 /* Gradient top border that uses the group accent color */
@@ -119,6 +120,7 @@
   font-size: 1.3rem;
   flex-shrink: 0;
   transition: transform var(--transition-base);
+  will-change: transform;
 }
 
 .skills__group:hover .skills__group-icon {
