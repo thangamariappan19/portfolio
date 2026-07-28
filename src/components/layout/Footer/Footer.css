@@ -55,6 +55,12 @@
   background: rgba(16, 185, 129, 0.06);
 }
 
+.footer__social:focus-visible {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
 .light .footer__social:hover {
   background: rgba(59, 130, 246, 0.06);
 }
