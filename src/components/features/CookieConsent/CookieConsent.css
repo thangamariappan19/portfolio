@@ -1,8 +1,9 @@
 .cookie-consent {
   position: fixed;
   bottom: 1.5rem;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   width: min(700px, calc(100vw - 2rem));
   z-index: 9990;
   background: var(--glass-bg);
@@ -140,7 +141,10 @@
   .cookie-consent {
     bottom: 0;
     border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-    width: 100%;
+    width: 100vw;
+    left: 0;
+    right: 0;
+    margin: 0;
   }
 
   .cookie-consent__inner {
