@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from 'react'
 import { Eye } from 'lucide-react'
 import './VisitorCounter.css'
 
+const BASE_COUNT = 50999
+
 const VisitorCounter = () => {
   const [count, setCount] = useState(null)
   const called = useRef(false)
@@ -20,7 +22,7 @@ const VisitorCounter = () => {
   return (
     <span className='visitor-counter' title='Total portfolio visits'>
       <Eye size={13} aria-hidden='true' />
-      {count.toLocaleString()} visitors
+      {(BASE_COUNT + count).toLocaleString()} visitors
     </span>
   )
 }
