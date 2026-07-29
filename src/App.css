@@ -321,6 +321,8 @@ main {
   border: none;
   outline: none;
   white-space: nowrap;
+  user-select: none;
+  touch-action: manipulation;
 }
 
 .btn:focus-visible {
