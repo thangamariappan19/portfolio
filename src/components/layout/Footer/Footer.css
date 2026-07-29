@@ -25,6 +25,7 @@
   text-decoration: none;
   letter-spacing: -0.03em;
   transition: color var(--transition-fast);
+  cursor: pointer;
 }
 
 .footer__brand:hover {
