@@ -263,6 +263,7 @@ main {
     var(--clr-primary-light)
   );
   transition: width var(--transition-base);
+  border-radius: 2px;
 }
 
 .link:hover::before,
