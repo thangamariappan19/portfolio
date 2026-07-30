@@ -32,9 +32,12 @@
     "footer-001",
     "footer-002",
     "app-003",
-    "app-004"
+    "app-004",
+    "app-005",
+    "app-006"
   ],
   "skipped": [
-    "app-007"
+    "app-007",
+    "app-008"
   ]
 }
