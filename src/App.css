@@ -299,6 +299,7 @@ main {
   padding: 0.5em;
   border-radius: 50%;
   transition: all var(--transition-base);
+  backface-visibility: hidden;
 }
 
 .link--icon:hover {
