@@ -167,6 +167,7 @@ main {
 .section {
   margin-top: 2rem;
   scroll-margin-top: 90px;
+  contain: layout;
 }
 
 .section__header {
