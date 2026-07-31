@@ -426,6 +426,12 @@ main {
   gap: 1rem;
 }
 
+/* ── Selection ──────────────────────────────────────────────────────────── */
+::selection {
+  background: var(--clr-primary);
+  color: var(--clr-primary-text);
+}
+
 /* ── Scrollbar ───────────────────────────────────────────────────────────── */
 ::-webkit-scrollbar {
   width: 6px;
