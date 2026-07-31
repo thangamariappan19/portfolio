@@ -451,6 +451,12 @@ main {
   background: var(--clr-primary);
 }
 
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--clr-fg-muted) transparent;
+}
+
 /* ── Smooth scroll ───────────────────────────────────────────────────────── */
 @media (prefers-reduced-motion: no-preference) {
   .app {
