@@ -506,6 +506,24 @@ main {
   }
 }
 
+@media print {
+  .nav,
+  .scroll-progress,
+  .footer,
+  .spotlight {
+    display: none !important;
+  }
+
+  .app::before {
+    display: none;
+  }
+
+  main {
+    padding: 0;
+    max-width: 100%;
+  }
+}
+
 /* ── Ambient gradient orbs (dark mode only) ──────────────────────────────── */
 .orb {
   position: fixed;
