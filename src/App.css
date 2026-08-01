@@ -69,6 +69,11 @@
   color-scheme: dark;
 }
 
+/* ── Native control accent ───────────────────────────────────────────────── */
+html {
+  accent-color: var(--clr-primary);
+}
+
 /* ── App Shell ───────────────────────────────────────────────────────────── */
 .app {
   font-family: var(--font-body);
