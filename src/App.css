@@ -72,6 +72,7 @@
 /* ── Native control accent ───────────────────────────────────────────────── */
 html {
   accent-color: var(--clr-primary);
+  scrollbar-gutter: stable;
 }
 
 /* ── App Shell ───────────────────────────────────────────────────────────── */
