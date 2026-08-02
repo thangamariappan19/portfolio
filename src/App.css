@@ -422,6 +422,12 @@ main {
   transform: scale(0.95);
 }
 
+.btn--primary:active,
+.btn--outline:active,
+.btn--ghost:active {
+  transform: translateY(1px) scale(0.98);
+}
+
 /* ── Utilities ───────────────────────────────────────────────────────────── */
 .center {
   display: flex;
