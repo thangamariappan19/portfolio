@@ -169,6 +169,7 @@
   cursor: default;
   transition: all var(--transition-fast);
   white-space: nowrap;
+  will-change: transform;
 }
 
 .skill-tag:hover {
