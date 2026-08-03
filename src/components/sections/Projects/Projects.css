@@ -97,6 +97,7 @@
   overflow: hidden;
   height: 100%;
   contain: layout;
+  will-change: transform;
 }
 
 .project-card:hover {
