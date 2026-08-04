@@ -274,7 +274,7 @@
   box-shadow: var(--shadow-lg), var(--glow);
   width: 100%;
   max-width: 440px;
-  transition: box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease, border-color 0.4s ease;
   contain: layout;
 }
 
