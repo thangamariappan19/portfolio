@@ -36,7 +36,7 @@
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-full);
-  z-index: 1000;
+  z-index: var(--z-nav, 1000);
   transition:
     box-shadow 0.3s ease,
     background 0.3s ease;
