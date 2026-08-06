@@ -419,6 +419,7 @@
   white-space: nowrap;
   pointer-events: none;
   will-change: transform;
+  backface-visibility: hidden;
 }
 
 .float-badge--1 {
