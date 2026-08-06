@@ -13,6 +13,7 @@
   padding: 1.5rem 2.5rem;
   box-shadow: var(--shadow);
   flex-wrap: wrap;
+  contain: layout;
 }
 
 .skills__stat {
