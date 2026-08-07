@@ -3,8 +3,8 @@
   margin-top: 2rem;
   border-top: 1px solid var(--border-sm);
   background: var(--glass-bg);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .footer__content {
