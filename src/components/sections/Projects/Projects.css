@@ -133,6 +133,7 @@
   background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
   opacity: 0;
   transition: opacity var(--transition-base);
+  will-change: opacity;
 }
 
 .project-card:hover .project-card__accent {
