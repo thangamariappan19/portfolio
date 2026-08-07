@@ -125,6 +125,12 @@
   background: rgba(16, 185, 129, 0.08);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .nav__theme:hover {
+    transform: none;
+  }
+}
+
 .nav__theme:focus-visible {
   outline: 2px solid var(--clr-primary);
   outline-offset: 2px;
