@@ -129,6 +129,12 @@
   transform: scale(1.1) rotate(5deg);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .skills__group:hover .skills__group-icon {
+    transform: none;
+  }
+}
+
 .skills__group-title {
   font-family: var(--font-heading);
   font-size: 1rem;
