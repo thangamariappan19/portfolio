@@ -302,6 +302,11 @@ main {
   letter-spacing: 0.01em;
 }
 
+.link--nav:focus-visible {
+  outline: 2px solid var(--clr-primary);
+  outline-offset: 2px;
+}
+
 .link--nav:hover {
   color: var(--clr-primary);
 }
