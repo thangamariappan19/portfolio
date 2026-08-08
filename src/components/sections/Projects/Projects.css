@@ -106,6 +106,12 @@
   transform: translateY(-3px);
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .project-card:hover {
+    transform: none;
+  }
+}
+
 .light .project-card:hover {
   border-color: rgba(59, 130, 246, 0.2);
 }
