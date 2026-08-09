@@ -447,6 +447,14 @@ main {
   transform: translateY(1px) scale(0.98);
 }
 
+/* ── Form elements ───────────────────────────────────────────────────────── */
+input,
+textarea,
+select {
+  caret-color: var(--clr-primary);
+  accent-color: var(--clr-primary);
+}
+
 /* ── Utilities ───────────────────────────────────────────────────────────── */
 .center {
   display: flex;
